@@ -218,6 +218,50 @@
                   "facebookAccessToken"
                 ]
               ]
+            },
+            "infogroupApiKey": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Sub": [
+                      "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
+                      {
+                        "appId": {
+                          "Ref": "secretsPathAmplifyAppId"
+                        },
+                        "env": {
+                          "Ref": "env"
+                        },
+                        "functionName": "spiderEngines"
+                      }
+                    ]
+                  },
+                  "infogroupApiKey"
+                ]
+              ]
+            },
+            "yellowpagesKey": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Sub": [
+                      "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
+                      {
+                        "appId": {
+                          "Ref": "secretsPathAmplifyAppId"
+                        },
+                        "env": {
+                          "Ref": "env"
+                        },
+                        "functionName": "spiderEngines"
+                      }
+                    ]
+                  },
+                  "yellowpagesKey"
+                ]
+              ]
             }
           }
         },
