@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "api": {
+      "spiders1": [
+        "Query",
+        "Mutation"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "secretNames": [
+    "googleKey",
+    "googleCx"
+  ]
+}

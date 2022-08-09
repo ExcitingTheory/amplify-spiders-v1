@@ -1,9 +1,3 @@
-# This "input" configures a global authorization rule to enable public access to
-# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
-
-input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
-
-
 type WebResult {
   data: AWSJSON
   type: WEBCRAWLERS
@@ -34,23 +28,7 @@ enum WEBCRAWLERS {
   CUSTOM
 }
 
-
-type Post
-  @model
-  @auth(
-    rules: [
-      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
-    ]) {
-  id: ID!
-  title: String!
-  owner: String
-}
-
-
-type WebCrawl @model @auth(
-    rules: [
-      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
-    ]) {
+type WebCrawl @model @auth(rules: [{allow: owner}]) {
   id: ID!
   url: String
   dateTime: AWSDateTime
@@ -61,10 +39,7 @@ type WebCrawl @model @auth(
   owner: String
 }
 
-type EngineCrawl @model @auth(
-    rules: [
-      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
-    ]) {
+type EngineCrawl @model @auth(rules: [{allow: owner}]) {
   id: ID!
   dateTime: AWSDateTime
   search: String
@@ -87,7 +62,7 @@ type Domain @model @auth(
   id: ID!
   name: String
   owner: String
-  EngineCrawls: [WebCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
+  EngineCrawls: [EngineCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
   WebCrawls: [WebCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
 }
  

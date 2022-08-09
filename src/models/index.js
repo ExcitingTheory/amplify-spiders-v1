@@ -18,10 +18,9 @@ const Enginecrawlers = {
   "YELLOW_PAGES": "YELLOW_PAGES"
 };
 
-const { Post, WebCrawl, EngineCrawl, Domain, WebResult, EngineResult } = initSchema(schema);
+const { WebCrawl, EngineCrawl, Domain, WebResult, EngineResult } = initSchema(schema);
 
 export {
-  Post,
   WebCrawl,
   EngineCrawl,
   Domain,

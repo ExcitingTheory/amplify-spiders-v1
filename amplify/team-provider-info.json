@@ -20,6 +20,20 @@
         "AdminQueriesd6d26a6b": {
           "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
           "s3Key": "amplify-builds/AdminQueriesd6d26a6b-34515a34776f53705451-build.zip"
+        },
+        "spiderEngines": {
+          "secretsPathAmplifyAppId": "d39d9izi3mmqnw",
+          "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
+          "s3Key": "amplify-builds/spiderEngines-2f6e2f6659484a507769-build.zip"
+        },
+        "spiderKeywords": {
+          "secretsPathAmplifyAppId": "d39d9izi3mmqnw",
+          "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
+          "s3Key": "amplify-builds/spiderKeywords-704146562b4976486152-build.zip"
+        },
+        "spiderWebs": {
+          "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
+          "s3Key": "amplify-builds/spiderWebs-4e774e6c5a6967594a33-build.zip"
         }
       }
     }

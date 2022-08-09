@@ -2,6 +2,21 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const spiderEngineCrawl = /* GraphQL */ `
+  mutation SpiderEngineCrawl($options: AWSJSON) {
+    spiderEngineCrawl(options: $options)
+  }
+`;
+export const spiderKeywordCrawl = /* GraphQL */ `
+  mutation SpiderKeywordCrawl($options: AWSJSON) {
+    spiderKeywordCrawl(options: $options)
+  }
+`;
+export const spiderWebCrawl = /* GraphQL */ `
+  mutation SpiderWebCrawl($options: AWSJSON) {
+    spiderWebCrawl(options: $options)
+  }
+`;
 export const createPost = /* GraphQL */ `
   mutation CreatePost(
     $input: CreatePostInput!

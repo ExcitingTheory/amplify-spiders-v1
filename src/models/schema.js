@@ -1,74 +1,5 @@
 export const schema = {
     "models": {
-        "Post": {
-            "name": "Post",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "title": {
-                    "name": "title",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "owner": {
-                    "name": "owner",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "Posts",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "provider": "userPools",
-                                "ownerField": "owner",
-                                "allow": "owner",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ],
-                                "identityClaim": "cognito:username"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
         "WebCrawl": {
             "name": "WebCrawl",
             "fields": {
@@ -127,13 +58,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "owner": {
-                    "name": "owner",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -175,13 +99,13 @@ export const schema = {
                                 "provider": "userPools",
                                 "ownerField": "owner",
                                 "allow": "owner",
+                                "identityClaim": "cognito:username",
                                 "operations": [
                                     "create",
                                     "update",
                                     "delete",
                                     "read"
-                                ],
-                                "identityClaim": "cognito:username"
+                                ]
                             }
                         ]
                     }
@@ -289,13 +213,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "owner": {
-                    "name": "owner",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -337,13 +254,13 @@ export const schema = {
                                 "provider": "userPools",
                                 "ownerField": "owner",
                                 "allow": "owner",
+                                "identityClaim": "cognito:username",
                                 "operations": [
                                     "create",
                                     "update",
                                     "delete",
                                     "read"
-                                ],
-                                "identityClaim": "cognito:username"
+                                ]
                             }
                         ]
                     }
@@ -367,18 +284,11 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "owner": {
-                    "name": "owner",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "EngineCrawls": {
                     "name": "EngineCrawls",
                     "isArray": true,
                     "type": {
-                        "model": "WebCrawl"
+                        "model": "EngineCrawl"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -392,7 +302,7 @@ export const schema = {
                     "name": "WebCrawls",
                     "isArray": true,
                     "type": {
-                        "model": "WebCrawl"
+                        "model": "EngineCrawl"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -434,13 +344,13 @@ export const schema = {
                                 "provider": "userPools",
                                 "ownerField": "owner",
                                 "allow": "owner",
+                                "identityClaim": "cognito:username",
                                 "operations": [
                                     "create",
                                     "update",
                                     "delete",
                                     "read"
-                                ],
-                                "identityClaim": "cognito:username"
+                                ]
                             }
                         ]
                     }
@@ -542,5 +452,5 @@ export const schema = {
             }
         }
     },
-    "version": "362c835dfe7ea721f47d0ddeb0c18f9a"
+    "version": "268e161cf44f3dc32a19ddaef5fb7704"
 };

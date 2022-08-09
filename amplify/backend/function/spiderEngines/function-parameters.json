@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "api": {
+      "spiders1": [
+        "Query",
+        "Mutation"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "secretNames": [
+    "factualKey",
+    "googleKey",
+    "googleCx",
+    "foursquareClientId",
+    "foursquareClientSecret",
+    "facebookAccessToken"
+  ]
+}

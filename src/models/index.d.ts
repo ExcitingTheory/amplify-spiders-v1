@@ -32,10 +32,6 @@ export declare class EngineResult {
   constructor(init: ModelInit<EngineResult>);
 }
 
-type PostMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
-
 type WebCrawlMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -48,16 +44,6 @@ type DomainMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class Post {
-  readonly id: string;
-  readonly title: string;
-  readonly owner?: string | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-  constructor(init: ModelInit<Post, PostMetaData>);
-  static copyOf(source: Post, mutator: (draft: MutableModel<Post, PostMetaData>) => MutableModel<Post, PostMetaData> | void): Post;
-}
-
 export declare class WebCrawl {
   readonly id: string;
   readonly url?: string | null;
@@ -66,7 +52,6 @@ export declare class WebCrawl {
   readonly custom?: WebResult | null;
   readonly nu?: WebResult | null;
   readonly lighthouse?: WebResult | null;
-  readonly owner?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<WebCrawl, WebCrawlMetaData>);
@@ -86,7 +71,6 @@ export declare class EngineCrawl {
   readonly yelp?: EngineResult | null;
   readonly infogroup?: EngineResult | null;
   readonly yellowPages?: EngineResult | null;
-  readonly owner?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<EngineCrawl, EngineCrawlMetaData>);
@@ -96,9 +80,8 @@ export declare class EngineCrawl {
 export declare class Domain {
   readonly id: string;
   readonly name?: string | null;
-  readonly owner?: string | null;
-  readonly EngineCrawls?: (WebCrawl | null)[] | null;
-  readonly WebCrawls?: (WebCrawl | null)[] | null;
+  readonly EngineCrawls?: (EngineCrawl | null)[] | null;
+  readonly WebCrawls?: (EngineCrawl | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Domain, DomainMetaData>);
