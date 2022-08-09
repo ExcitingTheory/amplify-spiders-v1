@@ -1,0 +1,93 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+
+type WebResult {
+  data: AWSJSON
+  type: WEBCRAWLERS
+  unstructured: String
+}
+
+type EngineResult {
+  data: AWSJSON
+  jsonPathToRecord: String
+  rank: Int
+  totalResults: Int
+  type: ENGINECRAWLERS
+}
+
+enum ENGINECRAWLERS {
+  KEYWORD_PLANNER
+  GOOGLE
+  FOURSQUARE
+  FACEBOOK
+  YELP
+  INFOGROUP
+  YELLOW_PAGES
+}
+
+enum WEBCRAWLERS {
+  NU
+  LIGHTHOUSE
+  CUSTOM
+}
+
+
+type Post
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    ]) {
+  id: ID!
+  title: String!
+  owner: String
+}
+
+
+type WebCrawl @model @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    ]) {
+  id: ID!
+  url: String
+  dateTime: AWSDateTime
+  domainID: ID! @index(name: "byDomain")
+  custom: WebResult
+  nu: WebResult
+  lighthouse: WebResult
+  owner: String
+}
+
+type EngineCrawl @model @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    ]) {
+  id: ID!
+  dateTime: AWSDateTime
+  search: String
+  domainID: ID! @index(name: "byDomain")
+  zipCode: String
+  keywordPlanner: EngineResult
+  google: EngineResult
+  foursquare: EngineResult
+  facebook: EngineResult
+  yelp: EngineResult
+  infogroup: EngineResult
+  yellowPages: EngineResult
+  owner: String
+}
+
+type Domain @model @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    ]) {
+  id: ID!
+  name: String
+  owner: String
+  EngineCrawls: [WebCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
+  WebCrawls: [WebCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
+}
+ 

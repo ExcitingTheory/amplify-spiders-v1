@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "spiders1",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authspiders17563e8247563e824",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-08-09T03:35:45.964Z"
+}

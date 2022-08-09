@@ -1,6 +1,6 @@
 projects:
-  japanese3:
-    schemaPath: amplify/backend/api/japanese3/build/schema.graphql
+  spiders1:
+    schemaPath: amplify/backend/api/spiders1/build/schema.graphql
     includes:
       - src/graphql/**/*.ts
     excludes:

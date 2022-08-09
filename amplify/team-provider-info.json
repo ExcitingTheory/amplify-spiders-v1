@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-spiders1-dev-193723-authRole",
+      "UnauthRoleArn": "arn:aws:iam::759854655984:role/amplify-spiders1-dev-193723-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::759854655984:role/amplify-spiders1-dev-193723-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-spiders1-dev-193723-deployment",
+      "UnauthRoleName": "amplify-spiders1-dev-193723-unauthRole",
+      "StackName": "amplify-spiders1-dev-193723",
+      "StackId": "arn:aws:cloudformation:us-east-1:759854655984:stack/amplify-spiders1-dev-193723/340b27c0-178c-11ed-9cf5-12267cd789f9",
+      "AmplifyAppId": "d39d9izi3mmqnw"
+    },
+    "categories": {
+      "auth": {
+        "spiders17563e8247563e824": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "AdminQueriesd6d26a6b": {
+          "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
+          "s3Key": "amplify-builds/AdminQueriesd6d26a6b-34515a34776f53705451-build.zip"
+        }
+      }
+    }
+  }
+}
