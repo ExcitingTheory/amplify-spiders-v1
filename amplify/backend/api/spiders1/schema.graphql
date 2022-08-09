@@ -28,7 +28,10 @@ enum WEBCRAWLERS {
   CUSTOM
 }
 
-type WebCrawl @model @auth(rules: [{allow: owner}]) {
+type WebCrawl @model @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    ]) {
   id: ID!
   url: String
   dateTime: AWSDateTime
@@ -39,7 +42,10 @@ type WebCrawl @model @auth(rules: [{allow: owner}]) {
   owner: String
 }
 
-type EngineCrawl @model @auth(rules: [{allow: owner}]) {
+type EngineCrawl @model @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    ]) {
   id: ID!
   dateTime: AWSDateTime
   search: String
