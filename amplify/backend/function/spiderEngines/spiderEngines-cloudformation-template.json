@@ -87,28 +87,6 @@
             "API_SPIDERS1_GRAPHQLAPIENDPOINTOUTPUT": {
               "Ref": "apispiders1GraphQLAPIEndpointOutput"
             },
-            "factualKey": {
-              "Fn::Join": [
-                "",
-                [
-                  {
-                    "Fn::Sub": [
-                      "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
-                      {
-                        "appId": {
-                          "Ref": "secretsPathAmplifyAppId"
-                        },
-                        "env": {
-                          "Ref": "env"
-                        },
-                        "functionName": "spiderEngines"
-                      }
-                    ]
-                  },
-                  "factualKey"
-                ]
-              ]
-            },
             "googleKey": {
               "Fn::Join": [
                 "",
@@ -260,6 +238,50 @@
                     ]
                   },
                   "yellowpagesKey"
+                ]
+              ]
+            },
+            "yelpApiToken": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Sub": [
+                      "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
+                      {
+                        "appId": {
+                          "Ref": "secretsPathAmplifyAppId"
+                        },
+                        "env": {
+                          "Ref": "env"
+                        },
+                        "functionName": "spiderEngines"
+                      }
+                    ]
+                  },
+                  "yelpApiToken"
+                ]
+              ]
+            },
+            "foursquareApiKey": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Sub": [
+                      "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
+                      {
+                        "appId": {
+                          "Ref": "secretsPathAmplifyAppId"
+                        },
+                        "env": {
+                          "Ref": "env"
+                        },
+                        "functionName": "spiderEngines"
+                      }
+                    ]
+                  },
+                  "foursquareApiKey"
                 ]
               ]
             }

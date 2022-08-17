@@ -2,19 +2,39 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreatePostInput = {
+export type CreateWebCrawlInput = {
   id?: string | null,
-  title: string,
+  url?: string | null,
+  dateTime?: string | null,
+  domainID: string,
+  custom?: WebResultInput | null,
+  nu?: WebResultInput | null,
+  lighthouse?: WebResultInput | null,
   owner?: string | null,
   _version?: number | null,
 };
 
-export type ModelPostConditionInput = {
-  title?: ModelStringInput | null,
+export type WebResultInput = {
+  data?: string | null,
+  type?: WEBCRAWLERS | null,
+  unstructured?: string | null,
+};
+
+export enum WEBCRAWLERS {
+  NU = "NU",
+  LIGHTHOUSE = "LIGHTHOUSE",
+  CUSTOM = "CUSTOM",
+}
+
+
+export type ModelWebCrawlConditionInput = {
+  url?: ModelStringInput | null,
+  dateTime?: ModelStringInput | null,
+  domainID?: ModelIDInput | null,
   owner?: ModelStringInput | null,
-  and?: Array< ModelPostConditionInput | null > | null,
-  or?: Array< ModelPostConditionInput | null > | null,
-  not?: ModelPostConditionInput | null,
+  and?: Array< ModelWebCrawlConditionInput | null > | null,
+  or?: Array< ModelWebCrawlConditionInput | null > | null,
+  not?: ModelWebCrawlConditionInput | null,
 };
 
 export type ModelStringInput = {
@@ -55,65 +75,6 @@ export type ModelSizeInput = {
   ge?: number | null,
   gt?: number | null,
   between?: Array< number | null > | null,
-};
-
-export type Post = {
-  __typename: "Post",
-  id: string,
-  title: string,
-  owner?: string | null,
-  createdAt: string,
-  updatedAt: string,
-  _version: number,
-  _deleted?: boolean | null,
-  _lastChangedAt: number,
-};
-
-export type UpdatePostInput = {
-  id: string,
-  title?: string | null,
-  owner?: string | null,
-  _version?: number | null,
-};
-
-export type DeletePostInput = {
-  id: string,
-  _version?: number | null,
-};
-
-export type CreateWebCrawlInput = {
-  id?: string | null,
-  url?: string | null,
-  dateTime?: string | null,
-  domainID: string,
-  custom?: WebResultInput | null,
-  nu?: WebResultInput | null,
-  lighthouse?: WebResultInput | null,
-  owner?: string | null,
-  _version?: number | null,
-};
-
-export type WebResultInput = {
-  data?: string | null,
-  type?: WEBCRAWLERS | null,
-  unstructured?: string | null,
-};
-
-export enum WEBCRAWLERS {
-  NU = "NU",
-  LIGHTHOUSE = "LIGHTHOUSE",
-  CUSTOM = "CUSTOM",
-}
-
-
-export type ModelWebCrawlConditionInput = {
-  url?: ModelStringInput | null,
-  dateTime?: ModelStringInput | null,
-  domainID?: ModelIDInput | null,
-  owner?: ModelStringInput | null,
-  and?: Array< ModelWebCrawlConditionInput | null > | null,
-  or?: Array< ModelWebCrawlConditionInput | null > | null,
-  not?: ModelWebCrawlConditionInput | null,
 };
 
 export type ModelIDInput = {
@@ -293,13 +254,20 @@ export type Domain = {
   id: string,
   name?: string | null,
   owner?: string | null,
-  EngineCrawls?: ModelWebCrawlConnection | null,
+  EngineCrawls?: ModelEngineCrawlConnection | null,
   WebCrawls?: ModelWebCrawlConnection | null,
   createdAt: string,
   updatedAt: string,
   _version: number,
   _deleted?: boolean | null,
   _lastChangedAt: number,
+};
+
+export type ModelEngineCrawlConnection = {
+  __typename: "ModelEngineCrawlConnection",
+  items:  Array<EngineCrawl | null >,
+  nextToken?: string | null,
+  startedAt?: number | null,
 };
 
 export type ModelWebCrawlConnection = {
@@ -319,22 +287,6 @@ export type UpdateDomainInput = {
 export type DeleteDomainInput = {
   id: string,
   _version?: number | null,
-};
-
-export type ModelPostFilterInput = {
-  id?: ModelIDInput | null,
-  title?: ModelStringInput | null,
-  owner?: ModelStringInput | null,
-  and?: Array< ModelPostFilterInput | null > | null,
-  or?: Array< ModelPostFilterInput | null > | null,
-  not?: ModelPostFilterInput | null,
-};
-
-export type ModelPostConnection = {
-  __typename: "ModelPostConnection",
-  items:  Array<Post | null >,
-  nextToken?: string | null,
-  startedAt?: number | null,
 };
 
 export type ModelWebCrawlFilterInput = {
@@ -360,13 +312,6 @@ export type ModelEngineCrawlFilterInput = {
   not?: ModelEngineCrawlFilterInput | null,
 };
 
-export type ModelEngineCrawlConnection = {
-  __typename: "ModelEngineCrawlConnection",
-  items:  Array<EngineCrawl | null >,
-  nextToken?: string | null,
-  startedAt?: number | null,
-};
-
 export type ModelDomainFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
@@ -383,61 +328,30 @@ export type ModelDomainConnection = {
   startedAt?: number | null,
 };
 
-export type CreatePostMutationVariables = {
-  input: CreatePostInput,
-  condition?: ModelPostConditionInput | null,
+export type CrawlEnginesMutationVariables = {
+  search?: string | null,
+  postalCode?: string | null,
 };
 
-export type CreatePostMutation = {
-  createPost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-  } | null,
+export type CrawlEnginesMutation = {
+  crawlEngines?: string | null,
 };
 
-export type UpdatePostMutationVariables = {
-  input: UpdatePostInput,
-  condition?: ModelPostConditionInput | null,
+export type CrawlKeywordsMutationVariables = {
+  search?: string | null,
+  url?: string | null,
 };
 
-export type UpdatePostMutation = {
-  updatePost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-  } | null,
+export type CrawlKeywordsMutation = {
+  crawlKeywords?: string | null,
 };
 
-export type DeletePostMutationVariables = {
-  input: DeletePostInput,
-  condition?: ModelPostConditionInput | null,
+export type CrawlWebsMutationVariables = {
+  url?: string | null,
 };
 
-export type DeletePostMutation = {
-  deletePost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-  } | null,
+export type CrawlWebsMutation = {
+  crawlWebs?: string | null,
 };
 
 export type CreateWebCrawlMutationVariables = {
@@ -803,7 +717,7 @@ export type CreateDomainMutation = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,
@@ -832,7 +746,7 @@ export type UpdateDomainMutation = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,
@@ -861,7 +775,7 @@ export type DeleteDomainMutation = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,
@@ -875,75 +789,6 @@ export type DeleteDomainMutation = {
     _version: number,
     _deleted?: boolean | null,
     _lastChangedAt: number,
-  } | null,
-};
-
-export type GetPostQueryVariables = {
-  id: string,
-};
-
-export type GetPostQuery = {
-  getPost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-  } | null,
-};
-
-export type ListPostsQueryVariables = {
-  filter?: ModelPostFilterInput | null,
-  limit?: number | null,
-  nextToken?: string | null,
-};
-
-export type ListPostsQuery = {
-  listPosts?:  {
-    __typename: "ModelPostConnection",
-    items:  Array< {
-      __typename: "Post",
-      id: string,
-      title: string,
-      owner?: string | null,
-      createdAt: string,
-      updatedAt: string,
-      _version: number,
-      _deleted?: boolean | null,
-      _lastChangedAt: number,
-    } | null >,
-    nextToken?: string | null,
-    startedAt?: number | null,
-  } | null,
-};
-
-export type SyncPostsQueryVariables = {
-  filter?: ModelPostFilterInput | null,
-  limit?: number | null,
-  nextToken?: string | null,
-  lastSync?: number | null,
-};
-
-export type SyncPostsQuery = {
-  syncPosts?:  {
-    __typename: "ModelPostConnection",
-    items:  Array< {
-      __typename: "Post",
-      id: string,
-      title: string,
-      owner?: string | null,
-      createdAt: string,
-      updatedAt: string,
-      _version: number,
-      _deleted?: boolean | null,
-      _lastChangedAt: number,
-    } | null >,
-    nextToken?: string | null,
-    startedAt?: number | null,
   } | null,
 };
 
@@ -1185,7 +1030,7 @@ export type GetDomainQuery = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,
@@ -1250,60 +1095,6 @@ export type SyncDomainsQuery = {
     } | null >,
     nextToken?: string | null,
     startedAt?: number | null,
-  } | null,
-};
-
-export type OnCreatePostSubscriptionVariables = {
-  owner?: string | null,
-};
-
-export type OnCreatePostSubscription = {
-  onCreatePost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-  } | null,
-};
-
-export type OnUpdatePostSubscriptionVariables = {
-  owner?: string | null,
-};
-
-export type OnUpdatePostSubscription = {
-  onUpdatePost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
-  } | null,
-};
-
-export type OnDeletePostSubscriptionVariables = {
-  owner?: string | null,
-};
-
-export type OnDeletePostSubscription = {
-  onDeletePost?:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    owner?: string | null,
-    createdAt: string,
-    updatedAt: string,
-    _version: number,
-    _deleted?: boolean | null,
-    _lastChangedAt: number,
   } | null,
 };
 
@@ -1663,7 +1454,7 @@ export type OnCreateDomainSubscription = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,
@@ -1691,7 +1482,7 @@ export type OnUpdateDomainSubscription = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,
@@ -1719,7 +1510,7 @@ export type OnDeleteDomainSubscription = {
     name?: string | null,
     owner?: string | null,
     EngineCrawls?:  {
-      __typename: "ModelWebCrawlConnection",
+      __typename: "ModelEngineCrawlConnection",
       nextToken?: string | null,
       startedAt?: number | null,
     } | null,

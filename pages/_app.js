@@ -7,8 +7,7 @@ import { CacheProvider } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import awsConfig from '../src/aws-exports';
-import Amplify from '@aws-amplify/core';
-import { AuthModeStrategyType } from 'aws-amplify';
+import Amplify, { AuthModeStrategyType } from 'aws-amplify';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -27,27 +26,28 @@ if(typeof window !== 'undefined' ) {
 }
 
 // Assuming two redirect URIs, and the first is for localhost and second is for production
-// const [
-//   localRedirectSignIn,
-//   productionRedirectSignIn,
-// ] = awsConfig?.oauth?.redirectSignIn.split(",") || [];
+const [
+  localRedirectSignIn,
+  productionRedirectSignIn,
+] = awsConfig?.oauth?.redirectSignIn.split(",") || [];
 
-// const [
-//   localRedirectSignOut,
-//   productionRedirectSignOut,
-// ] = awsConfig?.oauth?.redirectSignOut.split(",") || [];
+const [
+  localRedirectSignOut,
+  productionRedirectSignOut,
+] = awsConfig?.oauth?.redirectSignOut.split(",") || [];
 
 const updatedAwsConfig = {
   ...awsConfig,
   oauth: {
     ...awsConfig.oauth,
-    // redirectSignIn: isLocalhost ? localRedirectSignIn : productionRedirectSignIn,
-    // redirectSignOut: isLocalhost ? localRedirectSignOut : productionRedirectSignOut,
+    redirectSignIn: isLocalhost ? localRedirectSignIn : productionRedirectSignIn,
+    redirectSignOut: isLocalhost ? localRedirectSignOut : productionRedirectSignOut,
   }
 }
 
 Amplify.configure({
   ...updatedAwsConfig,
+  // ssr: true,
   DataStore: {
     authModeStrategyType: AuthModeStrategyType.MULTI_AUTH
   }

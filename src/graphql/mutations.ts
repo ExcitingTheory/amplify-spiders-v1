@@ -2,70 +2,19 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const spiderEngineCrawl = /* GraphQL */ `
-  mutation SpiderEngineCrawl($options: AWSJSON) {
-    spiderEngineCrawl(options: $options)
+export const crawlEngines = /* GraphQL */ `
+  mutation CrawlEngines($search: String, $postalCode: String) {
+    crawlEngines(search: $search, postalCode: $postalCode)
   }
 `;
-export const spiderKeywordCrawl = /* GraphQL */ `
-  mutation SpiderKeywordCrawl($options: AWSJSON) {
-    spiderKeywordCrawl(options: $options)
+export const crawlKeywords = /* GraphQL */ `
+  mutation CrawlKeywords($search: String, $url: String) {
+    crawlKeywords(search: $search, url: $url)
   }
 `;
-export const spiderWebCrawl = /* GraphQL */ `
-  mutation SpiderWebCrawl($options: AWSJSON) {
-    spiderWebCrawl(options: $options)
-  }
-`;
-export const createPost = /* GraphQL */ `
-  mutation CreatePost(
-    $input: CreatePostInput!
-    $condition: ModelPostConditionInput
-  ) {
-    createPost(input: $input, condition: $condition) {
-      id
-      title
-      owner
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const updatePost = /* GraphQL */ `
-  mutation UpdatePost(
-    $input: UpdatePostInput!
-    $condition: ModelPostConditionInput
-  ) {
-    updatePost(input: $input, condition: $condition) {
-      id
-      title
-      owner
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const deletePost = /* GraphQL */ `
-  mutation DeletePost(
-    $input: DeletePostInput!
-    $condition: ModelPostConditionInput
-  ) {
-    deletePost(input: $input, condition: $condition) {
-      id
-      title
-      owner
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
+export const crawlWebs = /* GraphQL */ `
+  mutation CrawlWebs($url: String) {
+    crawlWebs(url: $url)
   }
 `;
 export const createWebCrawl = /* GraphQL */ `

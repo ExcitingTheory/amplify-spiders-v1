@@ -1,14 +1,33 @@
+type Mutation {
+  crawlEngines(search: String, postalCode: String): String @function(name: "spiderEngines-${env}")
+  crawlKeywords(search: String, url: String): String @function(name: "spiderKeywords-${env}")
+  crawlWebs(url: String): String @function(name: "spiderWebs-${env}")
+}
+
 type WebResult {
   data: AWSJSON
-  type: WEBCRAWLERS
+  parsed: AWSJSON
   unstructured: String
+  search: String
+  zipCode: Integer
+  domain: String
+  type: WEBCRAWLERS
 }
+    "highScore": 0.9523809523809523,
+    "foundWebsite": true,
+    "mostLikely": 2,
+    "exactMatch": 0 }
+
 
 type EngineResult {
   data: AWSJSON
-  jsonPathToRecord: String
-  rank: Int
-  totalResults: Int
+  results: AWSJSON
+  search: String
+  zipCode: Integer
+  highScore: Float
+  foundWebsite: true
+  domain: String
+  rank: Integer
   type: ENGINECRAWLERS
 }
 
@@ -19,6 +38,7 @@ enum ENGINECRAWLERS {
   FACEBOOK
   YELP
   INFOGROUP
+  CITYSEARCH
   YELLOW_PAGES
 }
 

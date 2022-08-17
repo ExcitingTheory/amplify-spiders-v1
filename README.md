@@ -23,9 +23,10 @@ amplify push
 ```
 
 --force?  didn't end up doing that
-https://github.com/aws-amplify/amplify-adminui/issues/472
+https://github.com/aws-amplify/amplify-adminui/issues/472 
 
-There was an extra bucket that was preventing the social provider thing: amplifyspidersv18ed89556verificationbucket-dev deleted and republished
+What ended up working was creating auth without federation.  
+
 
 ```bash
 amplify publish 
@@ -42,4 +43,12 @@ graphql access in lambdas
         API_SPIDERS1_GRAPHQLAPIIDOUTPUT
         ENV
         REGION
+```
+
+Example:
+
+```graphql
+mutation MyMutation {
+  crawlEngines(search:"bend brewing company", postalCode:"97702")
+}
 ```

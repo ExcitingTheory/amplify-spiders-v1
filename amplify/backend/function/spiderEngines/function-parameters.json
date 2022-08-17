@@ -9,13 +9,14 @@
   },
   "lambdaLayers": [],
   "secretNames": [
-    "factualKey",
     "googleKey",
     "googleCx",
     "foursquareClientId",
     "foursquareClientSecret",
     "facebookAccessToken",
     "infogroupApiKey",
-    "yellowpagesKey"
+    "yellowpagesKey",
+    "yelpApiToken",
+    "foursquareApiKey"
   ]
 }

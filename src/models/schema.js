@@ -58,6 +58,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "owner": {
+                    "name": "owner",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -99,13 +106,13 @@ export const schema = {
                                 "provider": "userPools",
                                 "ownerField": "owner",
                                 "allow": "owner",
-                                "identityClaim": "cognito:username",
                                 "operations": [
                                     "create",
                                     "update",
                                     "delete",
                                     "read"
-                                ]
+                                ],
+                                "identityClaim": "cognito:username"
                             }
                         ]
                     }
@@ -213,6 +220,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "owner": {
+                    "name": "owner",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -254,13 +268,13 @@ export const schema = {
                                 "provider": "userPools",
                                 "ownerField": "owner",
                                 "allow": "owner",
-                                "identityClaim": "cognito:username",
                                 "operations": [
                                     "create",
                                     "update",
                                     "delete",
                                     "read"
-                                ]
+                                ],
+                                "identityClaim": "cognito:username"
                             }
                         ]
                     }
@@ -284,6 +298,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "owner": {
+                    "name": "owner",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "EngineCrawls": {
                     "name": "EngineCrawls",
                     "isArray": true,
@@ -302,7 +323,7 @@ export const schema = {
                     "name": "WebCrawls",
                     "isArray": true,
                     "type": {
-                        "model": "EngineCrawl"
+                        "model": "WebCrawl"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -344,13 +365,13 @@ export const schema = {
                                 "provider": "userPools",
                                 "ownerField": "owner",
                                 "allow": "owner",
-                                "identityClaim": "cognito:username",
                                 "operations": [
                                     "create",
                                     "update",
                                     "delete",
                                     "read"
-                                ]
+                                ],
+                                "identityClaim": "cognito:username"
                             }
                         ]
                     }
@@ -452,5 +473,5 @@ export const schema = {
             }
         }
     },
-    "version": "268e161cf44f3dc32a19ddaef5fb7704"
+    "version": "0601393f212868a7ecabb1ad973553f9"
 };
