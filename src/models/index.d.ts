@@ -13,21 +13,42 @@ export enum Enginecrawlers {
   FACEBOOK = "FACEBOOK",
   YELP = "YELP",
   INFOGROUP = "INFOGROUP",
+  CITYSEARCH = "CITYSEARCH",
   YELLOW_PAGES = "YELLOW_PAGES"
 }
 
 export declare class WebResult {
   readonly data?: string | null;
-  readonly type?: Webcrawlers | keyof typeof Webcrawlers | null;
+  readonly parsed?: string | null;
   readonly unstructured?: string | null;
+  readonly type?: Webcrawlers | keyof typeof Webcrawlers | null;
   constructor(init: ModelInit<WebResult>);
+}
+
+export declare class ParsedEngineResultValue {
+  readonly key?: number | null;
+  readonly name?: string | null;
+  readonly score?: number | null;
+  readonly websiteUrl?: string | null;
+  constructor(init: ModelInit<ParsedEngineResultValue>);
+}
+
+export declare class ParsedEngineResult {
+  readonly status?: string | null;
+  readonly value?: ParsedEngineResultValue | null;
+  constructor(init: ModelInit<ParsedEngineResult>);
 }
 
 export declare class EngineResult {
   readonly data?: string | null;
-  readonly jsonPathToRecord?: string | null;
+  readonly results?: (ParsedEngineResult | null)[] | null;
+  readonly highScore?: number | null;
+  readonly foundWebsite?: boolean | null;
+  readonly mostLikely?: number | null;
+  readonly exactWebsiteMatch?: number | null;
+  readonly exactWebsiteMatchHttp?: number | null;
+  readonly exactNameMatch?: number | null;
   readonly rank?: number | null;
-  readonly totalResults?: number | null;
   readonly type?: Enginecrawlers | keyof typeof Enginecrawlers | null;
   constructor(init: ModelInit<EngineResult>);
 }
@@ -47,7 +68,6 @@ type DomainMetaData = {
 export declare class WebCrawl {
   readonly id: string;
   readonly url?: string | null;
-  readonly dateTime?: string | null;
   readonly domainID: string;
   readonly custom?: WebResult | null;
   readonly nu?: WebResult | null;
@@ -61,10 +81,9 @@ export declare class WebCrawl {
 
 export declare class EngineCrawl {
   readonly id: string;
-  readonly dateTime?: string | null;
   readonly search?: string | null;
   readonly domainID: string;
-  readonly zipCode?: string | null;
+  readonly postalCode?: string | null;
   readonly keywordPlanner?: EngineResult | null;
   readonly google?: EngineResult | null;
   readonly foursquare?: EngineResult | null;

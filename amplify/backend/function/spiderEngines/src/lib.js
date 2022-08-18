@@ -108,25 +108,24 @@ exports.parseCitysearch = async function (data, search, postalCode, domainName) 
 
   
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
-  
   // console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
   if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
     let website = await getRequest(toSearch[websiteCheckIndex]["website"])
-    let websiteUrl = "";
 
     if (website?.request?.res?.responseUrl) {
-      websiteUrl = website.request.res.responseUrl
-      if (websiteUrl.includes(domainName)) {
+      console.log('website?.request?.res?.responseUrl', website?.request?.res?.responseUrl)
+      const found = website.request.res.responseUrl
+      if (found.includes(domainName)) {
         foundWebsite = true
         mostLikely = websiteCheckIndex
-        results[websiteCheckIndex]["value"]["websiteUrl"] = websiteUrl
+        results[websiteCheckIndex]["value"]["websiteUrl"] = found
       }
   
-      if (websiteUrl === `https://www.${domainName}/` || websiteUrl === `https://${domainName}/`) {
+      if (found === `https://www.${domainName}/` || found === `https://${domainName}/`) {
         exactWebsiteMatch = websiteCheckIndex
       }
   
-      if (websiteUrl === `http://www.${domainName}/` || websiteUrl === `http://${domainName}/`) {
+      if (found === `http://www.${domainName}/` || found === `http://${domainName}/`) {
         exactWebsiteMatchHttp = websiteCheckIndex
       }
 
@@ -288,7 +287,6 @@ exports.parseYelp = async function (data, search, postalCode, domainName) {
   const results = await Promise.allSettled(promises)
 
   /** Visit yelp site and grab all hrefs */
-  let websiteUrl = "";
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
   console.log('toSearch[websiteCheckIndex]["url"]', toSearch[websiteCheckIndex]["url"])
   if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["url"]) {

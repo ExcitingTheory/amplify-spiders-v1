@@ -1,5 +1,5 @@
 type Mutation {
-  crawlEngines(search: String, postalCode: String): String @function(name: "spiderEngines-${env}")
+  crawlEngines(search: String, postalCode: String, domainId: String, apexDomain: String): String @function(name: "spiderEngines-${env}")
   crawlKeywords(search: String, url: String): String @function(name: "spiderKeywords-${env}")
   crawlWebs(url: String): String @function(name: "spiderWebs-${env}")
 }
@@ -8,27 +8,34 @@ type WebResult {
   data: AWSJSON
   parsed: AWSJSON
   unstructured: String
-  search: String
-  zipCode: Integer
-  domain: String
   type: WEBCRAWLERS
 }
-    "highScore": 0.9523809523809523,
-    "foundWebsite": true,
-    "mostLikely": 2,
-    "exactMatch": 0 }
 
+
+type ParsedEngineResultValue {
+  key: Int
+  name: String
+  score: Float
+  websiteUrl: String
+}
+
+
+type ParsedEngineResult {
+  status: String
+  value: ParsedEngineResultValue
+}
 
 type EngineResult {
-  data: AWSJSON
-  results: AWSJSON
-  search: String
-  zipCode: Integer
+  data: AWSJSON # Raw request data
+  results: [ParsedEngineResult] # parsed results
   highScore: Float
-  foundWebsite: true
-  domain: String
-  rank: Integer
-  type: ENGINECRAWLERS
+  foundWebsite: Boolean # Something matched a domain
+  mostLikely: Int # key in results
+  exactWebsiteMatch: Int # key in results
+  exactWebsiteMatchHttp: Int # key in results
+  exactNameMatch: Int # key in results
+  rank: Int # where in the searched listings was the listing found
+  type: ENGINECRAWLERS # Which search engine were the results from
 }
 
 enum ENGINECRAWLERS {
@@ -54,7 +61,6 @@ type WebCrawl @model @auth(
     ]) {
   id: ID!
   url: String
-  dateTime: AWSDateTime
   domainID: ID! @index(name: "byDomain")
   custom: WebResult
   nu: WebResult
@@ -67,10 +73,9 @@ type EngineCrawl @model @auth(
       { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
     ]) {
   id: ID!
-  dateTime: AWSDateTime
   search: String
   domainID: ID! @index(name: "byDomain")
-  zipCode: String
+  postalCode: String
   keywordPlanner: EngineResult
   google: EngineResult
   foursquare: EngineResult

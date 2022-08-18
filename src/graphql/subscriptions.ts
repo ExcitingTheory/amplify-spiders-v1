@@ -7,22 +7,24 @@ export const onCreateWebCrawl = /* GraphQL */ `
     onCreateWebCrawl(owner: $owner) {
       id
       url
-      dateTime
       domainID
       custom {
         data
-        type
+        parsed
         unstructured
+        type
       }
       nu {
         data
-        type
+        parsed
         unstructured
+        type
       }
       lighthouse {
         data
-        type
+        parsed
         unstructured
+        type
       }
       owner
       createdAt
@@ -38,22 +40,24 @@ export const onUpdateWebCrawl = /* GraphQL */ `
     onUpdateWebCrawl(owner: $owner) {
       id
       url
-      dateTime
       domainID
       custom {
         data
-        type
+        parsed
         unstructured
+        type
       }
       nu {
         data
-        type
+        parsed
         unstructured
+        type
       }
       lighthouse {
         data
-        type
+        parsed
         unstructured
+        type
       }
       owner
       createdAt
@@ -69,22 +73,24 @@ export const onDeleteWebCrawl = /* GraphQL */ `
     onDeleteWebCrawl(owner: $owner) {
       id
       url
-      dateTime
       domainID
       custom {
         data
-        type
+        parsed
         unstructured
+        type
       }
       nu {
         data
-        type
+        parsed
         unstructured
+        type
       }
       lighthouse {
         data
-        type
+        parsed
         unstructured
+        type
       }
       owner
       createdAt
@@ -99,57 +105,105 @@ export const onCreateEngineCrawl = /* GraphQL */ `
   subscription OnCreateEngineCrawl($owner: String) {
     onCreateEngineCrawl(owner: $owner) {
       id
-      dateTime
       search
       domainID
-      zipCode
+      postalCode
       keywordPlanner {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       google {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       foursquare {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       facebook {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       yelp {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       infogroup {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       yellowPages {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       owner
@@ -165,57 +219,105 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
   subscription OnUpdateEngineCrawl($owner: String) {
     onUpdateEngineCrawl(owner: $owner) {
       id
-      dateTime
       search
       domainID
-      zipCode
+      postalCode
       keywordPlanner {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       google {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       foursquare {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       facebook {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       yelp {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       infogroup {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       yellowPages {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       owner
@@ -231,57 +333,105 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
   subscription OnDeleteEngineCrawl($owner: String) {
     onDeleteEngineCrawl(owner: $owner) {
       id
-      dateTime
       search
       domainID
-      zipCode
+      postalCode
       keywordPlanner {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       google {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       foursquare {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       facebook {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       yelp {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       infogroup {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       yellowPages {
         data
-        jsonPathToRecord
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
         rank
-        totalResults
         type
       }
       owner
@@ -300,10 +450,33 @@ export const onCreateDomain = /* GraphQL */ `
       name
       owner
       EngineCrawls {
+        items {
+          id
+          search
+          domainID
+          postalCode
+          owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         nextToken
         startedAt
       }
       WebCrawls {
+        items {
+          id
+          url
+          domainID
+          owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         nextToken
         startedAt
       }
@@ -322,10 +495,33 @@ export const onUpdateDomain = /* GraphQL */ `
       name
       owner
       EngineCrawls {
+        items {
+          id
+          search
+          domainID
+          postalCode
+          owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         nextToken
         startedAt
       }
       WebCrawls {
+        items {
+          id
+          url
+          domainID
+          owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         nextToken
         startedAt
       }
@@ -344,10 +540,33 @@ export const onDeleteDomain = /* GraphQL */ `
       name
       owner
       EngineCrawls {
+        items {
+          id
+          search
+          domainID
+          postalCode
+          owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         nextToken
         startedAt
       }
       WebCrawls {
+        items {
+          id
+          url
+          domainID
+          owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         nextToken
         startedAt
       }

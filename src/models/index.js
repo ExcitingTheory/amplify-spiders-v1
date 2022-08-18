@@ -15,10 +15,11 @@ const Enginecrawlers = {
   "FACEBOOK": "FACEBOOK",
   "YELP": "YELP",
   "INFOGROUP": "INFOGROUP",
+  "CITYSEARCH": "CITYSEARCH",
   "YELLOW_PAGES": "YELLOW_PAGES"
 };
 
-const { WebCrawl, EngineCrawl, Domain, WebResult, EngineResult } = initSchema(schema);
+const { WebCrawl, EngineCrawl, Domain, WebResult, ParsedEngineResultValue, ParsedEngineResult, EngineResult } = initSchema(schema);
 
 export {
   WebCrawl,
@@ -27,5 +28,7 @@ export {
   Webcrawlers,
   Enginecrawlers,
   WebResult,
+  ParsedEngineResultValue,
+  ParsedEngineResult,
   EngineResult
 };

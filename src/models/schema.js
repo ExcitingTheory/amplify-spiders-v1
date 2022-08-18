@@ -17,13 +17,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "dateTime": {
-                    "name": "dateTime",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "domainID": {
                     "name": "domainID",
                     "isArray": false,
@@ -129,13 +122,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "dateTime": {
-                    "name": "dateTime",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "search": {
                     "name": "search",
                     "isArray": false,
@@ -150,8 +136,8 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "zipCode": {
-                    "name": "zipCode",
+                "postalCode": {
+                    "name": "postalCode",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -397,6 +383,7 @@ export const schema = {
                 "FACEBOOK",
                 "YELP",
                 "INFOGROUP",
+                "CITYSEARCH",
                 "YELLOW_PAGES"
             ]
         }
@@ -412,6 +399,20 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "parsed": {
+                    "name": "parsed",
+                    "isArray": false,
+                    "type": "AWSJSON",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "unstructured": {
+                    "name": "unstructured",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "type": {
                     "name": "type",
                     "isArray": false,
@@ -420,11 +421,58 @@ export const schema = {
                     },
                     "isRequired": false,
                     "attributes": []
+                }
+            }
+        },
+        "ParsedEngineResultValue": {
+            "name": "ParsedEngineResultValue",
+            "fields": {
+                "key": {
+                    "name": "key",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
                 },
-                "unstructured": {
-                    "name": "unstructured",
+                "name": {
+                    "name": "name",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "score": {
+                    "name": "score",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "websiteUrl": {
+                    "name": "websiteUrl",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            }
+        },
+        "ParsedEngineResult": {
+            "name": "ParsedEngineResult",
+            "fields": {
+                "status": {
+                    "name": "status",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "value": {
+                    "name": "value",
+                    "isArray": false,
+                    "type": {
+                        "nonModel": "ParsedEngineResultValue"
+                    },
                     "isRequired": false,
                     "attributes": []
                 }
@@ -440,22 +488,60 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "jsonPathToRecord": {
-                    "name": "jsonPathToRecord",
+                "results": {
+                    "name": "results",
+                    "isArray": true,
+                    "type": {
+                        "nonModel": "ParsedEngineResult"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true
+                },
+                "highScore": {
+                    "name": "highScore",
                     "isArray": false,
-                    "type": "String",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "rank": {
-                    "name": "rank",
+                "foundWebsite": {
+                    "name": "foundWebsite",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "mostLikely": {
+                    "name": "mostLikely",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "totalResults": {
-                    "name": "totalResults",
+                "exactWebsiteMatch": {
+                    "name": "exactWebsiteMatch",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "exactWebsiteMatchHttp": {
+                    "name": "exactWebsiteMatchHttp",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "exactNameMatch": {
+                    "name": "exactNameMatch",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "rank": {
+                    "name": "rank",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
@@ -473,5 +559,5 @@ export const schema = {
             }
         }
     },
-    "version": "0601393f212868a7ecabb1ad973553f9"
+    "version": "20c9d76596943494d9a449cb17486d72"
 };
