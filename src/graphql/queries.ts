@@ -130,7 +130,23 @@ export const getEngineCrawl = /* GraphQL */ `
       search
       domainID
       postalCode
-      keywordPlanner {
+      keywordplanner {
+        status
+        data
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
+        rank
+        type
+      }
+      citysearch {
+        status
         data
         results {
           status
@@ -145,6 +161,7 @@ export const getEngineCrawl = /* GraphQL */ `
         type
       }
       google {
+        status
         data
         results {
           status
@@ -159,6 +176,7 @@ export const getEngineCrawl = /* GraphQL */ `
         type
       }
       foursquare {
+        status
         data
         results {
           status
@@ -173,6 +191,7 @@ export const getEngineCrawl = /* GraphQL */ `
         type
       }
       facebook {
+        status
         data
         results {
           status
@@ -187,6 +206,7 @@ export const getEngineCrawl = /* GraphQL */ `
         type
       }
       yelp {
+        status
         data
         results {
           status
@@ -201,6 +221,7 @@ export const getEngineCrawl = /* GraphQL */ `
         type
       }
       infogroup {
+        status
         data
         results {
           status
@@ -214,7 +235,8 @@ export const getEngineCrawl = /* GraphQL */ `
         rank
         type
       }
-      yellowPages {
+      yellowpages {
+        status
         data
         results {
           status
@@ -249,7 +271,20 @@ export const listEngineCrawls = /* GraphQL */ `
         search
         domainID
         postalCode
-        keywordPlanner {
+        keywordplanner {
+          status
+          data
+          highScore
+          foundWebsite
+          mostLikely
+          exactWebsiteMatch
+          exactWebsiteMatchHttp
+          exactNameMatch
+          rank
+          type
+        }
+        citysearch {
+          status
           data
           highScore
           foundWebsite
@@ -261,6 +296,7 @@ export const listEngineCrawls = /* GraphQL */ `
           type
         }
         google {
+          status
           data
           highScore
           foundWebsite
@@ -272,6 +308,7 @@ export const listEngineCrawls = /* GraphQL */ `
           type
         }
         foursquare {
+          status
           data
           highScore
           foundWebsite
@@ -283,6 +320,7 @@ export const listEngineCrawls = /* GraphQL */ `
           type
         }
         facebook {
+          status
           data
           highScore
           foundWebsite
@@ -294,6 +332,7 @@ export const listEngineCrawls = /* GraphQL */ `
           type
         }
         yelp {
+          status
           data
           highScore
           foundWebsite
@@ -305,6 +344,7 @@ export const listEngineCrawls = /* GraphQL */ `
           type
         }
         infogroup {
+          status
           data
           highScore
           foundWebsite
@@ -315,7 +355,8 @@ export const listEngineCrawls = /* GraphQL */ `
           rank
           type
         }
-        yellowPages {
+        yellowpages {
+          status
           data
           highScore
           foundWebsite
@@ -356,7 +397,20 @@ export const syncEngineCrawls = /* GraphQL */ `
         search
         domainID
         postalCode
-        keywordPlanner {
+        keywordplanner {
+          status
+          data
+          highScore
+          foundWebsite
+          mostLikely
+          exactWebsiteMatch
+          exactWebsiteMatchHttp
+          exactNameMatch
+          rank
+          type
+        }
+        citysearch {
+          status
           data
           highScore
           foundWebsite
@@ -368,6 +422,7 @@ export const syncEngineCrawls = /* GraphQL */ `
           type
         }
         google {
+          status
           data
           highScore
           foundWebsite
@@ -379,6 +434,7 @@ export const syncEngineCrawls = /* GraphQL */ `
           type
         }
         foursquare {
+          status
           data
           highScore
           foundWebsite
@@ -390,6 +446,7 @@ export const syncEngineCrawls = /* GraphQL */ `
           type
         }
         facebook {
+          status
           data
           highScore
           foundWebsite
@@ -401,6 +458,7 @@ export const syncEngineCrawls = /* GraphQL */ `
           type
         }
         yelp {
+          status
           data
           highScore
           foundWebsite
@@ -412,6 +470,7 @@ export const syncEngineCrawls = /* GraphQL */ `
           type
         }
         infogroup {
+          status
           data
           highScore
           foundWebsite
@@ -422,7 +481,8 @@ export const syncEngineCrawls = /* GraphQL */ `
           rank
           type
         }
-        yellowPages {
+        yellowpages {
+          status
           data
           highScore
           foundWebsite

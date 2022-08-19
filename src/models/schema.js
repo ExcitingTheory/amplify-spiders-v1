@@ -143,8 +143,17 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "keywordPlanner": {
-                    "name": "keywordPlanner",
+                "keywordplanner": {
+                    "name": "keywordplanner",
+                    "isArray": false,
+                    "type": {
+                        "nonModel": "EngineResult"
+                    },
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "citysearch": {
+                    "name": "citysearch",
                     "isArray": false,
                     "type": {
                         "nonModel": "EngineResult"
@@ -197,8 +206,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "yellowPages": {
-                    "name": "yellowPages",
+                "yellowpages": {
+                    "name": "yellowpages",
                     "isArray": false,
                     "type": {
                         "nonModel": "EngineResult"
@@ -481,6 +490,13 @@ export const schema = {
         "EngineResult": {
             "name": "EngineResult",
             "fields": {
+                "status": {
+                    "name": "status",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "data": {
                     "name": "data",
                     "isArray": false,
@@ -559,5 +575,5 @@ export const schema = {
             }
         }
     },
-    "version": "20c9d76596943494d9a449cb17486d72"
+    "version": "7b0108179cb14aa3a41088f1241cd613"
 };

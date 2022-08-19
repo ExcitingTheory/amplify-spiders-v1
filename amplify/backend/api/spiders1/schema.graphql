@@ -1,5 +1,5 @@
 type Mutation {
-  crawlEngines(search: String, postalCode: String, domainId: String, apexDomain: String): String @function(name: "spiderEngines-${env}")
+  crawlEngines(search: String, postalCode: String, domainID: String, apexDomain: String): String @function(name: "spiderEngines-${env}")
   crawlKeywords(search: String, url: String): String @function(name: "spiderKeywords-${env}")
   crawlWebs(url: String): String @function(name: "spiderWebs-${env}")
 }
@@ -26,6 +26,7 @@ type ParsedEngineResult {
 }
 
 type EngineResult {
+  status: String
   data: AWSJSON # Raw request data
   results: [ParsedEngineResult] # parsed results
   highScore: Float
@@ -76,13 +77,14 @@ type EngineCrawl @model @auth(
   search: String
   domainID: ID! @index(name: "byDomain")
   postalCode: String
-  keywordPlanner: EngineResult
+  keywordplanner: EngineResult
+  citysearch: EngineResult
   google: EngineResult
   foursquare: EngineResult
   facebook: EngineResult
   yelp: EngineResult
   infogroup: EngineResult
-  yellowPages: EngineResult
+  yellowpages: EngineResult
   owner: String
 }
 

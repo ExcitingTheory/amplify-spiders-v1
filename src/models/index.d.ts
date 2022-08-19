@@ -40,6 +40,7 @@ export declare class ParsedEngineResult {
 }
 
 export declare class EngineResult {
+  readonly status?: string | null;
   readonly data?: string | null;
   readonly results?: (ParsedEngineResult | null)[] | null;
   readonly highScore?: number | null;
@@ -84,13 +85,14 @@ export declare class EngineCrawl {
   readonly search?: string | null;
   readonly domainID: string;
   readonly postalCode?: string | null;
-  readonly keywordPlanner?: EngineResult | null;
+  readonly keywordplanner?: EngineResult | null;
+  readonly citysearch?: EngineResult | null;
   readonly google?: EngineResult | null;
   readonly foursquare?: EngineResult | null;
   readonly facebook?: EngineResult | null;
   readonly yelp?: EngineResult | null;
   readonly infogroup?: EngineResult | null;
-  readonly yellowPages?: EngineResult | null;
+  readonly yellowpages?: EngineResult | null;
   readonly owner?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;

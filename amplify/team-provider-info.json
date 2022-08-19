@@ -24,7 +24,7 @@
         "spiderEngines": {
           "secretsPathAmplifyAppId": "d39d9izi3mmqnw",
           "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
-          "s3Key": "amplify-builds/spiderEngines-543670416c75316e306b-build.zip"
+          "s3Key": "amplify-builds/spiderEngines-7233747850765250656d-build.zip"
         },
         "spiderKeywords": {
           "secretsPathAmplifyAppId": "d39d9izi3mmqnw",

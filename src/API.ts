@@ -137,18 +137,20 @@ export type CreateEngineCrawlInput = {
   search?: string | null,
   domainID: string,
   postalCode?: string | null,
-  keywordPlanner?: EngineResultInput | null,
+  keywordplanner?: EngineResultInput | null,
+  citysearch?: EngineResultInput | null,
   google?: EngineResultInput | null,
   foursquare?: EngineResultInput | null,
   facebook?: EngineResultInput | null,
   yelp?: EngineResultInput | null,
   infogroup?: EngineResultInput | null,
-  yellowPages?: EngineResultInput | null,
+  yellowpages?: EngineResultInput | null,
   owner?: string | null,
   _version?: number | null,
 };
 
 export type EngineResultInput = {
+  status?: string | null,
   data?: string | null,
   results?: Array< ParsedEngineResultInput | null > | null,
   highScore?: number | null,
@@ -201,13 +203,14 @@ export type EngineCrawl = {
   search?: string | null,
   domainID: string,
   postalCode?: string | null,
-  keywordPlanner?: EngineResult | null,
+  keywordplanner?: EngineResult | null,
+  citysearch?: EngineResult | null,
   google?: EngineResult | null,
   foursquare?: EngineResult | null,
   facebook?: EngineResult | null,
   yelp?: EngineResult | null,
   infogroup?: EngineResult | null,
-  yellowPages?: EngineResult | null,
+  yellowpages?: EngineResult | null,
   owner?: string | null,
   createdAt: string,
   updatedAt: string,
@@ -218,6 +221,7 @@ export type EngineCrawl = {
 
 export type EngineResult = {
   __typename: "EngineResult",
+  status?: string | null,
   data?: string | null,
   results?:  Array<ParsedEngineResult | null > | null,
   highScore?: number | null,
@@ -249,13 +253,14 @@ export type UpdateEngineCrawlInput = {
   search?: string | null,
   domainID?: string | null,
   postalCode?: string | null,
-  keywordPlanner?: EngineResultInput | null,
+  keywordplanner?: EngineResultInput | null,
+  citysearch?: EngineResultInput | null,
   google?: EngineResultInput | null,
   foursquare?: EngineResultInput | null,
   facebook?: EngineResultInput | null,
   yelp?: EngineResultInput | null,
   infogroup?: EngineResultInput | null,
-  yellowPages?: EngineResultInput | null,
+  yellowpages?: EngineResultInput | null,
   owner?: string | null,
   _version?: number | null,
 };
@@ -360,7 +365,7 @@ export type ModelDomainConnection = {
 export type CrawlEnginesMutationVariables = {
   search?: string | null,
   postalCode?: string | null,
-  domainId?: string | null,
+  domainID?: string | null,
   apexDomain?: string | null,
 };
 
@@ -520,8 +525,26 @@ export type CreateEngineCrawlMutation = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -538,6 +561,7 @@ export type CreateEngineCrawlMutation = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -554,6 +578,7 @@ export type CreateEngineCrawlMutation = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -570,6 +595,7 @@ export type CreateEngineCrawlMutation = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -586,6 +612,7 @@ export type CreateEngineCrawlMutation = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -602,6 +629,7 @@ export type CreateEngineCrawlMutation = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -616,8 +644,9 @@ export type CreateEngineCrawlMutation = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -653,8 +682,26 @@ export type UpdateEngineCrawlMutation = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -671,6 +718,7 @@ export type UpdateEngineCrawlMutation = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -687,6 +735,7 @@ export type UpdateEngineCrawlMutation = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -703,6 +752,7 @@ export type UpdateEngineCrawlMutation = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -719,6 +769,7 @@ export type UpdateEngineCrawlMutation = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -735,6 +786,7 @@ export type UpdateEngineCrawlMutation = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -749,8 +801,9 @@ export type UpdateEngineCrawlMutation = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -786,8 +839,26 @@ export type DeleteEngineCrawlMutation = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -804,6 +875,7 @@ export type DeleteEngineCrawlMutation = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -820,6 +892,7 @@ export type DeleteEngineCrawlMutation = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -836,6 +909,7 @@ export type DeleteEngineCrawlMutation = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -852,6 +926,7 @@ export type DeleteEngineCrawlMutation = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -868,6 +943,7 @@ export type DeleteEngineCrawlMutation = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -882,8 +958,9 @@ export type DeleteEngineCrawlMutation = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1215,8 +1292,26 @@ export type GetEngineCrawlQuery = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1233,6 +1328,7 @@ export type GetEngineCrawlQuery = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1249,6 +1345,7 @@ export type GetEngineCrawlQuery = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1265,6 +1362,7 @@ export type GetEngineCrawlQuery = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1281,6 +1379,7 @@ export type GetEngineCrawlQuery = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1297,6 +1396,7 @@ export type GetEngineCrawlQuery = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1311,8 +1411,9 @@ export type GetEngineCrawlQuery = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1351,8 +1452,22 @@ export type ListEngineCrawlsQuery = {
       search?: string | null,
       domainID: string,
       postalCode?: string | null,
-      keywordPlanner?:  {
+      keywordplanner?:  {
         __typename: "EngineResult",
+        status?: string | null,
+        data?: string | null,
+        highScore?: number | null,
+        foundWebsite?: boolean | null,
+        mostLikely?: number | null,
+        exactWebsiteMatch?: number | null,
+        exactWebsiteMatchHttp?: number | null,
+        exactNameMatch?: number | null,
+        rank?: number | null,
+        type?: ENGINECRAWLERS | null,
+      } | null,
+      citysearch?:  {
+        __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1365,6 +1480,7 @@ export type ListEngineCrawlsQuery = {
       } | null,
       google?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1377,6 +1493,7 @@ export type ListEngineCrawlsQuery = {
       } | null,
       foursquare?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1389,6 +1506,7 @@ export type ListEngineCrawlsQuery = {
       } | null,
       facebook?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1401,6 +1519,7 @@ export type ListEngineCrawlsQuery = {
       } | null,
       yelp?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1413,6 +1532,7 @@ export type ListEngineCrawlsQuery = {
       } | null,
       infogroup?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1423,8 +1543,9 @@ export type ListEngineCrawlsQuery = {
         rank?: number | null,
         type?: ENGINECRAWLERS | null,
       } | null,
-      yellowPages?:  {
+      yellowpages?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1463,8 +1584,22 @@ export type SyncEngineCrawlsQuery = {
       search?: string | null,
       domainID: string,
       postalCode?: string | null,
-      keywordPlanner?:  {
+      keywordplanner?:  {
         __typename: "EngineResult",
+        status?: string | null,
+        data?: string | null,
+        highScore?: number | null,
+        foundWebsite?: boolean | null,
+        mostLikely?: number | null,
+        exactWebsiteMatch?: number | null,
+        exactWebsiteMatchHttp?: number | null,
+        exactNameMatch?: number | null,
+        rank?: number | null,
+        type?: ENGINECRAWLERS | null,
+      } | null,
+      citysearch?:  {
+        __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1477,6 +1612,7 @@ export type SyncEngineCrawlsQuery = {
       } | null,
       google?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1489,6 +1625,7 @@ export type SyncEngineCrawlsQuery = {
       } | null,
       foursquare?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1501,6 +1638,7 @@ export type SyncEngineCrawlsQuery = {
       } | null,
       facebook?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1513,6 +1651,7 @@ export type SyncEngineCrawlsQuery = {
       } | null,
       yelp?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1525,6 +1664,7 @@ export type SyncEngineCrawlsQuery = {
       } | null,
       infogroup?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1535,8 +1675,9 @@ export type SyncEngineCrawlsQuery = {
         rank?: number | null,
         type?: ENGINECRAWLERS | null,
       } | null,
-      yellowPages?:  {
+      yellowpages?:  {
         __typename: "EngineResult",
+        status?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1814,8 +1955,26 @@ export type OnCreateEngineCrawlSubscription = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1832,6 +1991,7 @@ export type OnCreateEngineCrawlSubscription = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1848,6 +2008,7 @@ export type OnCreateEngineCrawlSubscription = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1864,6 +2025,7 @@ export type OnCreateEngineCrawlSubscription = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1880,6 +2042,7 @@ export type OnCreateEngineCrawlSubscription = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1896,6 +2059,7 @@ export type OnCreateEngineCrawlSubscription = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1910,8 +2074,9 @@ export type OnCreateEngineCrawlSubscription = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1946,8 +2111,26 @@ export type OnUpdateEngineCrawlSubscription = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1964,6 +2147,7 @@ export type OnUpdateEngineCrawlSubscription = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1980,6 +2164,7 @@ export type OnUpdateEngineCrawlSubscription = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -1996,6 +2181,7 @@ export type OnUpdateEngineCrawlSubscription = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2012,6 +2198,7 @@ export type OnUpdateEngineCrawlSubscription = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2028,6 +2215,7 @@ export type OnUpdateEngineCrawlSubscription = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2042,8 +2230,9 @@ export type OnUpdateEngineCrawlSubscription = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2078,8 +2267,26 @@ export type OnDeleteEngineCrawlSubscription = {
     search?: string | null,
     domainID: string,
     postalCode?: string | null,
-    keywordPlanner?:  {
+    keywordplanner?:  {
       __typename: "EngineResult",
+      status?: string | null,
+      data?: string | null,
+      results?:  Array< {
+        __typename: "ParsedEngineResult",
+        status?: string | null,
+      } | null > | null,
+      highScore?: number | null,
+      foundWebsite?: boolean | null,
+      mostLikely?: number | null,
+      exactWebsiteMatch?: number | null,
+      exactWebsiteMatchHttp?: number | null,
+      exactNameMatch?: number | null,
+      rank?: number | null,
+      type?: ENGINECRAWLERS | null,
+    } | null,
+    citysearch?:  {
+      __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2096,6 +2303,7 @@ export type OnDeleteEngineCrawlSubscription = {
     } | null,
     google?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2112,6 +2320,7 @@ export type OnDeleteEngineCrawlSubscription = {
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2128,6 +2337,7 @@ export type OnDeleteEngineCrawlSubscription = {
     } | null,
     facebook?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2144,6 +2354,7 @@ export type OnDeleteEngineCrawlSubscription = {
     } | null,
     yelp?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2160,6 +2371,7 @@ export type OnDeleteEngineCrawlSubscription = {
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
@@ -2174,8 +2386,9 @@ export type OnDeleteEngineCrawlSubscription = {
       rank?: number | null,
       type?: ENGINECRAWLERS | null,
     } | null,
-    yellowPages?:  {
+    yellowpages?:  {
       __typename: "EngineResult",
+      status?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",

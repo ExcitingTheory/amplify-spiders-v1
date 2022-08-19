@@ -1,5 +1,5 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
+import axios from 'axios'
+import cheerio from 'cheerio'
 
 /**
  * Compares the similarity between two strings using an n-gram comparison method. 
@@ -10,7 +10,7 @@ const cheerio = require('cheerio');
  * @param gramSize The size of the grams. Defaults to length 2.
  */
 
-const stringSimilarity = function (str1, str2, gramSize = 2) {
+export const stringSimilarity = function (str1, str2, gramSize = 2) {
   function getNGrams(s, len) {
     s = ' '.repeat(len - 1) + s.toLowerCase() + ' '.repeat(len - 1);
     let v = new Array(s.length - len + 1);
@@ -41,10 +41,10 @@ const stringSimilarity = function (str1, str2, gramSize = 2) {
   return hits / total;
 }
 
-exports.stringSimilarity = stringSimilarity
+// exports.stringSimilarity = stringSimilarity
 
-const getRequest = async function (url, params = {}) {
-  let data =  axios.get(url, params).catch((error) => {
+export const getRequest = async function (url, params = {}) {
+  let data = axios.get(url, params).catch((error) => {
     if (error.response) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx
@@ -64,13 +64,11 @@ const getRequest = async function (url, params = {}) {
   });
 
   return data
-} 
+}
 
-exports.getRequest = getRequest
-
-exports.parseCitysearch = async function (data, search, postalCode, domainName) {
-
+export const parseCitysearch = async function (data, search, postalCode, domainName) {
   const toSearch = data?.results?.locations || [];
+  let mostLikely = -1
   let exactWebsiteMatch = -1
   let exactWebsiteMatchHttp = -1
   let exactNameMatch = -1
@@ -106,31 +104,35 @@ exports.parseCitysearch = async function (data, search, postalCode, domainName) 
   //   mostLikely
   // }))
 
-  
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
-  // console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
-  if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
-    let website = await getRequest(toSearch[websiteCheckIndex]["website"])
+  console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
+  // if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
+  //   let website
+  //   try {
+  //     website = await getRequest(toSearch[websiteCheckIndex]["website"])
+  //   } catch (error) {
+  //     console.log('Error parsing website:', error)
+  //   }
 
-    if (website?.request?.res?.responseUrl) {
-      console.log('website?.request?.res?.responseUrl', website?.request?.res?.responseUrl)
-      const found = website.request.res.responseUrl
-      if (found.includes(domainName)) {
-        foundWebsite = true
-        mostLikely = websiteCheckIndex
-        results[websiteCheckIndex]["value"]["websiteUrl"] = found
-      }
-  
-      if (found === `https://www.${domainName}/` || found === `https://${domainName}/`) {
-        exactWebsiteMatch = websiteCheckIndex
-      }
-  
-      if (found === `http://www.${domainName}/` || found === `http://${domainName}/`) {
-        exactWebsiteMatchHttp = websiteCheckIndex
-      }
+  //   if (website?.request?.res?.responseUrl) {
+  //     console.log('website?.request?.res?.responseUrl', website?.request?.res?.responseUrl)
+  //     const found = website.request.res.responseUrl
+  //     if (found.includes(domainName)) {
+  //       foundWebsite = true
+  //       mostLikely = websiteCheckIndex
+  //       results[websiteCheckIndex]["value"]["websiteUrl"] = found
+  //     }
 
-    }
-  }
+  //     if (found === `https://www.${domainName}/` || found === `https://${domainName}/`) {
+  //       exactWebsiteMatch = websiteCheckIndex
+  //     }
+
+  //     if (found === `http://www.${domainName}/` || found === `http://${domainName}/`) {
+  //       exactWebsiteMatchHttp = websiteCheckIndex
+  //     }
+
+  //   }
+  // }
 
   return {
     results,
@@ -143,7 +145,7 @@ exports.parseCitysearch = async function (data, search, postalCode, domainName) 
   }
 }
 
-exports.parseGoogle = async function (data, search, postalCode, domainName) {
+export const parseGoogle = async function (data, search, postalCode, domainName) {
   const toSearch = data?.items || [];
   // console.log(toSearch)
   let mostLikely = -1
@@ -215,7 +217,7 @@ exports.parseGoogle = async function (data, search, postalCode, domainName) {
     mostLikely // Key from highest score
   }
  */
-exports.parseFoursquare = async function (data, search, postalCode, domainName) {
+export const parseFoursquare = async function (data, search, postalCode, domainName) {
   const toSearch = data?.results || [];
   let mostLikely = -1
   let exactNameMatch = -1
@@ -256,9 +258,11 @@ exports.parseFoursquare = async function (data, search, postalCode, domainName) 
   }
 }
 
-exports.parseYelp = async function (data, search, postalCode, domainName) {
+export const parseYelp = async function (data, search, postalCode, domainName) {
   const toSearch = data?.businesses || [];
   let mostLikely = -1
+  let exactWebsiteMatch = -1
+  let exactWebsiteMatchHttp = -1
   let exactNameMatch = -1
   let foundWebsite = false;
   let highScore = 0;
@@ -311,7 +315,7 @@ exports.parseYelp = async function (data, search, postalCode, domainName) {
           if (found === `http://www.${domainName}` || found === `http://${domainName}`) {
             exactWebsiteMatchHttp = websiteCheckIndex
           }
-          
+
         });
       } catch (error) {
         console.log("Error parsing webpage")
@@ -327,11 +331,14 @@ exports.parseYelp = async function (data, search, postalCode, domainName) {
     results,
     highScore,
     foundWebsite,
+    mostLikely,
+    exactWebsiteMatch,
+    exactWebsiteMatchHttp,
     exactNameMatch
   }
 }
 
-exports.parseYellowpages = async function (data, search, postalCode, domainName) {
+export const parseYellowpages = async function (data, search, postalCode, domainName) {
   const toSearch = data?.searchResult?.searchListings?.searchListing || [];
   let mostLikely = -1
   let exactNameMatch = -1

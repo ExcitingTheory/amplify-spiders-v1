@@ -6,13 +6,13 @@ export const crawlEngines = /* GraphQL */ `
   mutation CrawlEngines(
     $search: String
     $postalCode: String
-    $domainId: String
+    $domainID: String
     $apexDomain: String
   ) {
     crawlEngines(
       search: $search
       postalCode: $postalCode
-      domainId: $domainId
+      domainID: $domainID
       apexDomain: $apexDomain
     )
   }
@@ -145,7 +145,23 @@ export const createEngineCrawl = /* GraphQL */ `
       search
       domainID
       postalCode
-      keywordPlanner {
+      keywordplanner {
+        status
+        data
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
+        rank
+        type
+      }
+      citysearch {
+        status
         data
         results {
           status
@@ -160,6 +176,7 @@ export const createEngineCrawl = /* GraphQL */ `
         type
       }
       google {
+        status
         data
         results {
           status
@@ -174,6 +191,7 @@ export const createEngineCrawl = /* GraphQL */ `
         type
       }
       foursquare {
+        status
         data
         results {
           status
@@ -188,6 +206,7 @@ export const createEngineCrawl = /* GraphQL */ `
         type
       }
       facebook {
+        status
         data
         results {
           status
@@ -202,6 +221,7 @@ export const createEngineCrawl = /* GraphQL */ `
         type
       }
       yelp {
+        status
         data
         results {
           status
@@ -216,6 +236,7 @@ export const createEngineCrawl = /* GraphQL */ `
         type
       }
       infogroup {
+        status
         data
         results {
           status
@@ -229,7 +250,8 @@ export const createEngineCrawl = /* GraphQL */ `
         rank
         type
       }
-      yellowPages {
+      yellowpages {
+        status
         data
         results {
           status
@@ -262,7 +284,23 @@ export const updateEngineCrawl = /* GraphQL */ `
       search
       domainID
       postalCode
-      keywordPlanner {
+      keywordplanner {
+        status
+        data
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
+        rank
+        type
+      }
+      citysearch {
+        status
         data
         results {
           status
@@ -277,6 +315,7 @@ export const updateEngineCrawl = /* GraphQL */ `
         type
       }
       google {
+        status
         data
         results {
           status
@@ -291,6 +330,7 @@ export const updateEngineCrawl = /* GraphQL */ `
         type
       }
       foursquare {
+        status
         data
         results {
           status
@@ -305,6 +345,7 @@ export const updateEngineCrawl = /* GraphQL */ `
         type
       }
       facebook {
+        status
         data
         results {
           status
@@ -319,6 +360,7 @@ export const updateEngineCrawl = /* GraphQL */ `
         type
       }
       yelp {
+        status
         data
         results {
           status
@@ -333,6 +375,7 @@ export const updateEngineCrawl = /* GraphQL */ `
         type
       }
       infogroup {
+        status
         data
         results {
           status
@@ -346,7 +389,8 @@ export const updateEngineCrawl = /* GraphQL */ `
         rank
         type
       }
-      yellowPages {
+      yellowpages {
+        status
         data
         results {
           status
@@ -379,7 +423,23 @@ export const deleteEngineCrawl = /* GraphQL */ `
       search
       domainID
       postalCode
-      keywordPlanner {
+      keywordplanner {
+        status
+        data
+        results {
+          status
+        }
+        highScore
+        foundWebsite
+        mostLikely
+        exactWebsiteMatch
+        exactWebsiteMatchHttp
+        exactNameMatch
+        rank
+        type
+      }
+      citysearch {
+        status
         data
         results {
           status
@@ -394,6 +454,7 @@ export const deleteEngineCrawl = /* GraphQL */ `
         type
       }
       google {
+        status
         data
         results {
           status
@@ -408,6 +469,7 @@ export const deleteEngineCrawl = /* GraphQL */ `
         type
       }
       foursquare {
+        status
         data
         results {
           status
@@ -422,6 +484,7 @@ export const deleteEngineCrawl = /* GraphQL */ `
         type
       }
       facebook {
+        status
         data
         results {
           status
@@ -436,6 +499,7 @@ export const deleteEngineCrawl = /* GraphQL */ `
         type
       }
       yelp {
+        status
         data
         results {
           status
@@ -450,6 +514,7 @@ export const deleteEngineCrawl = /* GraphQL */ `
         type
       }
       infogroup {
+        status
         data
         results {
           status
@@ -463,7 +528,8 @@ export const deleteEngineCrawl = /* GraphQL */ `
         rank
         type
       }
-      yellowPages {
+      yellowpages {
+        status
         data
         results {
           status
