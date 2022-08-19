@@ -11,24 +11,28 @@ type WebResult {
   type: WEBCRAWLERS
 }
 
-
-type ParsedEngineResultValue {
+type ParsedEngineResult {
   key: Int
   name: String
   score: Float
   websiteUrl: String
 }
 
-
-type ParsedEngineResult {
+type ParsedEngineResultPromise {
   status: String
-  value: ParsedEngineResultValue
+  reason: String 
+  value: ParsedEngineResult
+}
+
+type EngineResultPromise {
+  status: String
+  reason: String
+  value: EngineResult
 }
 
 type EngineResult {
-  status: String
   data: AWSJSON # Raw request data
-  results: [ParsedEngineResult] # parsed results
+  results: [ParsedEngineResultPromise] # parsed results
   highScore: Float
   foundWebsite: Boolean # Something matched a domain
   mostLikely: Int # key in results
@@ -77,14 +81,14 @@ type EngineCrawl @model @auth(
   search: String
   domainID: ID! @index(name: "byDomain")
   postalCode: String
-  keywordplanner: EngineResult
-  citysearch: EngineResult
-  google: EngineResult
-  foursquare: EngineResult
-  facebook: EngineResult
-  yelp: EngineResult
-  infogroup: EngineResult
-  yellowpages: EngineResult
+  keywordplanner: EngineResultPromise
+  citysearch: EngineResultPromise
+  google: EngineResultPromise
+  foursquare: EngineResultPromise
+  facebook: EngineResultPromise
+  yelp: EngineResultPromise
+  infogroup: EngineResultPromise
+  yellowpages: EngineResultPromise
   owner: String
 }
 

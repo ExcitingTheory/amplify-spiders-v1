@@ -188,7 +188,6 @@ export const handler = async (event) => {
 
   console.log('starting data parsing')
 
-  console.log('results[0]?.value?.data', results[0]?.value?.data)
   const parsed = await Promise.allSettled([
     parseCitysearch(results[0]?.value?.data, search, postalCode, apexDomain),
     parseGoogle(results[1]?.value?.data, search, postalCode, apexDomain),

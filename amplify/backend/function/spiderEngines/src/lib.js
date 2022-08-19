@@ -106,33 +106,33 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
 
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
   console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
-  // if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
-  //   let website
-  //   try {
-  //     website = await getRequest(toSearch[websiteCheckIndex]["website"])
-  //   } catch (error) {
-  //     console.log('Error parsing website:', error)
-  //   }
+  if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
+    let website
+    try {
+      website = await getRequest(toSearch[websiteCheckIndex]["website"])
+    } catch (error) {
+      console.log('Error parsing website:', error)
+    }
 
-  //   if (website?.request?.res?.responseUrl) {
-  //     console.log('website?.request?.res?.responseUrl', website?.request?.res?.responseUrl)
-  //     const found = website.request.res.responseUrl
-  //     if (found.includes(domainName)) {
-  //       foundWebsite = true
-  //       mostLikely = websiteCheckIndex
-  //       results[websiteCheckIndex]["value"]["websiteUrl"] = found
-  //     }
+    if (website?.request?.res?.responseUrl) {
+      console.log('website?.request?.res?.responseUrl', website?.request?.res?.responseUrl)
+      const found = website.request.res.responseUrl
+      if (found.includes(domainName)) {
+        foundWebsite = true
+        mostLikely = websiteCheckIndex
+        results[websiteCheckIndex]["value"]["websiteUrl"] = found
+      }
 
-  //     if (found === `https://www.${domainName}/` || found === `https://${domainName}/`) {
-  //       exactWebsiteMatch = websiteCheckIndex
-  //     }
+      if (found === `https://www.${domainName}/` || found === `https://${domainName}/`) {
+        exactWebsiteMatch = websiteCheckIndex
+      }
 
-  //     if (found === `http://www.${domainName}/` || found === `http://${domainName}/`) {
-  //       exactWebsiteMatchHttp = websiteCheckIndex
-  //     }
+      if (found === `http://www.${domainName}/` || found === `http://${domainName}/`) {
+        exactWebsiteMatchHttp = websiteCheckIndex
+      }
 
-  //   }
-  // }
+    }
+  }
 
   return {
     results,

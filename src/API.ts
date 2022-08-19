@@ -151,6 +151,7 @@ export type CreateEngineCrawlInput = {
 
 export type EngineResultInput = {
   status?: string | null,
+  reason?: string | null,
   data?: string | null,
   results?: Array< ParsedEngineResultInput | null > | null,
   highScore?: number | null,
@@ -165,6 +166,7 @@ export type EngineResultInput = {
 
 export type ParsedEngineResultInput = {
   status?: string | null,
+  reason?: string | null,
   value?: ParsedEngineResultValueInput | null,
 };
 
@@ -222,6 +224,7 @@ export type EngineCrawl = {
 export type EngineResult = {
   __typename: "EngineResult",
   status?: string | null,
+  reason?: string | null,
   data?: string | null,
   results?:  Array<ParsedEngineResult | null > | null,
   highScore?: number | null,
@@ -237,6 +240,7 @@ export type EngineResult = {
 export type ParsedEngineResult = {
   __typename: "ParsedEngineResult",
   status?: string | null,
+  reason?: string | null,
   value?: ParsedEngineResultValue | null,
 };
 
@@ -528,10 +532,12 @@ export type CreateEngineCrawlMutation = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -545,10 +551,12 @@ export type CreateEngineCrawlMutation = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -562,10 +570,12 @@ export type CreateEngineCrawlMutation = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -579,10 +589,12 @@ export type CreateEngineCrawlMutation = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -596,10 +608,12 @@ export type CreateEngineCrawlMutation = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -613,10 +627,12 @@ export type CreateEngineCrawlMutation = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -630,10 +646,12 @@ export type CreateEngineCrawlMutation = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -647,10 +665,12 @@ export type CreateEngineCrawlMutation = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -685,10 +705,12 @@ export type UpdateEngineCrawlMutation = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -702,10 +724,12 @@ export type UpdateEngineCrawlMutation = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -719,10 +743,12 @@ export type UpdateEngineCrawlMutation = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -736,10 +762,12 @@ export type UpdateEngineCrawlMutation = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -753,10 +781,12 @@ export type UpdateEngineCrawlMutation = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -770,10 +800,12 @@ export type UpdateEngineCrawlMutation = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -787,10 +819,12 @@ export type UpdateEngineCrawlMutation = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -804,10 +838,12 @@ export type UpdateEngineCrawlMutation = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -842,10 +878,12 @@ export type DeleteEngineCrawlMutation = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -859,10 +897,12 @@ export type DeleteEngineCrawlMutation = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -876,10 +916,12 @@ export type DeleteEngineCrawlMutation = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -893,10 +935,12 @@ export type DeleteEngineCrawlMutation = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -910,10 +954,12 @@ export type DeleteEngineCrawlMutation = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -927,10 +973,12 @@ export type DeleteEngineCrawlMutation = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -944,10 +992,12 @@ export type DeleteEngineCrawlMutation = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -961,10 +1011,12 @@ export type DeleteEngineCrawlMutation = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1295,10 +1347,12 @@ export type GetEngineCrawlQuery = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1312,10 +1366,12 @@ export type GetEngineCrawlQuery = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1329,10 +1385,12 @@ export type GetEngineCrawlQuery = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1346,10 +1404,12 @@ export type GetEngineCrawlQuery = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1363,10 +1423,12 @@ export type GetEngineCrawlQuery = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1380,10 +1442,12 @@ export type GetEngineCrawlQuery = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1397,10 +1461,12 @@ export type GetEngineCrawlQuery = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1414,10 +1480,12 @@ export type GetEngineCrawlQuery = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1455,6 +1523,7 @@ export type ListEngineCrawlsQuery = {
       keywordplanner?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1468,6 +1537,7 @@ export type ListEngineCrawlsQuery = {
       citysearch?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1481,6 +1551,7 @@ export type ListEngineCrawlsQuery = {
       google?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1494,6 +1565,7 @@ export type ListEngineCrawlsQuery = {
       foursquare?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1507,6 +1579,7 @@ export type ListEngineCrawlsQuery = {
       facebook?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1520,6 +1593,7 @@ export type ListEngineCrawlsQuery = {
       yelp?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1533,6 +1607,7 @@ export type ListEngineCrawlsQuery = {
       infogroup?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1546,6 +1621,7 @@ export type ListEngineCrawlsQuery = {
       yellowpages?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1587,6 +1663,7 @@ export type SyncEngineCrawlsQuery = {
       keywordplanner?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1600,6 +1677,7 @@ export type SyncEngineCrawlsQuery = {
       citysearch?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1613,6 +1691,7 @@ export type SyncEngineCrawlsQuery = {
       google?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1626,6 +1705,7 @@ export type SyncEngineCrawlsQuery = {
       foursquare?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1639,6 +1719,7 @@ export type SyncEngineCrawlsQuery = {
       facebook?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1652,6 +1733,7 @@ export type SyncEngineCrawlsQuery = {
       yelp?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1665,6 +1747,7 @@ export type SyncEngineCrawlsQuery = {
       infogroup?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1678,6 +1761,7 @@ export type SyncEngineCrawlsQuery = {
       yellowpages?:  {
         __typename: "EngineResult",
         status?: string | null,
+        reason?: string | null,
         data?: string | null,
         highScore?: number | null,
         foundWebsite?: boolean | null,
@@ -1958,10 +2042,12 @@ export type OnCreateEngineCrawlSubscription = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1975,10 +2061,12 @@ export type OnCreateEngineCrawlSubscription = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -1992,10 +2080,12 @@ export type OnCreateEngineCrawlSubscription = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2009,10 +2099,12 @@ export type OnCreateEngineCrawlSubscription = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2026,10 +2118,12 @@ export type OnCreateEngineCrawlSubscription = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2043,10 +2137,12 @@ export type OnCreateEngineCrawlSubscription = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2060,10 +2156,12 @@ export type OnCreateEngineCrawlSubscription = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2077,10 +2175,12 @@ export type OnCreateEngineCrawlSubscription = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2114,10 +2214,12 @@ export type OnUpdateEngineCrawlSubscription = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2131,10 +2233,12 @@ export type OnUpdateEngineCrawlSubscription = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2148,10 +2252,12 @@ export type OnUpdateEngineCrawlSubscription = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2165,10 +2271,12 @@ export type OnUpdateEngineCrawlSubscription = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2182,10 +2290,12 @@ export type OnUpdateEngineCrawlSubscription = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2199,10 +2309,12 @@ export type OnUpdateEngineCrawlSubscription = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2216,10 +2328,12 @@ export type OnUpdateEngineCrawlSubscription = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2233,10 +2347,12 @@ export type OnUpdateEngineCrawlSubscription = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2270,10 +2386,12 @@ export type OnDeleteEngineCrawlSubscription = {
     keywordplanner?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2287,10 +2405,12 @@ export type OnDeleteEngineCrawlSubscription = {
     citysearch?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2304,10 +2424,12 @@ export type OnDeleteEngineCrawlSubscription = {
     google?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2321,10 +2443,12 @@ export type OnDeleteEngineCrawlSubscription = {
     foursquare?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2338,10 +2462,12 @@ export type OnDeleteEngineCrawlSubscription = {
     facebook?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2355,10 +2481,12 @@ export type OnDeleteEngineCrawlSubscription = {
     yelp?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2372,10 +2500,12 @@ export type OnDeleteEngineCrawlSubscription = {
     infogroup?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,
@@ -2389,10 +2519,12 @@ export type OnDeleteEngineCrawlSubscription = {
     yellowpages?:  {
       __typename: "EngineResult",
       status?: string | null,
+      reason?: string | null,
       data?: string | null,
       results?:  Array< {
         __typename: "ParsedEngineResult",
         status?: string | null,
+        reason?: string | null,
       } | null > | null,
       highScore?: number | null,
       foundWebsite?: boolean | null,

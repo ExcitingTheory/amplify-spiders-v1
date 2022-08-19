@@ -110,9 +110,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       postalCode
       keywordplanner {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -125,9 +127,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       citysearch {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -140,9 +144,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       google {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -155,9 +161,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       foursquare {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -170,9 +178,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       facebook {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -185,9 +195,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       yelp {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -200,9 +212,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       infogroup {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -215,9 +229,11 @@ export const onCreateEngineCrawl = /* GraphQL */ `
       }
       yellowpages {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -246,9 +262,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       postalCode
       keywordplanner {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -261,9 +279,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       citysearch {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -276,9 +296,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       google {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -291,9 +313,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       foursquare {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -306,9 +330,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       facebook {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -321,9 +347,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       yelp {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -336,9 +364,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       infogroup {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -351,9 +381,11 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
       }
       yellowpages {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -382,9 +414,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       postalCode
       keywordplanner {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -397,9 +431,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       citysearch {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -412,9 +448,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       google {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -427,9 +465,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       foursquare {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -442,9 +482,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       facebook {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -457,9 +499,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       yelp {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -472,9 +516,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       infogroup {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite
@@ -487,9 +533,11 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
       }
       yellowpages {
         status
+        reason
         data
         results {
           status
+          reason
         }
         highScore
         foundWebsite

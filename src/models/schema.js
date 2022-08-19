@@ -476,6 +476,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "reason": {
+                    "name": "reason",
+                    "isArray": false,
+                    "type": "AWSJSON",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "value": {
                     "name": "value",
                     "isArray": false,
@@ -494,6 +501,13 @@ export const schema = {
                     "name": "status",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "reason": {
+                    "name": "reason",
+                    "isArray": false,
+                    "type": "AWSJSON",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -575,5 +589,5 @@ export const schema = {
             }
         }
     },
-    "version": "7b0108179cb14aa3a41088f1241cd613"
+    "version": "74eed2e1daa6e00cb841870df41f0c69"
 };

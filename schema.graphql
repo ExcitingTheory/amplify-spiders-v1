@@ -1,26 +1,46 @@
 # This "input" configures a global authorization rule to enable public access to
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
 
-input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
-
+# input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 type Mutation {
-  crawlEngines(options: AWSJSON): AWSJSON @function(name: "spiderEngines-${env}")
-  crawlKeywords(options: AWSJSON): AWSJSON @function(name: "spiderKeywords-${env}")
-  crawlWebs(options: AWSJSON): AWSJSON @function(name: "spiderWebs-${env}")
+  crawlEngines(search: String, postalCode: String, domainID: String, apexDomain: String): String @function(name: "spiderEngines-${env}")
+  crawlKeywords(search: String, url: String): String @function(name: "spiderKeywords-${env}")
+  crawlWebs(url: String): String @function(name: "spiderWebs-${env}")
 }
 
 type WebResult {
   data: AWSJSON
-  type: WEBCRAWLERS
+  parsed: AWSJSON
   unstructured: String
+  type: WEBCRAWLERS
+}
+
+type ParsedEngineResultValue {
+  key: Int
+  name: String
+  score: Float
+  websiteUrl: String
+}
+
+type ParsedEngineResult {
+  status: String
+  reason: AWSJSON 
+  value: ParsedEngineResultValue
 }
 
 type EngineResult {
-  data: AWSJSON
-  jsonPathToRecord: String
-  rank: Int
-  totalResults: Int
-  type: ENGINECRAWLERS
+  status: String
+  reason: AWSJSON
+  data: AWSJSON # Raw request data
+  results: [ParsedEngineResult] # parsed results
+  highScore: Float
+  foundWebsite: Boolean # Something matched a domain
+  mostLikely: Int # key in results
+  exactWebsiteMatch: Int # key in results
+  exactWebsiteMatchHttp: Int # key in results
+  exactNameMatch: Int # key in results
+  rank: Int # where in the searched listings was the listing found
+  type: ENGINECRAWLERS # Which search engine were the results from
 }
 
 enum ENGINECRAWLERS {
@@ -30,6 +50,7 @@ enum ENGINECRAWLERS {
   FACEBOOK
   YELP
   INFOGROUP
+  CITYSEARCH
   YELLOW_PAGES
 }
 
@@ -45,7 +66,6 @@ type WebCrawl @model @auth(
     ]) {
   id: ID!
   url: String
-  dateTime: AWSDateTime
   domainID: ID! @index(name: "byDomain")
   custom: WebResult
   nu: WebResult
@@ -58,17 +78,17 @@ type EngineCrawl @model @auth(
       { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
     ]) {
   id: ID!
-  dateTime: AWSDateTime
   search: String
   domainID: ID! @index(name: "byDomain")
-  zipCode: String
-  keywordPlanner: EngineResult
+  postalCode: String
+  keywordplanner: EngineResult
+  citysearch: EngineResult
   google: EngineResult
   foursquare: EngineResult
   facebook: EngineResult
   yelp: EngineResult
   infogroup: EngineResult
-  yellowPages: EngineResult
+  yellowpages: EngineResult
   owner: String
 }
 

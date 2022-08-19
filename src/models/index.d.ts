@@ -35,12 +35,14 @@ export declare class ParsedEngineResultValue {
 
 export declare class ParsedEngineResult {
   readonly status?: string | null;
+  readonly reason?: string | null;
   readonly value?: ParsedEngineResultValue | null;
   constructor(init: ModelInit<ParsedEngineResult>);
 }
 
 export declare class EngineResult {
   readonly status?: string | null;
+  readonly reason?: string | null;
   readonly data?: string | null;
   readonly results?: (ParsedEngineResult | null)[] | null;
   readonly highScore?: number | null;
