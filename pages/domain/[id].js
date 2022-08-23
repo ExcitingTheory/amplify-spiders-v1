@@ -197,6 +197,9 @@ function proccessMaps(data, inputMap) {
 
 // TODO Send a mouseover to trigger highlighting?
 // document.getElementById('xyz').dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
+// $("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
+
+
 
 
 
@@ -209,7 +212,10 @@ function Domains({ signOut, user }) {
   const router = useRouter()
   const { id } = router.query
 
-
+  function onStuffClick() {
+    console.log('click')
+    document.querySelector("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
+  }
 
 
   useEffect(() => {
@@ -313,7 +319,10 @@ function Domains({ signOut, user }) {
               <h2>{domain.name}</h2>
               <div>{domain.description}</div>
 
+              <button onClick={onStuffClick}>Click</button>
+
               <Charts bumpCharts={bumpCharts} />
+              
 
             </Card>
           }
