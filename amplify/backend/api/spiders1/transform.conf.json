@@ -3,8 +3,22 @@
     "ElasticsearchWarning": true,
     "ResolverConfig": {
         "project": {
-            "ConflictHandler": "AUTOMERGE",
+            "ConflictHandler": "OPTIMISTIC_CONCURRENCY",
             "ConflictDetection": "VERSION"
+        },
+        "models": {
+            "WebCrawl": {
+                "ConflictHandler": "OPTIMISTIC_CONCURRENCY",
+                "ConflictDetection": "VERSION"
+            },
+            "EngineCrawl": {
+                "ConflictHandler": "OPTIMISTIC_CONCURRENCY",
+                "ConflictDetection": "VERSION"
+            },
+            "Domain": {
+                "ConflictHandler": "OPTIMISTIC_CONCURRENCY",
+                "ConflictDetection": "VERSION"
+            }
         }
     }
 }

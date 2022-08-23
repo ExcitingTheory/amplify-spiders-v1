@@ -66,7 +66,7 @@ export const getRequest = async function (url, params = {}) {
   return data
 }
 
-export const parseCitysearch = async function (data, search, postalCode, domainName) {
+export const parseCitysearch = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.results?.locations || [];
   let mostLikely = -1
   let exactWebsiteMatch = -1
@@ -88,15 +88,50 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
       mostLikely = key
     }
 
+    // const address = {
+    //   street: element?.address?.street,
+    //   city: element?.address?.city,
+    //   state: element?.address?.state,
+    //   postalCode: element?.address?.postal_code
+    // }
+
+    const address = element?.address?.street
+
     let scoreInfo = {
       key,
       name,
-      score
+      score,
+      address
     }
     return scoreInfo
   });
 
-  const results = await Promise.allSettled(promises)
+  let results = await Promise.allSettled(promises)
+  results = results.map((result) => {
+    if (result.status === 'rejected') {
+      return {
+        key: -1,
+        name: '',
+        score: 0
+      }
+    } else {
+      return result.value
+    }
+  })
+  const bumpChart = results.map(function (result) {
+    if (result?.name) {
+      const y = result?.key >= 0 ? result.key + 1 : null
+      const id = [result.name, result?.address].join(': ')
+      return {
+        id,
+        data: [{
+          x: dateStamp,
+          y
+        }]
+      }
+    }
+  })
+
   // console.log(JSON.stringify({
   //   results,
   //   highScore,
@@ -136,6 +171,7 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
 
   return {
     results,
+    bumpChart,
     highScore,
     foundWebsite,
     mostLikely,
@@ -145,7 +181,7 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
   }
 }
 
-export const parseGoogle = async function (data, search, postalCode, domainName) {
+export const parseGoogle = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.items || [];
   // console.log(toSearch)
   let mostLikely = -1
@@ -187,15 +223,41 @@ export const parseGoogle = async function (data, search, postalCode, domainName)
       key,
       name,
       score,
-      websiteUrl
+      websiteUrl,
+      address: websiteUrl,
     }
     return scoreInfo
   });
 
-  const results = await Promise.allSettled(promises)
+  let results = await Promise.allSettled(promises)
+  results = results.map((result) => {
+    if (result.status === 'rejected') {
+      return {
+        key: -1,
+        name: '',
+        score: 0
+      }
+    } else {
+      return result.value
+    }
+  })
+  const bumpChart = results.map(function (result) {
+    if (result?.name) {
+      const y = result?.key >= 0 ? result.key + 1 : null
+      const id = [result.name, result?.address].join(': ')
+      return {
+        id,
+        data: [{
+          x: dateStamp,
+          y
+        }]
+      }
+    }
+  })
 
   return {
     results,
+    bumpChart,
     highScore,
     foundWebsite,
     mostLikely,
@@ -217,7 +279,7 @@ export const parseGoogle = async function (data, search, postalCode, domainName)
     mostLikely // Key from highest score
   }
  */
-export const parseFoursquare = async function (data, search, postalCode, domainName) {
+export const parseFoursquare = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.results || [];
   let mostLikely = -1
   let exactNameMatch = -1
@@ -236,29 +298,54 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
       mostLikely = key
     }
     /** 
-     * Verify Address
+     * Verify Address?
      * */
-
+    const address = element?.location?.address
     let scoreInfo = {
       key,
       name,
-      score
+      score,
+      address
     }
     return scoreInfo
   });
 
-  const results = await Promise.allSettled(promises)
-
+  let results = await Promise.allSettled(promises)
+  results = results.map((result) => {
+    if (result.status === 'rejected') {
+      return {
+        key: -1,
+        name: '',
+        score: 0
+      }
+    } else {
+      return result.value
+    }
+  })
+  const bumpChart = results.map(function (result) {
+    if (result?.name) {
+      const id = [result.name, result?.address].join(': ')
+      const y = result?.key >= 0 ? result.key + 1 : null
+      return {
+        id,
+        data: [{
+          x: dateStamp,
+          y
+        }]
+      }
+    }
+  })
 
   return {
     results,
+    bumpChart,
     highScore,
     mostLikely,
     exactNameMatch
   }
 }
 
-export const parseYelp = async function (data, search, postalCode, domainName) {
+export const parseYelp = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.businesses || [];
   let mostLikely = -1
   let exactWebsiteMatch = -1
@@ -280,15 +367,42 @@ export const parseYelp = async function (data, search, postalCode, domainName) {
       mostLikely = key
     }
 
+    const address = element?.location?.address1
+
     let scoreInfo = {
       key,
       name,
-      score
+      score,
+      address
     }
     return scoreInfo
   });
 
-  const results = await Promise.allSettled(promises)
+  let results = await Promise.allSettled(promises)
+  results = results.map((result) => {
+    if (result.status === 'rejected') {
+      return {
+        key: -1,
+        name: '',
+        score: 0
+      }
+    } else {
+      return result.value
+    }
+  })
+  const bumpChart = results.map(function (result) {
+    if (result?.name) {
+      const y = result?.key >= 0 ? result.key + 1 : null
+      const id = [result.name, result?.address].join(': ')
+      return {
+        id,
+        data: [{
+          x: dateStamp,
+          y
+        }]
+      }
+    }
+  })
 
   /** Visit yelp site and grab all hrefs */
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
@@ -329,6 +443,7 @@ export const parseYelp = async function (data, search, postalCode, domainName) {
 
   return {
     results,
+    bumpChart,
     highScore,
     foundWebsite,
     mostLikely,
@@ -338,7 +453,7 @@ export const parseYelp = async function (data, search, postalCode, domainName) {
   }
 }
 
-export const parseYellowpages = async function (data, search, postalCode, domainName) {
+export const parseYellowpages = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.searchResult?.searchListings?.searchListing || [];
   let mostLikely = -1
   let exactNameMatch = -1
@@ -360,18 +475,46 @@ export const parseYellowpages = async function (data, search, postalCode, domain
      * Verify Address
      * */
 
+    const address = element?.street
+
     let scoreInfo = {
       key,
       name,
-      score
+      score,
+      address
     }
     return scoreInfo
   });
 
-  const results = await Promise.allSettled(promises)
+  let results = await Promise.allSettled(promises)
+  results = results.map((result) => {
+    if (result.status === 'rejected') {
+      return {
+        key: -1,
+        name: '',
+        score: 0
+      }
+    } else {
+      return result.value
+    }
+  })
+  const bumpChart = results.map(function (result) {
+    if (result?.name) {
+      const y = result?.key >= 0 ? result.key + 1 : null
+      const id = [result.name, result?.address].join(': ')
+      return {
+        id,
+        data: [{
+          x: dateStamp,
+          y
+        }]
+      }
+    }
+  })
 
   return {
     results,
+    bumpChart,
     highScore,
     mostLikely,
     exactNameMatch

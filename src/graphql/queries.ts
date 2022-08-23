@@ -12,19 +12,16 @@ export const getWebCrawl = /* GraphQL */ `
         data
         parsed
         unstructured
-        type
       }
       nu {
         data
         parsed
         unstructured
-        type
       }
       lighthouse {
         data
         parsed
         unstructured
-        type
       }
       owner
       createdAt
@@ -50,19 +47,16 @@ export const listWebCrawls = /* GraphQL */ `
           data
           parsed
           unstructured
-          type
         }
         nu {
           data
           parsed
           unstructured
-          type
         }
         lighthouse {
           data
           parsed
           unstructured
-          type
         }
         owner
         createdAt
@@ -97,19 +91,16 @@ export const syncWebCrawls = /* GraphQL */ `
           data
           parsed
           unstructured
-          type
         }
         nu {
           data
           parsed
           unstructured
-          type
         }
         lighthouse {
           data
           parsed
           unstructured
-          type
         }
         owner
         createdAt
@@ -131,12 +122,19 @@ export const getEngineCrawl = /* GraphQL */ `
       domainID
       postalCode
       keywordplanner {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -144,16 +142,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       citysearch {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -161,16 +164,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       google {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -178,16 +186,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       foursquare {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -195,16 +208,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       facebook {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -212,16 +230,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       yelp {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -229,16 +252,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       infogroup {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -246,16 +274,21 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       yellowpages {
-        status
-        reason
-        data
         results {
-          status
-          reason
+          key
+          name
+          score
+          websiteUrl
+          address
+        }
+        bumpChart {
+          id
+          data {
+            x
+            y
+          }
         }
         highScore
         foundWebsite
@@ -263,8 +296,6 @@ export const getEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
-        rank
-        type
       }
       owner
       createdAt
@@ -288,108 +319,180 @@ export const listEngineCrawls = /* GraphQL */ `
         domainID
         postalCode
         keywordplanner {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         citysearch {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         google {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         foursquare {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         facebook {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         yelp {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         infogroup {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         yellowpages {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         owner
         createdAt
@@ -422,108 +525,180 @@ export const syncEngineCrawls = /* GraphQL */ `
         domainID
         postalCode
         keywordplanner {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         citysearch {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         google {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         foursquare {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         facebook {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         yelp {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         infogroup {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         yellowpages {
-          status
-          reason
-          data
+          results {
+            key
+            name
+            score
+            websiteUrl
+            address
+          }
+          bumpChart {
+            id
+            data {
+              x
+              y
+            }
+          }
           highScore
           foundWebsite
           mostLikely
           exactWebsiteMatch
           exactWebsiteMatchHttp
           exactNameMatch
-          rank
-          type
         }
         owner
         createdAt
@@ -549,6 +724,182 @@ export const getDomain = /* GraphQL */ `
           search
           domainID
           postalCode
+          keywordplanner {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          citysearch {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          google {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          foursquare {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          facebook {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          yelp {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          infogroup {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
+          yellowpages {
+            results {
+              key
+              name
+              score
+              websiteUrl
+              address
+            }
+            bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            highScore
+            foundWebsite
+            mostLikely
+            exactWebsiteMatch
+            exactWebsiteMatchHttp
+            exactNameMatch
+          }
           owner
           createdAt
           updatedAt
@@ -564,6 +915,21 @@ export const getDomain = /* GraphQL */ `
           id
           url
           domainID
+          custom {
+            data
+            parsed
+            unstructured
+          }
+          nu {
+            data
+            parsed
+            unstructured
+          }
+          lighthouse {
+            data
+            parsed
+            unstructured
+          }
           owner
           createdAt
           updatedAt
@@ -594,10 +960,224 @@ export const listDomains = /* GraphQL */ `
         name
         owner
         EngineCrawls {
+          items {
+            id
+            search
+            domainID
+            postalCode
+            keywordplanner {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            citysearch {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            google {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            foursquare {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            facebook {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            yelp {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            infogroup {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            yellowpages {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            owner
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
           nextToken
           startedAt
         }
         WebCrawls {
+          items {
+            id
+            url
+            domainID
+            custom {
+              data
+              parsed
+              unstructured
+            }
+            nu {
+              data
+              parsed
+              unstructured
+            }
+            lighthouse {
+              data
+              parsed
+              unstructured
+            }
+            owner
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
           nextToken
           startedAt
         }
@@ -630,10 +1210,224 @@ export const syncDomains = /* GraphQL */ `
         name
         owner
         EngineCrawls {
+          items {
+            id
+            search
+            domainID
+            postalCode
+            keywordplanner {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            citysearch {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            google {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            foursquare {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            facebook {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            yelp {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            infogroup {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            yellowpages {
+              results {
+                key
+                name
+                score
+                websiteUrl
+                address
+              }
+              bumpChart {
+                id
+                data {
+                  x
+                  y
+                }
+              }
+              highScore
+              foundWebsite
+              mostLikely
+              exactWebsiteMatch
+              exactWebsiteMatchHttp
+              exactNameMatch
+            }
+            owner
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
           nextToken
           startedAt
         }
         WebCrawls {
+          items {
+            id
+            url
+            domainID
+            custom {
+              data
+              parsed
+              unstructured
+            }
+            nu {
+              data
+              parsed
+              unstructured
+            }
+            lighthouse {
+              data
+              parsed
+              unstructured
+            }
+            owner
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
           nextToken
           startedAt
         }

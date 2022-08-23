@@ -60,9 +60,7 @@ export const handler = async (event) => {
     apexDomain } = event?.arguments
   const username = event?.identity?.claims["cognito:username"]
   const endpoint = new URL(GRAPHQL_ENDPOINT);
-  // const date = new Date();
-  // const epoch = Date.now();
-  // let dateStamp = date.toISOString();
+  const dateStamp = new Date().toLocaleDateString()
   const { Parameters } = await (new AWS.SSM())
     .getParameters({
       Names: [
@@ -135,11 +133,9 @@ export const handler = async (event) => {
       'term': search,
       'location': postalCode
     }
-
     const headers = {
       'Authorization': `Bearer ${findSecret("yelpApiToken")}`
     }
-
     return getRequest("https://api.yelp.com/v3/businesses/search", { params, headers });
   }
 
@@ -161,7 +157,6 @@ export const handler = async (event) => {
       'term': search,
       'searchloc': postalCode
     }
-
     return getRequest("http://pubapi.yp.com/search-api/search/devapi/search", { params });
   }
 
@@ -187,14 +182,32 @@ export const handler = async (event) => {
    */
 
   console.log('starting data parsing')
-
-  const parsed = await Promise.allSettled([
-    parseCitysearch(results[0]?.value?.data, search, postalCode, apexDomain),
-    parseGoogle(results[1]?.value?.data, search, postalCode, apexDomain),
-    parseFoursquare(results[2]?.value?.data, search, postalCode, apexDomain),
-    parseYellowpages(results[3]?.value?.data, search, postalCode, apexDomain),
-    parseYelp(results[4]?.value?.data, search, postalCode, apexDomain)
+  let parsed = await Promise.allSettled([
+    parseCitysearch(results[0]?.value?.data, search, postalCode, apexDomain, dateStamp),
+    parseGoogle(results[1]?.value?.data, search, postalCode, apexDomain, dateStamp),
+    parseFoursquare(results[2]?.value?.data, search, postalCode, apexDomain, dateStamp),
+    parseYellowpages(results[3]?.value?.data, search, postalCode, apexDomain, dateStamp),
+    parseYelp(results[4]?.value?.data, search, postalCode, apexDomain, dateStamp)
   ])
+  parsed = parsed.map((result, key) => {
+    if (result.status === 'rejected') {
+      return {
+        // data: {},
+        results: [],
+        bumpChart: [],
+        highScore: -1,
+        foundWebsite: false,
+        mostLikely: -1,
+        exactWebsiteMatch: -1,
+        exactWebsiteMatchHttp: -1,
+        exactNameMatch: -1,
+        rank: -1
+      }
+    } else {
+      // result.value.data = results[key]?.value?.data
+      return result.value
+    }
+  })
   const citysearch = parsed[0];
   const google = parsed[1];
   // const facebook = results[2];

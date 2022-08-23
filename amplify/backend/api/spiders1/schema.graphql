@@ -8,56 +8,42 @@ type WebResult {
   data: AWSJSON
   parsed: AWSJSON
   unstructured: String
-  type: WEBCRAWLERS
 }
+
+# type Address {
+#   city: String
+#   postalCode: String
+#   state: String
+#   street: String
+# }
 
 type ParsedEngineResult {
   key: Int
   name: String
   score: Float
   websiteUrl: String
+  address: String
 }
 
-type ParsedEngineResultPromise {
-  status: String
-  reason: String 
-  value: ParsedEngineResult
+type Coordinate {
+  x: String
+  y: Int
 }
 
-type EngineResultPromise {
-  status: String
-  reason: String
-  value: EngineResult
+type BumpChart {
+  id: String
+  data: [Coordinate]
 }
 
 type EngineResult {
-  data: AWSJSON # Raw request data
-  results: [ParsedEngineResultPromise] # parsed results
+  results: [ParsedEngineResult] # parsed results
+  bumpChart: [BumpChart]
   highScore: Float
   foundWebsite: Boolean # Something matched a domain
   mostLikely: Int # key in results
   exactWebsiteMatch: Int # key in results
   exactWebsiteMatchHttp: Int # key in results
   exactNameMatch: Int # key in results
-  rank: Int # where in the searched listings was the listing found
-  type: ENGINECRAWLERS # Which search engine were the results from
-}
-
-enum ENGINECRAWLERS {
-  KEYWORD_PLANNER
-  GOOGLE
-  FOURSQUARE
-  FACEBOOK
-  YELP
-  INFOGROUP
-  CITYSEARCH
-  YELLOW_PAGES
-}
-
-enum WEBCRAWLERS {
-  NU
-  LIGHTHOUSE
-  CUSTOM
 }
 
 type WebCrawl @model @auth(
@@ -81,14 +67,14 @@ type EngineCrawl @model @auth(
   search: String
   domainID: ID! @index(name: "byDomain")
   postalCode: String
-  keywordplanner: EngineResultPromise
-  citysearch: EngineResultPromise
-  google: EngineResultPromise
-  foursquare: EngineResultPromise
-  facebook: EngineResultPromise
-  yelp: EngineResultPromise
-  infogroup: EngineResultPromise
-  yellowpages: EngineResultPromise
+  keywordplanner: EngineResult
+  citysearch: EngineResult
+  google: EngineResult
+  foursquare: EngineResult
+  facebook: EngineResult
+  yelp: EngineResult
+  infogroup: EngineResult
+  yellowpages: EngineResult
   owner: String
 }
 

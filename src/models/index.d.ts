@@ -1,58 +1,44 @@
 import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
 
-export enum Webcrawlers {
-  NU = "NU",
-  LIGHTHOUSE = "LIGHTHOUSE",
-  CUSTOM = "CUSTOM"
-}
 
-export enum Enginecrawlers {
-  KEYWORD_PLANNER = "KEYWORD_PLANNER",
-  GOOGLE = "GOOGLE",
-  FOURSQUARE = "FOURSQUARE",
-  FACEBOOK = "FACEBOOK",
-  YELP = "YELP",
-  INFOGROUP = "INFOGROUP",
-  CITYSEARCH = "CITYSEARCH",
-  YELLOW_PAGES = "YELLOW_PAGES"
-}
 
 export declare class WebResult {
   readonly data?: string | null;
   readonly parsed?: string | null;
   readonly unstructured?: string | null;
-  readonly type?: Webcrawlers | keyof typeof Webcrawlers | null;
   constructor(init: ModelInit<WebResult>);
 }
 
-export declare class ParsedEngineResultValue {
+export declare class ParsedEngineResult {
   readonly key?: number | null;
   readonly name?: string | null;
   readonly score?: number | null;
   readonly websiteUrl?: string | null;
-  constructor(init: ModelInit<ParsedEngineResultValue>);
-}
-
-export declare class ParsedEngineResult {
-  readonly status?: string | null;
-  readonly reason?: string | null;
-  readonly value?: ParsedEngineResultValue | null;
+  readonly address?: string | null;
   constructor(init: ModelInit<ParsedEngineResult>);
 }
 
+export declare class Coordinate {
+  readonly x?: string | null;
+  readonly y?: number | null;
+  constructor(init: ModelInit<Coordinate>);
+}
+
+export declare class BumpChart {
+  readonly id?: string | null;
+  readonly data?: (Coordinate | null)[] | null;
+  constructor(init: ModelInit<BumpChart>);
+}
+
 export declare class EngineResult {
-  readonly status?: string | null;
-  readonly reason?: string | null;
-  readonly data?: string | null;
   readonly results?: (ParsedEngineResult | null)[] | null;
+  readonly bumpChart?: (BumpChart | null)[] | null;
   readonly highScore?: number | null;
   readonly foundWebsite?: boolean | null;
   readonly mostLikely?: number | null;
   readonly exactWebsiteMatch?: number | null;
   readonly exactWebsiteMatchHttp?: number | null;
   readonly exactNameMatch?: number | null;
-  readonly rank?: number | null;
-  readonly type?: Enginecrawlers | keyof typeof Enginecrawlers | null;
   constructor(init: ModelInit<EngineResult>);
 }
 

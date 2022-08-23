@@ -14,8 +14,29 @@
     ],
     "conflictResolution": {
       "defaultResolutionStrategy": {
-        "type": "AUTOMERGE"
-      }
-    }
+        "type": "OPTIMISTIC_CONCURRENCY"
+      },
+      "perModelResolutionStrategy": [
+        {
+          "resolutionStrategy": {
+            "type": "OPTIMISTIC_CONCURRENCY"
+          },
+          "entityName": "WebCrawl"
+        },
+        {
+          "resolutionStrategy": {
+            "type": "OPTIMISTIC_CONCURRENCY"
+          },
+          "entityName": "EngineCrawl"
+        },
+        {
+          "resolutionStrategy": {
+            "type": "OPTIMISTIC_CONCURRENCY"
+          },
+          "entityName": "Domain"
+        }
+      ]
+    },
+    "gqlSchemaPath": "/Users/colinbarrett-fox/Projects/tmp/amplify-spiders-v1/amplify/backend/api/spiders1/schema.graphql"
   }
 }

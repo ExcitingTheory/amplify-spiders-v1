@@ -374,29 +374,7 @@ export const schema = {
             ]
         }
     },
-    "enums": {
-        "Webcrawlers": {
-            "name": "Webcrawlers",
-            "values": [
-                "NU",
-                "LIGHTHOUSE",
-                "CUSTOM"
-            ]
-        },
-        "Enginecrawlers": {
-            "name": "Enginecrawlers",
-            "values": [
-                "KEYWORD_PLANNER",
-                "GOOGLE",
-                "FOURSQUARE",
-                "FACEBOOK",
-                "YELP",
-                "INFOGROUP",
-                "CITYSEARCH",
-                "YELLOW_PAGES"
-            ]
-        }
-    },
+    "enums": {},
     "nonModels": {
         "WebResult": {
             "name": "WebResult",
@@ -421,20 +399,11 @@ export const schema = {
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
-                },
-                "type": {
-                    "name": "type",
-                    "isArray": false,
-                    "type": {
-                        "enum": "Webcrawlers"
-                    },
-                    "isRequired": false,
-                    "attributes": []
                 }
             }
         },
-        "ParsedEngineResultValue": {
-            "name": "ParsedEngineResultValue",
+        "ParsedEngineResult": {
+            "name": "ParsedEngineResult",
             "fields": {
                 "key": {
                     "name": "key",
@@ -463,66 +432,75 @@ export const schema = {
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
+                },
+                "address": {
+                    "name": "address",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
                 }
             }
         },
-        "ParsedEngineResult": {
-            "name": "ParsedEngineResult",
+        "Coordinate": {
+            "name": "Coordinate",
             "fields": {
-                "status": {
-                    "name": "status",
+                "x": {
+                    "name": "x",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
-                "reason": {
-                    "name": "reason",
+                "y": {
+                    "name": "y",
                     "isArray": false,
-                    "type": "AWSJSON",
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            }
+        },
+        "BumpChart": {
+            "name": "BumpChart",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
-                "value": {
-                    "name": "value",
-                    "isArray": false,
+                "data": {
+                    "name": "data",
+                    "isArray": true,
                     "type": {
-                        "nonModel": "ParsedEngineResultValue"
+                        "nonModel": "Coordinate"
                     },
                     "isRequired": false,
-                    "attributes": []
+                    "attributes": [],
+                    "isArrayNullable": true
                 }
             }
         },
         "EngineResult": {
             "name": "EngineResult",
             "fields": {
-                "status": {
-                    "name": "status",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "reason": {
-                    "name": "reason",
-                    "isArray": false,
-                    "type": "AWSJSON",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "data": {
-                    "name": "data",
-                    "isArray": false,
-                    "type": "AWSJSON",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "results": {
                     "name": "results",
                     "isArray": true,
                     "type": {
                         "nonModel": "ParsedEngineResult"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true
+                },
+                "bumpChart": {
+                    "name": "bumpChart",
+                    "isArray": true,
+                    "type": {
+                        "nonModel": "BumpChart"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -569,25 +547,9 @@ export const schema = {
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
-                },
-                "rank": {
-                    "name": "rank",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "type": {
-                    "name": "type",
-                    "isArray": false,
-                    "type": {
-                        "enum": "Enginecrawlers"
-                    },
-                    "isRequired": false,
-                    "attributes": []
                 }
             }
         }
     },
-    "version": "74eed2e1daa6e00cb841870df41f0c69"
+    "version": "697afc01b81ee423d8bb906675128062"
 };
