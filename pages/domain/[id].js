@@ -20,62 +20,85 @@ import Link from '../../src/Link';
 import MainToolbar from '../../src/components/MainToolbar'
 import { ResponsiveBump } from '@nivo/bump'
 
-const MyResponsiveBump = ({ data /* see data tab */ }) => (
-  <ResponsiveBump
-    data={data}
-    colors={{ scheme: 'dark2' }}
-    // colors={{ scheme: 'spectral' }}
-    // legendLabel={(x) => {
-    //   console.log('legendLabel.x', x)
-    // }}
-    lineWidth={3}
-    activeLineWidth={6}
-    inactiveLineWidth={3}
-    inactiveOpacity={0.15}
-    startLabelTextColor="black"
-    endLabelTextColor="black"
-    pointSize={10}
-    activePointSize={16}
-    inactivePointSize={0}
-    pointColor={{ from: 'serie.color', modifiers: [] }}
-    // pointColor={{ theme: 'inherit' }}
-    pointBorderWidth={3}
-    activePointBorderWidth={3}
-    // pointBorderColor={{ from: 'serie.color' }}
-    axisTop={{
-      tickSize: 5,
-      tickPadding: 5,
-      tickRotation: 0,
-      legend: '',
-      legendPosition: 'middle',
-      legendOffset: -36
-    }}
-    axisBottom={{
-      tickSize: 5,
-      tickPadding: 5,
-      tickRotation: 0,
-      legend: '',
-      legendPosition: 'middle',
-      legendOffset: 32
-    }}
-    axisLeft={{
-      tickSize: 5,
-      tickPadding: 5,
-      tickRotation: 0,
-      legend: 'ranking',
-      legendPosition: 'middle',
-      legendOffset: -40
-    }}
-    margin={{ top: 40, right: 400, bottom: 40, left: 60 }}
-    axisRight={null}
-  />
-)
+const MyResponsiveBump = ({ data, name }) => {
 
-const Charts = function ({bumpCharts}) {
+  if (data) {
+
+    data = Array.from(data.values())
+
+    function onStuffClick() {
+      console.log('click')
+      document.querySelector("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
+    }
+
+    return (
+      <Card
+        style={{
+          margin: '2rem auto',
+          minWidth: 'min-content',
+          height: '35rem',
+          display: 'block',
+          padding: '2rem 1rem 6rem 2rem' }}>
+
+        <h3>{name}</h3>
 
 
+        <button onClick={onStuffClick}>Click</button>
+        <ResponsiveBump
+          data={data}
+          colors={{ scheme: 'dark2' }}
+          // colors={{ scheme: 'spectral' }}
+          // legendLabel={(x) => {
+          //   console.log('legendLabel.x', x)
+          // }}
+          lineWidth={3}
+          activeLineWidth={6}
+          inactiveLineWidth={3}
+          inactiveOpacity={0.15}
+          startLabelTextColor="black"
+          endLabelTextColor="black"
+          pointSize={10}
+          activePointSize={16}
+          inactivePointSize={0}
+          pointColor={{ from: 'serie.color', modifiers: [] }}
+          // pointColor={{ theme: 'inherit' }}
+          pointBorderWidth={3}
+          activePointBorderWidth={3}
+          // pointBorderColor={{ from: 'serie.color' }}
+          axisTop={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: '',
+            legendPosition: 'middle',
+            legendOffset: -36
+          }}
+          axisBottom={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: '',
+            legendPosition: 'middle',
+            legendOffset: 32
+          }}
+          axisLeft={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'ranking',
+            legendPosition: 'middle',
+            legendOffset: -40
+          }}
+          margin={{ top: 40, right: 400, bottom: 40, left: 60 }}
+          axisRight={null}
+        />
+      </Card>)
+  }
+  return null
+}
 
-  // const charts = engineCrawls.map(element => {
+const Charts = function ({ bumpCharts }) {
+
   const {
     citysearch,
     google,
@@ -87,101 +110,52 @@ const Charts = function ({bumpCharts}) {
     yellowpages
   } = bumpCharts
 
-  console.log('bumpCharts', bumpCharts)
-
-  if(citysearch) {
-    console.log('Array.from(citysearch.values())', Array.from(citysearch.values()))
-  }
-  
-  //   console.log('HERE', element)
-  //   console.log(JSON.stringify({
-  //     citysearch,
-  //     google,
-  //     foursquare,
-  //     // facebook,
-  //     // keywordplanner,
-  //     yelp,
-  //     infogroup,
-  //     yellowpages
-  //   }))
+  console.log(JSON.stringify({
+    citysearch,
+    google,
+    foursquare,
+    // facebook,
+    // keywordplanner,
+    yelp,
+    // infogroup,
+    yellowpages
+  }))
 
   return (
     <div>
-      
-      {citysearch &&
-        <div style={{ height: '20rem' }}>
-          Citysearch
-          <MyResponsiveBump data={Array.from(citysearch.values())} />
-        </div>
-      }
-        
-      {google &&
-        <div style={{ height: '20rem' }}>
-          Google
-          <MyResponsiveBump data={Array.from(google.values())} />
-        </div>
-      }
-
-      {foursquare &&
-        <div style={{ height: '20rem' }}>
-          Foursquare
-          <MyResponsiveBump data={Array.from(foursquare.values())} />
-        </div>
-      }
-        
-      {yelp &&
-        <div style={{ height: '20rem' }}>
-          Yelp
-          <MyResponsiveBump data={Array.from(yelp.values())} />
-        </div>
-      }
-        
-      {yellowpages &&
-        <div style={{ height: '20rem' }}>
-          Yellowpages
-          <MyResponsiveBump data={Array.from(yellowpages.values())} />
-        </div>
-      }
+      <MyResponsiveBump data={citysearch} name="Citysearch" />
+      <MyResponsiveBump data={google} name="Google" />
+      <MyResponsiveBump data={foursquare} name="Foursquare" />
+      <MyResponsiveBump data={yelp} name="Yelp" />
+      <MyResponsiveBump data={yellowpages} name="Yellowpages" />
     </div>
   )
 
-  // );
-
-
-  // return(charts)
 }
 
 
 function proccessMaps(data, inputMap) {
   if (data?.bumpChart) {
     if (inputMap) {
-      // console.log('maps?.citysearch citysearch.bumpChart', data.bumpChart)
       data.bumpChart.forEach(function (chartItem) {
-        // console.log('data.bumpChart.forEach.chartItem 2nd', chartItem)
-        if(inputMap.has(chartItem.id)){
-          // console.log('map.has(chartItem.id)')
+        if (inputMap.has(chartItem.id)) {
           const thisItem = inputMap.get(chartItem.id)
-          // console.log('map.get(chartItem.id)', map.get(chartItem.id))
           const newData = thisItem.data.concat(chartItem.data)
-          // console.log('thisItem.data.concat(chartItem.data)', newData)
           inputMap.set(chartItem.id, {
             id: chartItem.id,
             data: newData
           })
         } else {
-          // console.log('else map.set(chartItem.id', map.has(chartItem.id))
           inputMap.set(chartItem.id, {
             id: chartItem.id,
             data: chartItem.data
           })
         }
-        
+
       })
     } else {
-      // console.log('no maps?.citysearch citysearch.bumpChart', citysearch.bumpChart)
       inputMap = new Map()
       data.bumpChart.forEach(function (chartItem) {
-        // console.log('citysearch.bumpChart.forEach.chartItem 1st', chartItem)
         inputMap.set(chartItem.id, {
           id: chartItem.id,
           data: chartItem.data
@@ -194,15 +168,6 @@ function proccessMaps(data, inputMap) {
 }
 
 
-
-// TODO Send a mouseover to trigger highlighting?
-// document.getElementById('xyz').dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
-// $("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
-
-
-
-
-
 function Domains({ signOut, user }) {
   const [domain, setDomain] = useState([])
   const [engineCrawls, setEngineCrawls] = useState([])
@@ -212,10 +177,6 @@ function Domains({ signOut, user }) {
   const router = useRouter()
   const { id } = router.query
 
-  function onStuffClick() {
-    console.log('click')
-    document.querySelector("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
-  }
 
 
   useEffect(() => {
@@ -307,24 +268,26 @@ function Domains({ signOut, user }) {
             <div>Loading...</div>
           }
           {domain &&
-            <Card
-              key={domain.id}
-              sx={{
-                margin: '1rem auto',
-                padding: '2rem',
-                flexGrow: '1',
-                minWidth: 'min-content'
-              }}
-            >
-              <h2>{domain.name}</h2>
-              <div>{domain.description}</div>
+            <>
+              <Card
+                key={domain.id}
+                sx={{
+                  margin: '1rem auto',
+                  padding: '2rem',
+                  flexGrow: '1',
+                  minWidth: 'min-content'
+                }}
+              >
+                <h2>{domain.name}</h2>
+                <div>{domain.description}</div>
 
-              <button onClick={onStuffClick}>Click</button>
+
+
+
+              </Card>
 
               <Charts bumpCharts={bumpCharts} />
-              
-
-            </Card>
+            </>
           }
 
         </Box>
