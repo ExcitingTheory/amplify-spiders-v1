@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Domain, EngineCrawl } from "../../src/models";
-import { DataStore } from '@aws-amplify/datastore';
+import { DataStore, Predicates, SortDirection } from '@aws-amplify/datastore';
 import { useRouter } from 'next/router'
 
 import { withAuthenticator } from '@aws-amplify/ui-react';
@@ -185,7 +185,10 @@ function Domains({ signOut, user }) {
       let domainData = await DataStore.query(Domain, id)
       domainData = domainData[0]
       // const engineCrawls = await DataStore.query(EngineCrawl)
-      const engineCrawls = (await DataStore.query(EngineCrawl)).filter(c => c.domainID === domainData?.id);
+      const engineCrawls = (await DataStore.query(EngineCrawl, Predicates.ALL, {
+        sort: s => s.createdAt(SortDirection.ASCENDING)
+      })).filter(c => c.domainID === domainData?.id);
+      // const engineCrawls = (await DataStore.query(EngineCrawl)).filter(c => c.domainID === domainData?.id);
       console.log('domainData[0]', domainData)
       console.log('engineCrawls[0]', engineCrawls)
       setDomain(domainData)
