@@ -24,15 +24,16 @@ export declare class Coordinate {
   constructor(init: ModelInit<Coordinate>);
 }
 
-export declare class BumpChart {
+export declare class Chart {
   readonly id?: string | null;
   readonly data?: (Coordinate | null)[] | null;
-  constructor(init: ModelInit<BumpChart>);
+  constructor(init: ModelInit<Chart>);
 }
 
 export declare class EngineResult {
   readonly results?: (ParsedEngineResult | null)[] | null;
-  readonly bumpChart?: (BumpChart | null)[] | null;
+  readonly bumpChart?: (Chart | null)[] | null;
+  readonly heatmapChart?: (Chart | null)[] | null;
   readonly highScore?: number | null;
   readonly foundWebsite?: boolean | null;
   readonly mostLikely?: number | null;

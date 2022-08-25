@@ -461,8 +461,8 @@ export const schema = {
                 }
             }
         },
-        "BumpChart": {
-            "name": "BumpChart",
+        "Chart": {
+            "name": "Chart",
             "fields": {
                 "id": {
                     "name": "id",
@@ -500,7 +500,17 @@ export const schema = {
                     "name": "bumpChart",
                     "isArray": true,
                     "type": {
-                        "nonModel": "BumpChart"
+                        "nonModel": "Chart"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true
+                },
+                "heatmapChart": {
+                    "name": "heatmapChart",
+                    "isArray": true,
+                    "type": {
+                        "nonModel": "Chart"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -551,5 +561,5 @@ export const schema = {
             }
         }
     },
-    "version": "697afc01b81ee423d8bb906675128062"
+    "version": "60f9fde5b844b78b594302896b9eec53"
 };

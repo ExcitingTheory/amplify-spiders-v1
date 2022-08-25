@@ -4,7 +4,7 @@ import { schema } from './schema';
 
 
 
-const { WebCrawl, EngineCrawl, Domain, WebResult, ParsedEngineResult, Coordinate, BumpChart, EngineResult } = initSchema(schema);
+const { WebCrawl, EngineCrawl, Domain, WebResult, ParsedEngineResult, Coordinate, Chart, EngineResult } = initSchema(schema);
 
 export {
   WebCrawl,
@@ -13,6 +13,6 @@ export {
   WebResult,
   ParsedEngineResult,
   Coordinate,
-  BumpChart,
+  Chart,
   EngineResult
 };
