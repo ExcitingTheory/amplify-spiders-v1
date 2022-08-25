@@ -190,7 +190,7 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
   // }))
 
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
-  console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
+  // console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
   if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
     let website
     try {
@@ -205,7 +205,7 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
       if (found.includes(domainName)) {
         foundWebsite = true
         mostLikely = websiteCheckIndex
-        results[websiteCheckIndex]["value"]["websiteUrl"] = found
+        results[websiteCheckIndex]["websiteUrl"] = found
       }
 
       if (found === `https://www.${domainName}/` || found === `https://${domainName}/`) {
@@ -220,13 +220,28 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
   }
 
   const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
+
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    syntax,
-    scoreSyntax,
+    heatmapChart,
+    // scoreSyntax,
+    // syntax,
     foundWebsite,
     mostLikely,
     exactWebsiteMatch,
@@ -314,13 +329,28 @@ export const parseGoogle = async function (data, search, postalCode, domainName,
   })
 
   const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
+
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    syntax,
-    scoreSyntax,
+    heatmapChart,
+    // scoreSyntax,
+    // syntax,
     foundWebsite,
     mostLikely,
     exactWebsiteMatch,
@@ -401,13 +431,38 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
   })
 
   const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
+
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
+  // [
+  //   {
+  //     "id": "Japan",
+  //     "data": [
+  //       {
+  //         "x": "Train",
+  //         "y": 125
+  //       },
+
+
 
   return {
     results,
     bumpChart,
     highScore,
-    syntax,
-    scoreSyntax,
+    heatmapChart,
+    // scoreSyntax,
+    // syntax,
     mostLikely,
     exactNameMatch
   }
@@ -491,7 +546,7 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
           if (found.includes(domainName)) {
             // console.log('found', found)
             foundWebsite = true
-            results[websiteCheckIndex]["value"]["websiteUrl"] = found
+            results[websiteCheckIndex]["websiteUrl"] = found
           }
 
           if (found === `https://www.${domainName}` || found === `https://${domainName}`) {
@@ -514,13 +569,28 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
   // console.log(JSON.stringify(results))
 
   const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
+
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    syntax,
-    scoreSyntax,
+    heatmapChart,
+    // scoreSyntax,
+    // syntax,
     foundWebsite,
     mostLikely,
     exactWebsiteMatch,
@@ -595,13 +665,28 @@ export const parseYellowpages = async function (data, search, postalCode, domain
   })
 
   const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
+
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    syntax,
-    scoreSyntax,
+    heatmapChart,
+    // scoreSyntax,
+    // syntax,
     mostLikely,
     exactNameMatch
   }
