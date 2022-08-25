@@ -1,5 +1,8 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
+import '@tensorflow/tfjs-node';
+import * as use from '@tensorflow-models/universal-sentence-encoder';
+
 
 /**
  * Compares the similarity between two strings using an n-gram comparison method. 
@@ -41,7 +44,49 @@ export const stringSimilarity = function (str1, str2, gramSize = 2) {
   return hits / total;
 }
 
-// exports.stringSimilarity = stringSimilarity
+
+const dot = function (a, b) {
+  var hasOwnProperty = Object.prototype.hasOwnProperty;
+  var sum = 0;
+  for (var key in a) {
+    if (hasOwnProperty.call(a, key) && hasOwnProperty.call(b, key)) {
+      sum += a[key] * b[key]
+    }
+  }
+  return sum
+}
+
+const similarity = function (a, b) {
+  var magnitudeA = Math.sqrt(dot(a, a));
+  var magnitudeB = Math.sqrt(dot(b, b));
+  if (magnitudeA && magnitudeB)
+    return dot(a, b) / (magnitudeA * magnitudeB);
+  else return false
+}
+
+
+const cosineSimilarityMatrix = function (matrix) {
+  let cosine_similarity_matrix = [];
+  for (let i = 0; i < matrix.length; i++) {
+    let row = [];
+    for (let j = 0; j < i; j++) {
+      row.push(cosine_similarity_matrix[j][i]);
+    }
+    row.push(1);
+    for (let j = (i + 1); j < matrix.length; j++) {
+      row.push(similarity(matrix[i], matrix[j]));
+    }
+    cosine_similarity_matrix.push(row);
+  }
+  return cosine_similarity_matrix;
+}
+
+export const syntacticSimilarity = async function (sentences) {
+  const model = await use.load()
+  const embeddings = await model.embed(sentences)
+  let arr = cosineSimilarityMatrix(embeddings.arraySync())
+  return arr
+}
 
 export const getRequest = async function (url, params = {}) {
   let data = axios.get(url, params).catch((error) => {
@@ -69,11 +114,14 @@ export const getRequest = async function (url, params = {}) {
 export const parseCitysearch = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.results?.locations || [];
   let mostLikely = -1
+  // let mostLikelySyntax = -1
   let exactWebsiteMatch = -1
   let exactWebsiteMatchHttp = -1
   let exactNameMatch = -1
   let foundWebsite = false;
   let highScore = 0;
+  // let highScoreSyntax = 0;
+  let syntax = [search]
   let promises = toSearch.map(async (element, key) => {
     // console.log(element)
     const name = element.name
@@ -83,10 +131,12 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
       mostLikely = key
     }
     const score = stringSimilarity(search, name)
-    if (score > highScore && !foundWebsite) {
+    if (score > highScore) {
       highScore = score
       mostLikely = key
     }
+
+    syntax.push(name)
 
     // const address = {
     //   street: element?.address?.street,
@@ -169,10 +219,14 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
     }
   }
 
+  const scoreSyntax = await syntacticSimilarity(syntax)
+
   return {
     results,
     bumpChart,
     highScore,
+    syntax,
+    scoreSyntax,
     foundWebsite,
     mostLikely,
     exactWebsiteMatch,
@@ -190,6 +244,7 @@ export const parseGoogle = async function (data, search, postalCode, domainName,
   let exactNameMatch = -1
   let foundWebsite = false;
   let highScore = 0;
+  let syntax = [search]
   let promises = toSearch.map(async (element, key) => {
     // console.log(element)
     const name = element.title
@@ -205,6 +260,9 @@ export const parseGoogle = async function (data, search, postalCode, domainName,
       highScore = score
       mostLikely = key
     }
+
+
+    syntax.push(name)
 
     if (websiteUrl.includes(domainName)) {
       foundWebsite = true
@@ -255,10 +313,14 @@ export const parseGoogle = async function (data, search, postalCode, domainName,
     }
   })
 
+  const scoreSyntax = await syntacticSimilarity(syntax)
+
   return {
     results,
     bumpChart,
     highScore,
+    syntax,
+    scoreSyntax,
     foundWebsite,
     mostLikely,
     exactWebsiteMatch,
@@ -284,6 +346,7 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
   let mostLikely = -1
   let exactNameMatch = -1
   let highScore = 0;
+  let syntax = [search]
   let promises = toSearch.map(async (element, key) => {
     // console.log(element)
     const name = element.name
@@ -297,6 +360,7 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
       highScore = score
       mostLikely = key
     }
+    syntax.push(name)
     /** 
      * Verify Address?
      * */
@@ -336,10 +400,14 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
     }
   })
 
+  const scoreSyntax = await syntacticSimilarity(syntax)
+
   return {
     results,
     bumpChart,
     highScore,
+    syntax,
+    scoreSyntax,
     mostLikely,
     exactNameMatch
   }
@@ -353,6 +421,7 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
   let exactNameMatch = -1
   let foundWebsite = false;
   let highScore = 0;
+  let syntax = [search]
   let promises = toSearch.map(async (element, key) => {
     // console.log(element)
     const name = element.name
@@ -366,6 +435,9 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
       highScore = score
       mostLikely = key
     }
+
+
+    syntax.push(name)
 
     const address = element?.location?.address1
 
@@ -441,10 +513,14 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
 
   // console.log(JSON.stringify(results))
 
+  const scoreSyntax = await syntacticSimilarity(syntax)
+
   return {
     results,
     bumpChart,
     highScore,
+    syntax,
+    scoreSyntax,
     foundWebsite,
     mostLikely,
     exactWebsiteMatch,
@@ -458,6 +534,7 @@ export const parseYellowpages = async function (data, search, postalCode, domain
   let mostLikely = -1
   let exactNameMatch = -1
   let highScore = 0;
+  let syntax = [search]
   let promises = toSearch.map(async (element, key) => {
     // console.log(element)
     const name = element.businessName
@@ -471,6 +548,11 @@ export const parseYellowpages = async function (data, search, postalCode, domain
       highScore = score
       mostLikely = key
     }
+
+
+    syntax.push(name)
+
+
     /** 
      * Verify Address
      * */
@@ -512,10 +594,14 @@ export const parseYellowpages = async function (data, search, postalCode, domain
     }
   })
 
+  const scoreSyntax = await syntacticSimilarity(syntax)
+
   return {
     results,
     bumpChart,
     highScore,
+    syntax,
+    scoreSyntax,
     mostLikely,
     exactNameMatch
   }
