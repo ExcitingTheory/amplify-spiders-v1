@@ -20,14 +20,53 @@ import Link from '../../src/Link';
 import MainToolbar from '../../src/components/MainToolbar'
 import { ResponsiveBump } from '@nivo/bump'
 
-const MyResponsiveBump = ({ data, name }) => {
+const MyResponsiveBump = ({ chartData, engineCrawl, name }) => {
 
-  if (data) {
+  console.log('MyResponsiveBump',chartData, engineCrawl )
+  if (chartData && engineCrawl) {
 
-    data = Array.from(data.values())
+    const {
+      exactNameMatch,
+      exactWebsiteMatch,
+      exactWebsiteMatchHttp,
+      foundWebsite,
+      highScore,
+      mostLikely,
+      results
+    } = engineCrawl
+    console.log('MyResponsiveBum:  chartData, engineCrawl' )
+
+    if (exactNameMatch && results[exactNameMatch]) {
+      console.log("results[exactNameMatch]", results[exactNameMatch])
+    }
+    if (exactWebsiteMatch && results[exactWebsiteMatch]) {
+      console.log("results[exactWebsiteMatch]", results[exactWebsiteMatch])
+    }
+    if (exactWebsiteMatchHttp && results[exactWebsiteMatchHttp]) {
+      console.log("results[exactWebsiteMatchHttp]", results[exactWebsiteMatchHttp])
+    }
+    if (highScore && results[highScore]) {
+      console.log("results[highScore]", results[highScore])
+    }
+    if (highScore && results[mostLikely]) {
+      console.log("results[mostLikely]", results[mostLikely])
+    }
+
+    console.log(JSON.stringify({
+      exactNameMatch,
+      exactWebsiteMatch,
+      exactWebsiteMatchHttp,
+      foundWebsite,
+      highScore,
+      mostLikely,
+      results
+    }))
+
+    console.log('engineCrawl', engineCrawl)
+    chartData = Array.from(chartData.values())
 
     function onStuffClick() {
-      console.log('click')
+      console.log('click', chartData)
       document.querySelector("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
     }
 
@@ -38,14 +77,14 @@ const MyResponsiveBump = ({ data, name }) => {
           minWidth: 'min-content',
           height: '35rem',
           display: 'block',
-          padding: '2rem 1rem 6rem 2rem' }}>
+          padding: '2rem 1rem 6rem 2rem'
+        }}>
 
         <h3>{name}</h3>
 
-
         <button onClick={onStuffClick}>Click</button>
         <ResponsiveBump
-          data={data}
+          data={chartData}
           colors={{ scheme: 'dark2' }}
           // colors={{ scheme: 'spectral' }}
           // legendLabel={(x) => {
@@ -97,7 +136,7 @@ const MyResponsiveBump = ({ data, name }) => {
   return null
 }
 
-const Charts = function ({ bumpCharts }) {
+const Charts = function ({ bumpCharts, engineCrawls }) {
 
   const {
     citysearch,
@@ -121,13 +160,27 @@ const Charts = function ({ bumpCharts }) {
     yellowpages
   }))
 
+
+  let lastCrawl = {}
+
+  try {
+    lastCrawl = engineCrawls.slice(-1)[0]
+  } catch {
+  }
+
+  const lastCrawlCitysearch = lastCrawl?.citysearch
+  const lastCrawlGoogle = lastCrawl?.google
+  const lastCrawlFoursquare = lastCrawl?.foursquare
+  const lastCrawlYelp = lastCrawl?.yelp
+  const lastCrawlYellowpages = lastCrawl?.yellowpages
+
   return (
     <div>
-      <MyResponsiveBump data={citysearch} name="Citysearch" />
-      <MyResponsiveBump data={google} name="Google" />
-      <MyResponsiveBump data={foursquare} name="Foursquare" />
-      <MyResponsiveBump data={yelp} name="Yelp" />
-      <MyResponsiveBump data={yellowpages} name="Yellowpages" />
+      <MyResponsiveBump engineCrawl={lastCrawlCitysearch} chartData={citysearch} name="Citysearch" />
+      <MyResponsiveBump engineCrawl={lastCrawlGoogle} chartData={google} name="Google" />
+      <MyResponsiveBump engineCrawl={lastCrawlFoursquare} chartData={foursquare} name="Foursquare" />
+      <MyResponsiveBump engineCrawl={lastCrawlYelp} chartData={yelp} name="Yelp" />
+      <MyResponsiveBump engineCrawl={lastCrawlYellowpages} chartData={yellowpages} name="Yellowpages" />
     </div>
   )
 
@@ -289,7 +342,7 @@ function Domains({ signOut, user }) {
 
               </Card>
 
-              <Charts bumpCharts={bumpCharts} />
+              <Charts bumpCharts={bumpCharts} engineCrawls={engineCrawls} />
             </>
           }
 
