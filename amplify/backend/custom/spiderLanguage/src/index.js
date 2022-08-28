@@ -272,7 +272,6 @@ export const handler = async (event) => {
     body = await response.json();
     if (body.errors) statusCode = 400;
   } catch (error) {
-    console.log('error', error.message)
     statusCode = 500;
     body = {
       errors: [

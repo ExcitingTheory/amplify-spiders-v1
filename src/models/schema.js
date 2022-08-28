@@ -455,7 +455,7 @@ export const schema = {
                 "y": {
                     "name": "y",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 }
@@ -561,5 +561,5 @@ export const schema = {
             }
         }
     },
-    "version": "60f9fde5b844b78b594302896b9eec53"
+    "version": "f759b42756a7fe198d9d383577cdd826"
 };

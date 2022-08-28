@@ -155,5 +155,31 @@
         }
       }
     }
+  },
+  "custom": {
+    "spiderLanguage": {
+      "service": "customCDK",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "spiders1",
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "spiderEngines",
+          "attributes": [
+            "Name",
+            "Arn",
+            "Region",
+            "LambdaExecutionRole"
+          ]
+        }
+      ]
+    }
   }
 }

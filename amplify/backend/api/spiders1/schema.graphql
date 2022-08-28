@@ -1,4 +1,5 @@
 type Mutation {
+  crawlEnginesLanguage(search: String, postalCode: String, domainID: String, apexDomain: String): String @function(name: "spiderEnginesLanguage-${env}")
   crawlEngines(search: String, postalCode: String, domainID: String, apexDomain: String): String @function(name: "spiderEngines-${env}")
   crawlKeywords(search: String, url: String): String @function(name: "spiderKeywords-${env}")
   crawlWebs(url: String): String @function(name: "spiderWebs-${env}")
@@ -27,7 +28,7 @@ type ParsedEngineResult {
 
 type Coordinate {
   x: String
-  y: Int
+  y: Float
 }
 
 type Chart {
@@ -81,6 +82,7 @@ type EngineCrawl @model @auth(
 
 type Domain @model @auth(
     rules: [
+      # { allow: private, provider: iam }
       { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
     ]) {
   id: ID!

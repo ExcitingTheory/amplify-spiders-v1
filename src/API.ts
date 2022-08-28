@@ -142,7 +142,8 @@ export type CreateEngineCrawlInput = {
 
 export type EngineResultInput = {
   results?: Array< ParsedEngineResultInput | null > | null,
-  bumpChart?: Array< BumpChartInput | null > | null,
+  bumpChart?: Array< ChartInput | null > | null,
+  heatmapChart?: Array< ChartInput | null > | null,
   highScore?: number | null,
   foundWebsite?: boolean | null,
   mostLikely?: number | null,
@@ -159,7 +160,7 @@ export type ParsedEngineResultInput = {
   address?: string | null,
 };
 
-export type BumpChartInput = {
+export type ChartInput = {
   id?: string | null,
   data?: Array< CoordinateInput | null > | null,
 };
@@ -204,7 +205,8 @@ export type EngineCrawl = {
 export type EngineResult = {
   __typename: "EngineResult",
   results?:  Array<ParsedEngineResult | null > | null,
-  bumpChart?:  Array<BumpChart | null > | null,
+  bumpChart?:  Array<Chart | null > | null,
+  heatmapChart?:  Array<Chart | null > | null,
   highScore?: number | null,
   foundWebsite?: boolean | null,
   mostLikely?: number | null,
@@ -222,8 +224,8 @@ export type ParsedEngineResult = {
   address?: string | null,
 };
 
-export type BumpChart = {
-  __typename: "BumpChart",
+export type Chart = {
+  __typename: "Chart",
   id?: string | null,
   data?:  Array<Coordinate | null > | null,
 };
@@ -346,6 +348,17 @@ export type ModelDomainConnection = {
   items:  Array<Domain | null >,
   nextToken?: string | null,
   startedAt?: number | null,
+};
+
+export type CrawlEnginesLanguageMutationVariables = {
+  search?: string | null,
+  postalCode?: string | null,
+  domainID?: string | null,
+  apexDomain?: string | null,
+};
+
+export type CrawlEnginesLanguageMutation = {
+  crawlEnginesLanguage?: string | null,
 };
 
 export type CrawlEnginesMutationVariables = {
@@ -513,7 +526,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -539,7 +561,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -565,7 +596,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -591,7 +631,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -617,7 +666,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -643,7 +701,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -669,7 +736,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -695,7 +771,16 @@ export type CreateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -742,7 +827,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -768,7 +862,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -794,7 +897,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -820,7 +932,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -846,7 +967,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -872,7 +1002,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -898,7 +1037,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -924,7 +1072,16 @@ export type UpdateEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -971,7 +1128,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -997,7 +1163,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1023,7 +1198,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1049,7 +1233,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1075,7 +1268,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1101,7 +1303,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1127,7 +1338,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1153,7 +1373,16 @@ export type DeleteEngineCrawlMutation = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -1207,7 +1436,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1233,7 +1471,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1259,7 +1506,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1285,7 +1541,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1311,7 +1576,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1337,7 +1611,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1363,7 +1646,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1389,7 +1681,16 @@ export type CreateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1487,7 +1788,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1513,7 +1823,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1539,7 +1858,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1565,7 +1893,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1591,7 +1928,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1617,7 +1963,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1643,7 +1998,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1669,7 +2033,16 @@ export type UpdateDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1767,7 +2140,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1793,7 +2175,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1819,7 +2210,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1845,7 +2245,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1871,7 +2280,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1897,7 +2315,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1923,7 +2350,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -1949,7 +2385,16 @@ export type DeleteDomainMutation = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -2165,7 +2610,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2191,7 +2645,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2217,7 +2680,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2243,7 +2715,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2269,7 +2750,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2295,7 +2785,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2321,7 +2820,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2347,7 +2855,16 @@ export type GetEngineCrawlQuery = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -2397,7 +2914,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2423,7 +2949,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2449,7 +2984,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2475,7 +3019,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2501,7 +3054,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2527,7 +3089,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2553,7 +3124,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2579,7 +3159,16 @@ export type ListEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2633,7 +3222,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2659,7 +3257,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2685,7 +3292,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2711,7 +3327,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2737,7 +3362,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2763,7 +3397,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2789,7 +3432,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2815,7 +3467,16 @@ export type SyncEngineCrawlsQuery = {
           address?: string | null,
         } | null > | null,
         bumpChart?:  Array< {
-          __typename: "BumpChart",
+          __typename: "Chart",
+          id?: string | null,
+          data?:  Array< {
+            __typename: "Coordinate",
+            x?: string | null,
+            y?: number | null,
+          } | null > | null,
+        } | null > | null,
+        heatmapChart?:  Array< {
+          __typename: "Chart",
           id?: string | null,
           data?:  Array< {
             __typename: "Coordinate",
@@ -2871,7 +3532,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -2897,7 +3567,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -2923,7 +3602,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -2949,7 +3637,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -2975,7 +3672,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -3001,7 +3707,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -3027,7 +3742,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -3053,7 +3777,16 @@ export type GetDomainQuery = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -3154,7 +3887,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3180,7 +3922,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3206,7 +3957,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3232,7 +3992,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3258,7 +4027,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3284,7 +4062,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3310,7 +4097,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3336,7 +4132,16 @@ export type ListDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3441,7 +4246,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3467,7 +4281,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3493,7 +4316,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3519,7 +4351,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3545,7 +4386,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3571,7 +4421,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3597,7 +4456,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3623,7 +4491,16 @@ export type SyncDomainsQuery = {
               address?: string | null,
             } | null > | null,
             bumpChart?:  Array< {
-              __typename: "BumpChart",
+              __typename: "Chart",
+              id?: string | null,
+              data?:  Array< {
+                __typename: "Coordinate",
+                x?: string | null,
+                y?: number | null,
+              } | null > | null,
+            } | null > | null,
+            heatmapChart?:  Array< {
+              __typename: "Chart",
               id?: string | null,
               data?:  Array< {
                 __typename: "Coordinate",
@@ -3827,7 +4704,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -3853,7 +4739,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -3879,7 +4774,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -3905,7 +4809,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -3931,7 +4844,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -3957,7 +4879,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -3983,7 +4914,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4009,7 +4949,16 @@ export type OnCreateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4055,7 +5004,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4081,7 +5039,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4107,7 +5074,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4133,7 +5109,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4159,7 +5144,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4185,7 +5179,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4211,7 +5214,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4237,7 +5249,16 @@ export type OnUpdateEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4283,7 +5304,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4309,7 +5339,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4335,7 +5374,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4361,7 +5409,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4387,7 +5444,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4413,7 +5479,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4439,7 +5514,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4465,7 +5549,16 @@ export type OnDeleteEngineCrawlSubscription = {
         address?: string | null,
       } | null > | null,
       bumpChart?:  Array< {
-        __typename: "BumpChart",
+        __typename: "Chart",
+        id?: string | null,
+        data?:  Array< {
+          __typename: "Coordinate",
+          x?: string | null,
+          y?: number | null,
+        } | null > | null,
+      } | null > | null,
+      heatmapChart?:  Array< {
+        __typename: "Chart",
         id?: string | null,
         data?:  Array< {
           __typename: "Coordinate",
@@ -4518,7 +5611,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4544,7 +5646,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4570,7 +5681,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4596,7 +5716,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4622,7 +5751,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4648,7 +5786,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4674,7 +5821,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4700,7 +5856,16 @@ export type OnCreateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4797,7 +5962,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4823,7 +5997,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4849,7 +6032,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4875,7 +6067,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4901,7 +6102,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4927,7 +6137,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4953,7 +6172,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -4979,7 +6207,16 @@ export type OnUpdateDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5076,7 +6313,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5102,7 +6348,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5128,7 +6383,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5154,7 +6418,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5180,7 +6453,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5206,7 +6488,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5232,7 +6523,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",
@@ -5258,7 +6558,16 @@ export type OnDeleteDomainSubscription = {
             address?: string | null,
           } | null > | null,
           bumpChart?:  Array< {
-            __typename: "BumpChart",
+            __typename: "Chart",
+            id?: string | null,
+            data?:  Array< {
+              __typename: "Coordinate",
+              x?: string | null,
+              y?: number | null,
+            } | null > | null,
+          } | null > | null,
+          heatmapChart?:  Array< {
+            __typename: "Chart",
             id?: string | null,
             data?:  Array< {
               __typename: "Coordinate",

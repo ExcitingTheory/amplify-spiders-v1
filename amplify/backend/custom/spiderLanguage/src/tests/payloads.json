@@ -1,0 +1,3227 @@
+{
+    "citysearch": {
+        "results": {
+            "uri": "http://api.citygridmedia.com/search/real/where?publisher=10000028538&format=json&what=Bend+Brewing+Company&where=97702",
+            "first_hit": 1,
+            "last_hit": 20,
+            "total_hits": 295,
+            "page": 1,
+            "rpp": 20,
+            "regions": [
+                {
+                    "type": "postal_code",
+                    "name": "97702",
+                    "latitude": 43.996074,
+                    "longitude": -121.291986,
+                    "default_radius": 9.44
+                }
+            ],
+            "geo_ids": [
+                45180
+            ],
+            "tag_ids": [
+                6019,
+                1988,
+                12069,
+                2005,
+                4215,
+                6023,
+                12809,
+                12762,
+                1978,
+                253
+            ],
+            "locations": [
+                {
+                    "id": 641624805,
+                    "featured": false,
+                    "name": "The Original Bend Transmission Company",
+                    "address": {
+                        "street": "61522 American Loop",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Farm District",
+                    "latitude": 44.036151,
+                    "longitude": -121.291555,
+                    "phone_number": "5416405509",
+                    "rating": 0,
+                    "tagline": "",
+                    "profile": "http://www.citysearch.com/profile/641624805/bend_or/the_original_bend_transmission_company_llc.html",
+                    "website": "https://api.citygridmedia.com/content/places/v2/click?q=urVBa6moXC5S9VPyC16BYDW2um0RUlPUMHXPxwSBLjzUP6DZA8b00GfzasrWuH8opNqqAdkrpglo8zwkjetiKWSSEp0bcoxXZMDSH01c1IXht_ZzlNlW4VhtlrzLeGPrRrPINTW0F_o1p1xgtE9V2W3fMesdg2eX72-zhgV9SZ2dU3ijsPZBhdycPcz28QDu5aHibmLJcvactqf2mW8NdHISSjQk6lJlvxE_FJDHrfgzVEZUONCMpnFeuqOhSGRvAW-UFlACv46iW_u0508cS5b6GPWmdlvZ4XK3V0lARj1_KFtjURsBnl2wU3WhawT1VUCN0NrPQQhrzT1kmBPUt_cjA6i9yVSynkQkZ8xKplAdNIlF9ZKbwTQNB-RplOsg5qvT5Ho00HTa3tEwVTS-JPpchWbG9A-vju6jzqEz0XLAi5Y2IZYrlofFqznePokrQFIa2P6o-jMAr0Yecm9-Q89fo-HjgB8S3yS7aVMbF4EUd503kzfqO6_L6UGNgLLHUL-rRr4E_UUwHbWEpjTNlXmKM02SZIrG",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Unclassified",
+                    "impression_id": "000b00000084a03443622f4c139a2afcbe3aee0eaa",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 6019,
+                            "name": "Unclassified",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "the-original-bend-transmission-company-llc-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 669851076,
+                    "featured": false,
+                    "name": "Bend Movers",
+                    "address": {
+                        "street": "1001 SE 15th Str Ste 112",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Larkspur",
+                    "latitude": 44.044174,
+                    "longitude": -121.283903,
+                    "phone_number": "5412419766",
+                    "rating": 0,
+                    "tagline": "",
+                    "profile": "http://www.citysearch.com/profile/669851076/bend_or/bend_movers.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Relocation Services, Moving Companies, Unclassified",
+                    "impression_id": "000b0000005a181c69be324441a2f488cd6bdc8536",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 12069,
+                            "name": "Relocation Services",
+                            "primary": false
+                        },
+                        {
+                            "id": 4215,
+                            "name": "Moving Companies",
+                            "primary": false
+                        },
+                        {
+                            "id": 6019,
+                            "name": "Unclassified",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "bend-movers-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 8557989,
+                    "featured": false,
+                    "name": "Bend On-Site Screening",
+                    "address": {
+                        "street": "61580 American Ln Ste 4",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Farm District",
+                    "latitude": 44.035392,
+                    "longitude": -121.291407,
+                    "phone_number": "4582560753",
+                    "rating": 0,
+                    "tagline": "",
+                    "profile": "http://www.citysearch.com/profile/8557989/bend_or/bend_on_site_screening.html",
+                    "website": "https://api.citygridmedia.com/content/places/v2/click?q=urVBa6moXC5S9VPyC16BYDW2um0RUlPUIu9YNJfLPMydDG1ssgZlsTPxOzzCqpbKEqYvu7ljIkIZz_1bRK-g_I2mjIBsp1KI0OovfkHgFingoWS6ay4ubQe-7U7MnBc1lQjvG2NGQttPBrvoLO7Fj59haRj-ka1pGB-1b_dnpInHA5EzgLyja8EkH3nQceUDAIbK0e8cIHwihuosE2c3hDqkO04WeniWWS2TZ0pJh39mTcdTIBG937CcAzlSjpPwbgGOZfpFUBR1up6ub1OfJbAhqGir-WZsqqGLvqwtTgBD4P9_rmEZq7AH6EvOGbxmF-UQ9zxEtu8LxdBWi9xQlU70sWaJJvLXEbxEZ70cnklh2XBr5-t3n7C2LspJdz9oyP81eHvDmim-9iBloGDfCNGgH-sUOHTJXGYZeoR31Eoe3G-ZBuKadxToU9kYrMQ2ocn7Pzrplcqy3dF3MpV6coTFmgJOYlYXO2Vx0s__HblMpi2rvwCrI82yoRZwqIG7jvKKUHWD74Jqv8J0hUkiRQ",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Windows, Window Tinting, Door Repair, Window Treatments",
+                    "impression_id": "000b000000ea110e92b93e4e3fa3f71e1a1bfcff4f",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 6023,
+                            "name": "Windows",
+                            "primary": true
+                        },
+                        {
+                            "id": 12762,
+                            "name": "Window Tinting",
+                            "primary": false
+                        },
+                        {
+                            "id": 12809,
+                            "name": "Door Repair",
+                            "primary": false
+                        },
+                        {
+                            "id": 1978,
+                            "name": "Window Treatments",
+                            "primary": false
+                        },
+                        {
+                            "id": 1988,
+                            "name": "Building Materials",
+                            "primary": false
+                        },
+                        {
+                            "id": 2005,
+                            "name": "Residential Glass",
+                            "primary": false
+                        },
+                        {
+                            "id": 253,
+                            "name": "Auto Glass",
+                            "primary": false
+                        },
+                        {
+                            "id": 26570,
+                            "name": "Quarries",
+                            "primary": false
+                        },
+                        {
+                            "id": 268,
+                            "name": "Automotive Repair",
+                            "primary": false
+                        },
+                        {
+                            "id": 3446,
+                            "name": "Screen Printing",
+                            "primary": false
+                        },
+                        {
+                            "id": 5789,
+                            "name": "Wholesale Window Shades",
+                            "primary": false
+                        },
+                        {
+                            "id": 6022,
+                            "name": "Doors",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "bend-onsite-screening-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 41328224,
+                    "featured": false,
+                    "name": "Bend Tree Service",
+                    "address": {
+                        "street": "19380 River Woods Dr",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Deschutes River Woods",
+                    "latitude": 43.98994,
+                    "longitude": -121.35534,
+                    "phone_number": "5413167296",
+                    "rating": 0,
+                    "tagline": "",
+                    "profile": "http://www.citysearch.com/profile/41328224/bend_or/bend_tree_service.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Tree Services, Lawn Maintenance, Shrubs, Shrub & Tree Services",
+                    "impression_id": "000b000000e83739a2868d42afb717d1e9e219525b",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 2013,
+                            "name": "Tree Services",
+                            "primary": true
+                        },
+                        {
+                            "id": 11608,
+                            "name": "Lawn Maintenance",
+                            "primary": false
+                        },
+                        {
+                            "id": 12721,
+                            "name": "Shrubs",
+                            "primary": false
+                        },
+                        {
+                            "id": 2011,
+                            "name": "Shrub & Tree Services",
+                            "primary": false
+                        },
+                        {
+                            "id": 2012,
+                            "name": "Shrub Services",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "bend-tree-svc-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 8557990,
+                    "featured": false,
+                    "name": "Bend Glass & Mirror",
+                    "address": {
+                        "street": "1080 SE 9th St Ste 100",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Larkspur",
+                    "latitude": 44.040687,
+                    "longitude": -121.291006,
+                    "phone_number": "5416471256",
+                    "rating": 0,
+                    "tagline": "",
+                    "profile": "http://www.citysearch.com/profile/8557990/bend_or/bend_glass_mirror.html",
+                    "website": "https://api.citygridmedia.com/content/places/v2/click?q=urVBa6moXC5S9VPyC16BYDW2um0RUlPUIu9YNJfLPMzy75RA85VCn2gpkr2IW9peTzOhg8Ag4Gn_DRIiKmvpYyVy2HnrMqiM0BGZrytdVN4G3vWlStf5xyDd1lPXAF9Krf2SxRE1CtuJLCdFxmRiWVV4J2Em05FIbatbn4d6os3mwGLWXO2BlZ_NEOKiK6ezko7Qb0Q2T0ouBKZCu9l6b54tI_WWTD4ebAa53t_e-W4DrmP-03ikN1MgTv7oEJDRbLegC4KrZIJwhXIDZQXyNqbX2TOzEsuO29_zgnZWVeQErUNrhYW6T8et7zxofdW28-d2virLDZoxTyAFf_dJChIcAbhlBJPrzHTepMtFZ-rC36yMu4-pWJo-Q2w5g7632Ppn5cWi7LkVJXM73w7EuFK3dY256EF2gCwUkg_QbTg4xvEUTNOKueYe5jTQAQOJXb5drS0Fwv4vRCdLX7wQ59l9HDgKa4MqwZnCTLIh---he4ekBhXBq-ktVP2wzuqQXGf7GqYUpmMaq0gI4VaZHw",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Mirrors, Mastercard Accepted, Visa Accepted, Awnings",
+                    "impression_id": "000b000000ec59273d1bfc42708434b7ec605b8606",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 11512,
+                            "name": "Mirrors",
+                            "primary": true
+                        },
+                        {
+                            "id": 11361,
+                            "name": "Mastercard Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11382,
+                            "name": "Visa Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 12846,
+                            "name": "Awnings",
+                            "primary": false
+                        },
+                        {
+                            "id": 17300,
+                            "name": "Door Openers",
+                            "primary": false
+                        },
+                        {
+                            "id": 1956,
+                            "name": "Bed & Bath",
+                            "primary": false
+                        },
+                        {
+                            "id": 1988,
+                            "name": "Building Materials",
+                            "primary": false
+                        },
+                        {
+                            "id": 2005,
+                            "name": "Residential Glass",
+                            "primary": false
+                        },
+                        {
+                            "id": 253,
+                            "name": "Auto Glass",
+                            "primary": false
+                        },
+                        {
+                            "id": 26570,
+                            "name": "Quarries",
+                            "primary": false
+                        },
+                        {
+                            "id": 4835,
+                            "name": "Wholesale Skylights",
+                            "primary": false
+                        },
+                        {
+                            "id": 5490,
+                            "name": "Wholesale Bath Equipment",
+                            "primary": false
+                        },
+                        {
+                            "id": 6023,
+                            "name": "Windows",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "bend-glass-mirror-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 689864156,
+                    "featured": false,
+                    "name": "Residence Inn By Marriott Bend",
+                    "address": {
+                        "street": "500 SW Bond St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Bend",
+                    "latitude": 44.055468,
+                    "longitude": -121.316001,
+                    "phone_number": "5413825001",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/689864156/bend_or/residence_inn_by_marriott_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Hotels & Motels, Extended Stay",
+                    "impression_id": "000b000000137a75b455d44bdd890f56c1b751607a",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 4295,
+                            "name": "Hotels & Motels",
+                            "primary": true
+                        },
+                        {
+                            "id": 4301,
+                            "name": "Extended Stay",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "residence-inn-by-marriott-bend-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 612429345,
+                    "featured": false,
+                    "name": "Springhill Suites By Marriott Bend",
+                    "address": {
+                        "street": "551 SW Industrial Way",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Southern Crossing",
+                    "latitude": 44.050307,
+                    "longitude": -121.316429,
+                    "phone_number": "5413825075",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/612429345/bend_or/springhill_suites_by_marriott_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Hotels & Motels, Health Clubs & Gyms",
+                    "impression_id": "000b00000033985d85ccd742de81d4813da0724977",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 4295,
+                            "name": "Hotels & Motels",
+                            "primary": true
+                        },
+                        {
+                            "id": 3997,
+                            "name": "Health Clubs & Gyms",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "springhill-suites-by-marriott-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 35811773,
+                    "featured": false,
+                    "name": "La Quinta Inn By Wyndham Bend",
+                    "address": {
+                        "street": "61200 S Highway 97",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Farm District",
+                    "latitude": 44.02192,
+                    "longitude": -121.31585,
+                    "phone_number": "5413882227",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/35811773/bend_or/la_quinta_inn_by_wyndham_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Hotels & Motels, American Express Accepted, Debit Card Accepted, Diners Club Accepted",
+                    "impression_id": "000b0000009bb595c1bcae44ce89ab409d7e8a13bf",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 4295,
+                            "name": "Hotels & Motels",
+                            "primary": true
+                        },
+                        {
+                            "id": 11333,
+                            "name": "American Express Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11347,
+                            "name": "Debit Card Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11348,
+                            "name": "Diners Club Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11349,
+                            "name": "Discover Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11361,
+                            "name": "Mastercard Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11382,
+                            "name": "Visa Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 12637,
+                            "name": "Hotel Pool",
+                            "primary": false
+                        },
+                        {
+                            "id": 12639,
+                            "name": "Fitness Center",
+                            "primary": false
+                        },
+                        {
+                            "id": 12640,
+                            "name": "Honeymoon Packages",
+                            "primary": false
+                        },
+                        {
+                            "id": 12642,
+                            "name": "Online Reservations",
+                            "primary": false
+                        },
+                        {
+                            "id": 12643,
+                            "name": "Pet-Friendly",
+                            "primary": false
+                        },
+                        {
+                            "id": 12644,
+                            "name": "Private Bath",
+                            "primary": false
+                        },
+                        {
+                            "id": 354,
+                            "name": "Business Services",
+                            "primary": false
+                        },
+                        {
+                            "id": 4279,
+                            "name": "Travel",
+                            "primary": false
+                        },
+                        {
+                            "id": 4287,
+                            "name": "Lodging",
+                            "primary": false
+                        },
+                        {
+                            "id": 4288,
+                            "name": "Bed & Breakfasts",
+                            "primary": false
+                        },
+                        {
+                            "id": 4296,
+                            "name": "Apartment Hotels",
+                            "primary": false
+                        },
+                        {
+                            "id": 4297,
+                            "name": "Beach Hotels",
+                            "primary": false
+                        },
+                        {
+                            "id": 4299,
+                            "name": "Budget Hotels",
+                            "primary": false
+                        },
+                        {
+                            "id": 4300,
+                            "name": "Business Hotels",
+                            "primary": false
+                        },
+                        {
+                            "id": 4301,
+                            "name": "Extended Stay",
+                            "primary": false
+                        },
+                        {
+                            "id": 4302,
+                            "name": "Family-Friendly Hotels",
+                            "primary": false
+                        },
+                        {
+                            "id": 4303,
+                            "name": "Tourist Hotels",
+                            "primary": false
+                        },
+                        {
+                            "id": 4306,
+                            "name": "Weekend Getaway Hotels",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "la-quinta-innbend-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 681734576,
+                    "featured": false,
+                    "name": "Bend Veterinary Specialty & Emergency Center",
+                    "address": {
+                        "street": "1245 SE 3rd St C3",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Farm District",
+                    "latitude": 44.037223,
+                    "longitude": -121.304284,
+                    "phone_number": "5413859110",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/681734576/bend_or/bend_veterinary_specialty_emergency_center.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Veterinarians, Animal Hospitals, Emergency Vets",
+                    "impression_id": "000b000000cd4d0a8c51f54fe6a828128e21099ec2",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 3634,
+                            "name": "Veterinarians",
+                            "primary": true
+                        },
+                        {
+                            "id": 3632,
+                            "name": "Animal Hospitals",
+                            "primary": false
+                        },
+                        {
+                            "id": 3644,
+                            "name": "Emergency Vets",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "bend-veterinary-specialty-emergency-center-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 8558563,
+                    "featured": false,
+                    "name": "Therapeutic Associates Physical Thrpy-Athletic Club Of Bend",
+                    "address": {
+                        "street": "61615 Athletic Club Dr",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Century West",
+                    "latitude": 44.03574,
+                    "longitude": -121.336068,
+                    "phone_number": "5413827890",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/8558563/bend_or/therapeutic_associates_physical_thrpy_athletic_club_of_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Physical Therapists, Mastercard Accepted, Vocational Rehabilitation, Visa Accepted",
+                    "impression_id": "000b000000d2a802420d4e4a469088a3f190278714",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 1895,
+                            "name": "Physical Therapists",
+                            "primary": true
+                        },
+                        {
+                            "id": 11361,
+                            "name": "Mastercard Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 669,
+                            "name": "Vocational Rehabilitation",
+                            "primary": false
+                        },
+                        {
+                            "id": 11382,
+                            "name": "Visa Accepted",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "cooper-laura-therapeutic-associates-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 8557550,
+                    "featured": false,
+                    "name": "Entrada Lodge",
+                    "address": {
+                        "street": "19221 SW Century Dr",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "latitude": 44.022175,
+                    "longitude": -121.363156,
+                    "phone_number": "5413824080",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/8557550/bend_or/entrada_lodge.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Hotels & Motels, Mastercard Accepted, Visa Accepted, Bars & Clubs",
+                    "impression_id": "000b000000ceacbdbf672b4188bafa64cc0bb65c71",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 4295,
+                            "name": "Hotels & Motels",
+                            "primary": true
+                        },
+                        {
+                            "id": 11361,
+                            "name": "Mastercard Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 11382,
+                            "name": "Visa Accepted",
+                            "primary": false
+                        },
+                        {
+                            "id": 164,
+                            "name": "Bars & Clubs",
+                            "primary": false
+                        },
+                        {
+                            "id": 4287,
+                            "name": "Lodging",
+                            "primary": false
+                        },
+                        {
+                            "id": 4288,
+                            "name": "Bed & Breakfasts",
+                            "primary": false
+                        },
+                        {
+                            "id": 4307,
+                            "name": "Resorts",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "entrada-lodge-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 678523166,
+                    "featured": false,
+                    "name": "Central Oregon Fence Company",
+                    "address": {
+                        "street": "61170 Larkspur Loop",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Farm District",
+                    "latitude": 44.022046,
+                    "longitude": -121.290987,
+                    "phone_number": "5417973360",
+                    "rating": 0,
+                    "tagline": "",
+                    "profile": "http://www.citysearch.com/profile/678523166/bend_or/central_oregon_fence_company.html",
+                    "website": "https://api.citygridmedia.com/content/places/v2/click?q=urVBa6moXC5S9VPyC16BYDW2um0RUlPUeS_2F90RnvcZhxEXwEMj-V-EeXfRH0jqk5N_ROpbe-FZ69_cmn9jTcmjWwaoOpnwFF62M6ayX0QfZRcpfCt0Mw8bc5SjK22AtjKRLRWra7yxAVuZ3xInmOORgbjyQHtuyNbyHQoedoRDtHg8faTN54enAeQsp5QRpbzHH9pQqFBoqyJAl1gti6EkjY9H1DFxV7_IPGw-qbeEi3hhl1X-h-7Pw7N9yT7BAxrxxyAATd21MoO6Fv7c9Suezq4p8yqNPBmSoKIGrp7hIxMhH9uRsvQsg__IWLCwkDP4F_is-TGrx_EJSo3mSOtvIHhuVygSuXVSGvwnIdsd8QVBU9RePW1bIWYF3X4jt8xqZ6tE54UiVyskCyVNVw5jo19_5Ea8Zam7ySPKlIF0-MXcBXw6Uq95oq9OCH4mLyBVwgoGd3FAE15klR_UgvYsXdAmkr89wDRzdGCOmgpCp-KlYjq54XKFbvo0r0RrSW_FYjtsk6SwubikCTgOXGuCc4rSXot7",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Fence Contractors",
+                    "impression_id": "000b0000004d52bfec52ff408c8fe4144d90825080",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 893,
+                            "name": "Fence Contractors",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "central-oregon-fence-company-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 648089475,
+                    "featured": false,
+                    "name": "Bend Courier Company",
+                    "address": {
+                        "street": "105 Sw Hayes Ave",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Southern Crossing",
+                    "latitude": 44.03692,
+                    "longitude": -121.309035,
+                    "phone_number": "5418152478",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/648089475/bend_or/bend_courier_company.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Unclassified",
+                    "impression_id": "000b0000000c24850e791d459d873d6965c4512575",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 6019,
+                            "name": "Unclassified",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "bend-courier-company-bnd",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR Metro"
+                },
+                {
+                    "id": 652478144,
+                    "featured": false,
+                    "name": "Element Bend",
+                    "address": {
+                        "street": "98 SW Wall St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Southern Crossing",
+                    "latitude": 44.0510399185518,
+                    "longitude": -121.317508700084,
+                    "phone_number": "5413884398",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/652478144/bend_or/element_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Unclassified",
+                    "impression_id": "000b000000e970da83b9ad418a80d94081ba4698d5",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 6019,
+                            "name": "Unclassified",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "element-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                },
+                {
+                    "id": 754200646,
+                    "featured": false,
+                    "name": "Cynthia's of Bend",
+                    "address": {
+                        "street": "1100 SE 3rd St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Old Farm District",
+                    "latitude": 44.0372225586629,
+                    "longitude": -121.304284169648,
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/754200646/bend_or/cynthia_s_of_bend.html",
+                    "website": "https://api.citygridmedia.com/content/places/v2/click?q=urVBa6moXC5c7fD6SHv-hdLqcaDLgx9-WRh7pj1xVcXHkCb3MEFAD7hyiIidkETGNch6qVoM7aAlAw1mhsjcJ6orgTUx2Hpll1S20IgkPcYDclV9Y2Z7qnCyCsJK_koVqWXvIjkaMt7YGqN6gGoT513-CVPOUkvq3flyy_y5PLwjTCCdVdRdhxcasFonsiyRiELeDZZ_T-C1aCJTdWpO0ePXz_MPXnC9yUBMWW7PfMDCeQ8GH1ZTUfvG8Nk91qAxK9M2AEh88A-dIagUulCJEQGkaBjVsByamOpbrttmlr04VPKJOI_qJIcotdrmqoBpzsNBwKYmqJxBFEU9sHv5oVzEDR5lk-T5j5aZjyEyy3d7ZVJtexflF8LdobYkb9q60KQUipoDwlREnS54_ls3A6R7D5yfiPYyreBzNJPySej4YPs-Tzef9vrK-IWikewGn7pu915hE0xJIuoWCfMDuC4vzqrrZ8Q0yGvueT-FvwuqaYSgy2a2iwIAoExQq4pt5CxOsvzIn5Y",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Unclassified",
+                    "impression_id": "000b000000c2063cc7fef4445a8899eb698020cb25",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 6019,
+                            "name": "Unclassified",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "cynthia's-of-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                },
+                {
+                    "id": 630412325,
+                    "featured": false,
+                    "name": "BMW of Bend",
+                    "address": {
+                        "street": "SE 3rd St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Larkspur",
+                    "latitude": 44.0403946792233,
+                    "longitude": -121.303836962918,
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/630412325/bend_or/bmw_of_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "New Car Dealers, Alternative Fuels",
+                    "impression_id": "000b00000093da2520a0164796ae042449f84fe617",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 245,
+                            "name": "New Car Dealers",
+                            "primary": true
+                        },
+                        {
+                            "id": 15260,
+                            "name": "Alternative Fuels",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "bmw-of-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                },
+                {
+                    "id": 688730406,
+                    "featured": false,
+                    "name": "Chevrolet of Bend",
+                    "address": {
+                        "street": "345 NE 3rd St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97701"
+                    },
+                    "neighborhood": "Larkspur",
+                    "latitude": 44.0536086900789,
+                    "longitude": -121.302620059041,
+                    "phone_number": "5414089394",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/688730406/bend_or/chevrolet_of_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "New Car Dealers, Used Car Dealers, Automotive Repair",
+                    "impression_id": "000b0000002992b3e664964296bb6a6428c5d7e03e",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 245,
+                            "name": "New Car Dealers",
+                            "primary": true
+                        },
+                        {
+                            "id": 251,
+                            "name": "Used Car Dealers",
+                            "primary": false
+                        },
+                        {
+                            "id": 268,
+                            "name": "Automotive Repair",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "chevrolet-of-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                },
+                {
+                    "id": 44962353,
+                    "featured": false,
+                    "name": "Porsche Bend",
+                    "address": {
+                        "street": "1055 SE 3rd St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Larkspur",
+                    "latitude": 44.0403049601279,
+                    "longitude": -121.303885404705,
+                    "phone_number": "5413897970",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/44962353/bend_or/porsche_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Sign Manufacturers",
+                    "impression_id": "000b00000092ff916ce0e44023902046fc8a2f0742",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 3077,
+                            "name": "Sign Manufacturers",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "porsche-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                },
+                {
+                    "id": 8558532,
+                    "featured": false,
+                    "name": "Audi Bend",
+                    "address": {
+                        "street": "1045 SE 3rd St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Larkspur",
+                    "latitude": 44.0403946792233,
+                    "longitude": -121.303836962918,
+                    "phone_number": "5413855583",
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/8558532/bend_or/audi_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Batting Cages, Recreation Facilities",
+                    "impression_id": "000b000000dcdab0258d644fdca22c48c69402c591",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 4067,
+                            "name": "Batting Cages",
+                            "primary": true
+                        },
+                        {
+                            "id": 4066,
+                            "name": "Recreation Facilities",
+                            "primary": false
+                        }
+                    ],
+                    "public_id": "audi-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                },
+                {
+                    "id": 750789016,
+                    "featured": false,
+                    "name": "BMW of Bend",
+                    "address": {
+                        "street": "798 SE Division St",
+                        "city": "Bend",
+                        "state": "OR",
+                        "postal_code": "97702"
+                    },
+                    "neighborhood": "Southern Crossing",
+                    "latitude": 44.0426352020283,
+                    "longitude": -121.305818447146,
+                    "rating": 0,
+                    "profile": "http://www.citysearch.com/profile/750789016/bend_or/bmw_of_bend.html",
+                    "has_video": false,
+                    "has_offers": false,
+                    "user_review_count": 0,
+                    "sample_categories": "Unclassified",
+                    "impression_id": "000b00000098ffb6f722cd40e7bfbcb52e1e513e41",
+                    "expansion": {},
+                    "tags": [
+                        {
+                            "id": 6019,
+                            "name": "Unclassified",
+                            "primary": true
+                        }
+                    ],
+                    "public_id": "bmw-of-bend-bend",
+                    "business_operation_status": 1,
+                    "scorecard": "0",
+                    "votes": 0,
+                    "awards": [],
+                    "has_menu": false,
+                    "politanName": "Bend, OR"
+                }
+            ],
+            "call_id": "000b00000047f200f4d64a467c837cedfef8d2fd67"
+        }
+    },
+    "foursquare": {
+        "results": [
+            {
+                "fsq_id": "4dfda0f3183853f2cb551841",
+                "categories": [
+                    {
+                        "id": 13029,
+                        "name": "Brewery",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/brewery_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13068,
+                        "name": "American Restaurant",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13165,
+                        "name": "German Restaurant",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/german_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 10250,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.050786,
+                        "longitude": -121.330294
+                    },
+                    "roof": {
+                        "latitude": 44.050786,
+                        "longitude": -121.330294
+                    }
+                },
+                "link": "/v3/places/4dfda0f3183853f2cb551841",
+                "location": {
+                    "address": "70 SW Century Dr",
+                    "address_extended": "Ste 100",
+                    "census_block": "410170014021023",
+                    "country": "US",
+                    "cross_street": "Commerce Ave.",
+                    "dma": "Bend, Or",
+                    "formatted_address": "70 SW Century Dr (Commerce Ave.), Bend, OR 97702",
+                    "locality": "Bend",
+                    "postcode": "97702",
+                    "region": "OR"
+                },
+                "name": "GoodLife Brewing Company",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "50d0d422e4b0707f73d3da90",
+                "categories": [
+                    {
+                        "id": 13007,
+                        "name": "Beer Garden",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/beergarden_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13029,
+                        "name": "Brewery",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/brewery_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13068,
+                        "name": "American Restaurant",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 7759,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.055329,
+                        "longitude": -121.260493
+                    }
+                },
+                "link": "/v3/places/50d0d422e4b0707f73d3da90",
+                "location": {
+                    "address": "495 NE Bellevue Dr",
+                    "census_block": "410170019033022",
+                    "country": "US",
+                    "cross_street": "at US Hwy 20",
+                    "dma": "Bend, Or",
+                    "formatted_address": "495 NE Bellevue Dr (at US Hwy 20), Bend, OR 97701",
+                    "locality": "Bend",
+                    "postcode": "97701",
+                    "region": "OR"
+                },
+                "name": "Worthy Brewing Co.",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "4af1f75ef964a520d5e421e3",
+                "categories": [
+                    {
+                        "id": 13003,
+                        "name": "Bar",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13029,
+                        "name": "Brewery",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/brewery_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13068,
+                        "name": "American Restaurant",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 10575,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.05643,
+                        "longitude": -121.328528
+                    },
+                    "roof": {
+                        "latitude": 44.05643,
+                        "longitude": -121.328528
+                    }
+                },
+                "link": "/v3/places/4af1f75ef964a520d5e421e3",
+                "location": {
+                    "address": "1135 NW Galveston Ave",
+                    "address_extended": "Ste B",
+                    "census_block": "410170014021006",
+                    "country": "US",
+                    "cross_street": "at NW 12th St",
+                    "formatted_address": "1135 NW Galveston Ave (at NW 12th St), Bend, OR 97703",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Old Bend"
+                    ],
+                    "postcode": "97703",
+                    "region": "OR"
+                },
+                "name": "10 Barrel Brewing",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "4bad1f9af964a520f92f3be3",
+                "categories": [
+                    {
+                        "id": 11134,
+                        "name": "Pet Grooming Service",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/pet_store_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 17110,
+                        "name": "Pet Supplies Store",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/pet_store_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 7736,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.054152,
+                        "longitude": -121.265895
+                    },
+                    "roof": {
+                        "latitude": 44.054152,
+                        "longitude": -121.265895
+                    }
+                },
+                "link": "/v3/places/4bad1f9af964a520f92f3be3",
+                "location": {
+                    "address": "420 NE Windy Knolls Dr",
+                    "address_extended": "Ste 1",
+                    "census_block": "410170019033018",
+                    "country": "US",
+                    "cross_street": "Hwy 20",
+                    "dma": "Bend, Or",
+                    "formatted_address": "420 NE Windy Knolls Dr (Hwy 20), Bend, OR 97701",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Larkspur"
+                    ],
+                    "postcode": "97701",
+                    "region": "OR"
+                },
+                "name": "Bend Pet Express",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "4e7fa2cb4690e16a7d814966",
+                "categories": [
+                    {
+                        "id": 16044,
+                        "name": "Rock Climbing Spot",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/rockclimbing_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 7041,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.037968,
+                        "longitude": -121.290257
+                    },
+                    "roof": {
+                        "latitude": 44.037968,
+                        "longitude": -121.290257
+                    }
+                },
+                "link": "/v3/places/4e7fa2cb4690e16a7d814966",
+                "location": {
+                    "address": "1182 SE Centennial Ct",
+                    "census_block": "410170015013000",
+                    "country": "US",
+                    "cross_street": "",
+                    "dma": "Bend, Or",
+                    "formatted_address": "1182 SE Centennial Ct, Bend, OR 97702",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Larkspur"
+                    ],
+                    "postcode": "97702",
+                    "region": "OR"
+                },
+                "name": "Bend Rock Gym",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "4b6f0e72f964a52009da2ce3",
+                "categories": [
+                    {
+                        "id": 16032,
+                        "name": "Park",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/park_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 9228,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.041309,
+                        "longitude": -121.326614
+                    },
+                    "roof": {
+                        "latitude": 44.041309,
+                        "longitude": -121.326614
+                    }
+                },
+                "link": "/v3/places/4b6f0e72f964a52009da2ce3",
+                "location": {
+                    "address": "1000 SW Reed Market Rd",
+                    "census_block": "410170021021000",
+                    "country": "US",
+                    "cross_street": "at Brookswood Blvd",
+                    "dma": "Bend, Or",
+                    "formatted_address": "1000 SW Reed Market Rd (at Brookswood Blvd), Bend, OR 97702",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Old Mill District"
+                    ],
+                    "postcode": "97702",
+                    "region": "OR"
+                },
+                "name": "Farewell Bend Park",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "50b9656fe4b0073fab1bda06",
+                "categories": [
+                    {
+                        "id": 19014,
+                        "name": "Hotel",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [
+                    {
+                        "id": "404dfe1c-f785-4a09-8f79-e6900d40124f",
+                        "name": "Hilton Hotels & Resorts"
+                    }
+                ],
+                "distance": 8922,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.04555,
+                        "longitude": -121.313917
+                    },
+                    "roof": {
+                        "latitude": 44.045684,
+                        "longitude": -121.314388
+                    }
+                },
+                "link": "/v3/places/50b9656fe4b0073fab1bda06",
+                "location": {
+                    "address": "425 SW Bluff Dr",
+                    "census_block": "410170015022064",
+                    "country": "US",
+                    "cross_street": "",
+                    "dma": "Bend, Or",
+                    "formatted_address": "425 SW Bluff Dr, Bend, OR 97702",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Old Mill District"
+                    ],
+                    "postcode": "97702",
+                    "region": "OR"
+                },
+                "name": "Hilton Garden Inn Bend",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "5afcce3e492814002cbc6fcf",
+                "categories": [
+                    {
+                        "id": 13009,
+                        "name": "Cocktail Bar",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/cocktails_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13022,
+                        "name": "Sports Bar",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/sportsbar_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13068,
+                        "name": "American Restaurant",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 9422,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.051044,
+                        "longitude": -121.315146
+                    },
+                    "roof": {
+                        "latitude": 44.051044,
+                        "longitude": -121.315146
+                    }
+                },
+                "link": "/v3/places/5afcce3e492814002cbc6fcf",
+                "location": {
+                    "address": "555 NW Arizona Ave",
+                    "address_extended": "Ste 40",
+                    "census_block": "410170015022049",
+                    "country": "US",
+                    "cross_street": "",
+                    "formatted_address": "555 NW Arizona Ave, Bend, OR 97703",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Old Bend"
+                    ],
+                    "postcode": "97703",
+                    "region": "OR"
+                },
+                "name": "River Pig Saloon Bend",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "574a6080cd10c7ca9ec2e6b5",
+                "categories": [
+                    {
+                        "id": 13003,
+                        "name": "Bar",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13029,
+                        "name": "Brewery",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/brewery_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 13065,
+                        "name": "Restaurant",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 9377,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.050898,
+                        "longitude": -121.315446
+                    },
+                    "roof": {
+                        "latitude": 44.050898,
+                        "longitude": -121.315446
+                    }
+                },
+                "link": "/v3/places/574a6080cd10c7ca9ec2e6b5",
+                "location": {
+                    "address": "550 SW Industrial Way",
+                    "address_extended": "Ste 185",
+                    "census_block": "410170015022049",
+                    "country": "US",
+                    "cross_street": "",
+                    "dma": "Bend, Or",
+                    "formatted_address": "550 SW Industrial Way, Bend, OR 97702",
+                    "locality": "Bend",
+                    "neighborhood": [
+                        "Old Bend"
+                    ],
+                    "postcode": "97702",
+                    "region": "OR"
+                },
+                "name": "Immersion Brewing",
+                "related_places": {},
+                "timezone": "America/Los_Angeles"
+            },
+            {
+                "fsq_id": "50a6d890e4b0b339ad3fd994",
+                "categories": [
+                    {
+                        "id": 17043,
+                        "name": "Clothing Store",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 17044,
+                        "name": "Fashion Accessories Store",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_accessories_",
+                            "suffix": ".png"
+                        }
+                    },
+                    {
+                        "id": 17047,
+                        "name": "Men's Store",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_men_",
+                            "suffix": ".png"
+                        }
+                    }
+                ],
+                "chains": [],
+                "distance": 7506,
+                "geocodes": {
+                    "main": {
+                        "latitude": 44.026952,
+                        "longitude": -121.311738
+                    },
+                    "roof": {
+                        "latitude": 44.026952,
+                        "longitude": -121.311738
+                    }
+                },
+                "link": "/v3/places/50a6d890e4b0b339ad3fd994",
+                "location": {
+                    "address": "61334 S Highway 97",
+                    "census_block": "410170020022009",
+                    "country": "US",
+                    "cross_street": "",
+                    "dma": "Bend, Or",
+                    "formatted_address": "61334 S Highway 97, Bend, OR 97702",
+                    "locality": "Bend",
+                    "postcode": "97702",
+                    "region": "OR"
+                },
+                "name": "Coach Outlet Bend",
+                "related_places": {
+                    "parent": {
+                        "fsq_id": "4dc72e8918387d1bd56aaf9c",
+                        "name": "Bend Factory Stores"
+                    }
+                },
+                "timezone": "America/Los_Angeles"
+            }
+        ],
+        "context": {
+            "geo_bounds": {
+                "circle": {
+                    "center": {
+                        "latitude": 43.987841,
+                        "longitude": -121.23665249999999
+                    },
+                    "radius": 15795
+                }
+            }
+        }
+    },
+    "google": {
+        "kind": "customsearch#search",
+        "url": {
+            "type": "application/json",
+            "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+        },
+        "queries": {
+            "request": [
+                {
+                    "title": "Google Custom Search - Bend Brewing Company 97702",
+                    "totalResults": "34900",
+                    "searchTerms": "Bend Brewing Company 97702",
+                    "count": 10,
+                    "startIndex": 1,
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "off",
+                    "cx": "007033591552621484654:y0da100wr8e",
+                    "cr": "US"
+                }
+            ],
+            "nextPage": [
+                {
+                    "title": "Google Custom Search - Bend Brewing Company 97702",
+                    "totalResults": "34900",
+                    "searchTerms": "Bend Brewing Company 97702",
+                    "count": 10,
+                    "startIndex": 11,
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "off",
+                    "cx": "007033591552621484654:y0da100wr8e",
+                    "cr": "US"
+                }
+            ]
+        },
+        "context": {
+            "title": "web-things"
+        },
+        "searchInformation": {
+            "searchTime": 0.258851,
+            "formattedSearchTime": "0.26",
+            "totalResults": "34900",
+            "formattedTotalResults": "34,900"
+        },
+        "items": [
+            {
+                "kind": "customsearch#result",
+                "title": "Bend Brewing Company",
+                "htmlTitle": "<b>Bend Brewing Company</b>",
+                "link": "https://www.bendbrewingco.com/",
+                "displayLink": "www.bendbrewingco.com",
+                "snippet": "Welcome to Bend Brewing Co. We were established in 1995, and are the second oldest brew pub in Bend, Oregon. We have a rich history of award winning craft ...",
+                "htmlSnippet": "Welcome to <b>Bend Brewing Co</b>. We were established in 1995, and are the second oldest brew pub in <b>Bend, Oregon</b>. We have a rich history of award winning craft&nbsp;...",
+                "cacheId": "jPVLEUgDrhgJ",
+                "formattedUrl": "https://www.bendbrewingco.com/",
+                "htmlFormattedUrl": "https://www.<b>bendbrewingco</b>.com/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRC7bX-QNAKs16C0YQ2ozFAyya5Cd86PiAqqVqJzfR84Uqv9u3T2aY-ogkq",
+                            "width": "223",
+                            "height": "226"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "http://static1.squarespace.com/static/5b688b765417fcbd5ba76717/t/5b697546575d1f99a61b3b7a/1620149778121/BBC_Circle_OUTLINE.png?format=1500w",
+                            "og:type": "website",
+                            "og:image:width": "400",
+                            "twitter:title": "Bend Brewing Company",
+                            "twitter:card": "summary",
+                            "og:site_name": "Bend Brewing Company",
+                            "viewport": "initial-scale=1",
+                            "twitter:url": "https://www.bendbrewingco.com",
+                            "og:title": "Bend Brewing Company",
+                            "og:image:height": "404",
+                            "og:url": "https://www.bendbrewingco.com",
+                            "twitter:image": "http://static1.squarespace.com/static/5b688b765417fcbd5ba76717/t/5b697546575d1f99a61b3b7a/1620149778121/BBC_Circle_OUTLINE.png?format=1500w"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "http://static1.squarespace.com/static/5b688b765417fcbd5ba76717/t/5b697546575d1f99a61b3b7a/1620149778121/BBC_Circle_OUTLINE.png?format=1500w"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Deschutes Brewery | Deschutes Brewery",
+                "htmlTitle": "Deschutes <b>Brewery</b> | Deschutes <b>Brewery</b>",
+                "link": "https://www.deschutesbrewery.com/",
+                "displayLink": "www.deschutesbrewery.com",
+                "snippet": "Deschutes Brewery is an award winning craft beer and hand crafted ales in Oregon. Over the years, Deschutes Brewery has expanded beyond the original pub ...",
+                "htmlSnippet": "Deschutes <b>Brewery</b> is an award winning craft <b>beer</b> and hand crafted ales in Oregon. Over the years, Deschutes <b>Brewery</b> has expanded beyond the original pub&nbsp;...",
+                "cacheId": "FDxV958E5_wJ",
+                "formattedUrl": "https://www.deschutesbrewery.com/",
+                "htmlFormattedUrl": "https://www.deschutes<b>brewery</b>.com/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVCO0OeSRmtdTu-TT3dkVSGZSur2aJ7wW5jayoMmgK83Y0A6pQvfgMPEs",
+                            "width": "225",
+                            "height": "225"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-tilecolor": "#d4000c",
+                            "msapplication-config": "/assets/browserconfig.xml",
+                            "theme-color": "#ffffff",
+                            "viewport": "width=device-width, initial-scale=1"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://d1o0i0v5q5lp8h.cloudfront.net/desbre/live/assets/images/animation/bubbles/Fresh%20Haze_Fresh%20Fam.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "PUB MENU — Bend Brewing Company",
+                "htmlTitle": "PUB MENU — <b>Bend Brewing Company</b>",
+                "link": "https://www.bendbrewingco.com/the-pub",
+                "displayLink": "www.bendbrewingco.com",
+                "snippet": "Bend Brewing Company overlooks the Deschutes River at Mirror Pond in the beautiful city of Bend, Oregon. Locally owned and operated, Bend Brewing Co. takes ...",
+                "htmlSnippet": "<b>Bend Brewing Company</b> overlooks the Deschutes River at Mirror Pond in the beautiful city of <b>Bend, Oregon</b>. Locally owned and operated, <b>Bend Brewing Co</b>. takes&nbsp;...",
+                "cacheId": "aHohS34UzpUJ",
+                "formattedUrl": "https://www.bendbrewingco.com/the-pub",
+                "htmlFormattedUrl": "https://www.<b>bendbrewingco</b>.com/the-pub",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSXbuPNuheks0E7_9j7J3Eme_Ni19XHAOfZn1fteBHpDcNQMIo-EHKK_fJM",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:type": "website",
+                            "twitter:title": "PUB MENU — Bend Brewing Company",
+                            "twitter:card": "summary",
+                            "og:site_name": "Bend Brewing Company",
+                            "viewport": "initial-scale=1",
+                            "twitter:url": "https://www.bendbrewingco.com/the-pub",
+                            "og:title": "PUB MENU — Bend Brewing Company",
+                            "og:url": "https://www.bendbrewingco.com/the-pub"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images.squarespace-cdn.com/content/v1/5b688b765417fcbd5ba76717/1535056969614-INFKS9E6YYL0LOQ1IKNM/BBC_Lifestyle_05.jpg?format=2500w"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "GoodLife Brewing - Great Bend Beer in Oregon",
+                "htmlTitle": "GoodLife <b>Brewing</b> - Great <b>Bend Beer</b> in Oregon",
+                "link": "https://www.goodlifebrewing.com/",
+                "displayLink": "www.goodlifebrewing.com",
+                "snippet": "GoodLife Brewing makes great Bend beer for the good life. Our craft beer is brewed with quality ingredients, making it the best tasting Bend Oregon beer!",
+                "htmlSnippet": "GoodLife <b>Brewing</b> makes great <b>Bend beer</b> for the good life. Our craft <b>beer</b> is <b>brewed</b> with quality ingredients, making it the best tasting <b>Bend Oregon beer</b>!",
+                "cacheId": "LUhRBFFUmSAJ",
+                "formattedUrl": "https://www.goodlifebrewing.com/",
+                "htmlFormattedUrl": "https://www.goodlife<b>brewing</b>.com/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4Y5Gg06At6SdOUykwCgE_35hLjPLqIakVKMv1J3T2ZL7IVriEBbaOjI",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-tilecolor": "#1f1f1f",
+                            "og:image": "https://www.goodlifebrewing.com/wp-content/uploads/2022/07/GoodLife_AustinWhite_070122-2-scaled.jpg",
+                            "twitter:card": "summary",
+                            "twitter:title": "GoodLife Brewing - Great Bend Beer in Oregon",
+                            "theme-color": "#ffffff",
+                            "tec-api-origin": "https://www.goodlifebrewing.com",
+                            "og:title": "GoodLife Brewing Company – Cheers to the GoodLife. Bend, Oregon",
+                            "twitter:label1": "Est. reading time",
+                            "msapplication-tileimage": "https://www.goodlifebrewing.com/mstile-144x144.png",
+                            "twitter:image": "https://www.goodlifebrewing.com/wp-content/uploads/2022/07/GoodLife_AustinWhite_070122-2-scaled.jpg",
+                            "twitter:data1": "2 minutes",
+                            "viewport": "width=device-width, initial-scale=1.0",
+                            "twitter:description": "GoodLife Brewing makes great Bend beer for the good life. Our craft beer is brewed with quality ingredients, making it the best tasting Bend Oregon beer!",
+                            "og:url": "https://www.goodlifebrewing.com/",
+                            "tec-api-version": "v1"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://www.goodlifebrewing.com/wp-content/uploads/2022/07/GoodLife_AustinWhite_070122-2-scaled.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "10 Barrel Brewing Co. – Drink Beer Outside – Bend, Oregon",
+                "htmlTitle": "10 Barrel <b>Brewing Co</b>. – Drink <b>Beer</b> Outside – <b>Bend, Oregon</b>",
+                "link": "https://10barrel.com/",
+                "displayLink": "10barrel.com",
+                "snippet": "10 Barrel Brewing Company is a brewery based in Bend, Oregon, featuring innovative beers brewed locally at each of 6 brewpub locations.",
+                "htmlSnippet": "10 Barrel <b>Brewing Company</b> is a <b>brewery</b> based in <b>Bend, Oregon</b>, featuring innovative beers <b>brewed</b> locally at each of 6 brewpub locations.",
+                "cacheId": "OAR6kZMeAx0J",
+                "formattedUrl": "https://10barrel.com/",
+                "htmlFormattedUrl": "https://10barrel.com/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT1VAf_SDlbX_QncmoSOp1dkzYDavNkPoE0NWsgANLTg5R2TTZE3LhDJ0E",
+                            "width": "301",
+                            "height": "167"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-tilecolor": "#000",
+                            "og:image": "https://10barrel.com/wp-content/uploads/2016/06/2_10-Barrel-1.jpg",
+                            "theme-color": "#ffffff",
+                            "og:type": "website",
+                            "og:image:width": "1440",
+                            "twitter:card": "summary",
+                            "og:site_name": "10 Barrel Brewing Co.",
+                            "tec-api-origin": "https://10barrel.com",
+                            "og:title": "10 Barrel Brewing Co. – Drink Beer Outside – Bend, Oregon",
+                            "og:image:height": "800",
+                            "twitter:label1": "Est. reading time",
+                            "msapplication-tileimage": "https://10barrel.com/wp-content/uploads/2018/01/cropped-10B_Favicon-1-270x270.jpg",
+                            "og:description": "10 Barrel Brewing Company is a brewery based in Bend, Oregon, featuring innovative beers brewed locally at each of 6 brewpub locations.",
+                            "article:publisher": "https://www.facebook.com/10BarrelBrewingCompany",
+                            "twitter:data1": "0 minutes",
+                            "facebook-domain-verification": "y4mi81toor9km1pdcj6vrourcv9kya",
+                            "twitter:site": "@10BarrelBrewing",
+                            "article:modified_time": "2021-05-05T16:30:19+00:00",
+                            "viewport": "width=device-width, initial-scale=1",
+                            "og:locale": "en_US",
+                            "og:url": "https://10barrel.com/",
+                            "tec-api-version": "v1"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://10barrel.com/wp-content/uploads/2016/06/2_10-Barrel-1.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Breweries in Bend Oregon | Worthy Brewing | Strata IPA",
+                "htmlTitle": "<b>Breweries</b> in <b>Bend Oregon</b> | Worthy <b>Brewing</b> | Strata IPA",
+                "link": "https://worthy.beer/",
+                "displayLink": "worthy.beer",
+                "snippet": "Come visit Worthy Brewing, one of the best sustainable breweries in Bend, Oregon. Come ready to drink and be merry with an eco-friendly focus.",
+                "htmlSnippet": "Come visit Worthy <b>Brewing</b>, one of the best sustainable <b>breweries</b> in <b>Bend, Oregon</b>. Come ready to drink and be merry with an eco-friendly focus.",
+                "cacheId": "-k5J2EHBKcgJ",
+                "formattedUrl": "https://worthy.beer/",
+                "htmlFormattedUrl": "https://worthy.<b>beer</b>/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2g-QuL84S7srFJITmckh2oMoTAPMwjwQLUbyT_NTycnuRdtyzyctyCjm0",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://worthy.beer/wp-content/uploads/2020/11/Hopservatory9-1024x683.jpg",
+                            "copyright": "Copyright Worthy Brewing. All Rights Reserved.",
+                            "og:type": "website",
+                            "og:image:width": "1024",
+                            "twitter:card": "summary_large_image",
+                            "og:site_name": "Worthy Brewing",
+                            "author": "Worthy Brewing",
+                            "og:title": "Breweries in Bend Oregon | Worthy Brewing | Strata IPA",
+                            "og:image:height": "683",
+                            "og:image:type": "image/jpeg",
+                            "title": "Breweries in Bend Oregon | Worthy Brewing | Strata IPA - Worthy Brewing",
+                            "msapplication-tileimage": "https://worthy.beer/wp-content/uploads/2020/02/cropped-favicon-270x270.png",
+                            "og:description": "Come visit Worthy Brewing, one of the best sustainable breweries in Bend, Oregon. Come ready to drink and be merry with an eco-friendly focus.",
+                            "article:modified_time": "2020-11-19T21:28:06+00:00",
+                            "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+                            "og:locale": "en_US",
+                            "og:url": "https://worthy.beer/"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://worthy.beer/wp-content/uploads/2020/11/Hopservatory9-1024x683.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Cascade Lakes Brewing Company",
+                "htmlTitle": "Cascade Lakes <b>Brewing Company</b>",
+                "link": "https://www.cascadelakes.com/",
+                "displayLink": "www.cascadelakes.com",
+                "snippet": "CRAFTING BEER, FOOD & COMMUNITY SINCE 1994 · We are based in Central Oregon and feature high quality craft beers at our Bend and Redmond brewpubs! · — BEER · — ...",
+                "htmlSnippet": "CRAFTING <b>BEER</b>, FOOD &amp; COMMUNITY SINCE 1994 &middot; We are based in Central Oregon and feature high quality craft beers at our <b>Bend</b> and Redmond brewpubs! &middot; — <b>BEER</b> &middot; —&nbsp;...",
+                "cacheId": "nCnEFc6ME6UJ",
+                "formattedUrl": "https://www.cascadelakes.com/",
+                "htmlFormattedUrl": "https://www.cascadelakes.com/",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "og:image": "http://static1.squarespace.com/static/5f05f1441119e23960b5e080/t/618b3628d96c4d5d2a885dfa/1636513320556/Wordmark_WHT.png?format=1500w",
+                            "og:type": "website",
+                            "og:image:width": "600",
+                            "twitter:title": "Cascade Lakes",
+                            "twitter:card": "summary",
+                            "og:site_name": "Cascade Lakes",
+                            "viewport": "width=device-width, initial-scale=1",
+                            "twitter:url": "https://www.cascadelakes.com",
+                            "og:title": "Cascade Lakes",
+                            "og:image:height": "129",
+                            "og:url": "https://www.cascadelakes.com",
+                            "twitter:image": "http://static1.squarespace.com/static/5f05f1441119e23960b5e080/t/618b3628d96c4d5d2a885dfa/1636513320556/Wordmark_WHT.png?format=1500w"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "http://static1.squarespace.com/static/5f05f1441119e23960b5e080/t/618b3628d96c4d5d2a885dfa/1636513320556/Wordmark_WHT.png?format=1500w"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Sunriver Brewing Company: Home",
+                "htmlTitle": "Sunriver <b>Brewing Company</b>: Home",
+                "link": "https://www.sunriverbrewingcompany.com/",
+                "displayLink": "www.sunriverbrewingcompany.com",
+                "snippet": "Visit our Sunriver Pub, our original and one of the great restaurants in Sunriver Oregon, one of our restaurants in Bend Oregon, or one of the fantastic ...",
+                "htmlSnippet": "Visit our Sunriver Pub, our original and one of the great restaurants in Sunriver Oregon, one of our restaurants in <b>Bend Oregon</b>, or one of the fantastic&nbsp;...",
+                "cacheId": "Bnqx2-X-QuMJ",
+                "formattedUrl": "https://www.sunriverbrewingcompany.com/",
+                "htmlFormattedUrl": "https://www.sunriver<b>brewingcompany</b>.com/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSkFneF3tGgwfIWRoDJrr-pfGw6TGYrDNdI-oUNPPtBzkwGnTkRVBbFkc",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:type": "website",
+                            "twitter:card": "summary_large_image",
+                            "og:site_name": "Sunriver Brewing Company",
+                            "article:modified_time": "2022-08-02T20:35:11+00:00",
+                            "viewport": "width=device-width,initial-scale=1,user-scalable=no",
+                            "og:title": "Home - Sunriver Brewing Company",
+                            "og:locale": "en_US",
+                            "twitter:label1": "Est. reading time",
+                            "og:url": "https://www.sunriverbrewingcompany.com/",
+                            "og:description": "Visit our Sunriver Pub, our original and one of the great restaurants in Sunriver Oregon, one of our restaurants in Bend Oregon, or one of the fantastic restaurants in Eugene Oregon at our Oakway Pub location.",
+                            "twitter:data1": "3 minutes"
+                        }
+                    ],
+                    "webpage": [
+                        {
+                            "image": "https://www.sunriverbrewingcompany.com/wp-content/uploads/2020/05/Sunriver_Brewing_Logo_Web.png",
+                            "url": "https://www.sunriverbrewingcompany.com/"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://www.sunriverbrewingcompany.com/wp-content/uploads/2022/08/eastside-header-450x300.jpeg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Immersion Brewing: Home",
+                "htmlTitle": "Immersion <b>Brewing</b>: Home",
+                "link": "https://imbrewing.com/",
+                "displayLink": "imbrewing.com",
+                "snippet": "Are you thirsty? Are you hungry? Bend's own Immersion Brewing is for you. We serve up our handcrafted beers and pub style food everyday!",
+                "htmlSnippet": "Are you thirsty? Are you hungry? <b>Bend&#39;s</b> own Immersion <b>Brewing</b> is for you. We serve up our handcrafted beers and pub style food everyday!",
+                "cacheId": "FQd20bIgjSYJ",
+                "formattedUrl": "https://imbrewing.com/",
+                "htmlFormattedUrl": "https://im<b>brewing</b>.com/",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "og:type": "website",
+                            "twitter:card": "summary_large_image",
+                            "og:site_name": "Immersion Brewing",
+                            "author": "Aly Lane",
+                            "og:title": "Home - Immersion Brewing",
+                            "twitter:label1": "Est. reading time",
+                            "msapplication-tileimage": "https://secureservercdn.net/50.62.198.124/iv0.a26.myftpupload.com/wp-content/uploads/2022/06/cropped-Hop-Drop-Color-270x270.gif",
+                            "og:description": "Are you thirsty? Are you hungry? Bend's own Immersion Brewing is for you. We serve up our handcrafted beers and pub style food everyday!",
+                            "article:publisher": "https://www.facebook.com/ImmersionBrewery",
+                            "twitter:data1": "1 minute",
+                            "twitter:site": "@ImBrewing",
+                            "article:modified_time": "2022-06-30T19:20:57+00:00",
+                            "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+                            "og:locale": "en_US",
+                            "og:url": "https://imbrewing.com/"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                "htmlTitle": "17 Killer <b>Breweries</b> and Brewpubs in <b>Bend, Oregon</b>",
+                "link": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                "displayLink": "pdx.eater.com",
+                "snippet": "Jul 18, 2022 ... Owned by Bend Brewing Company, the bar serves eight taps of BBC beers, including the Grove Pale Ale that is only served at Waypoint.",
+                "htmlSnippet": "Jul 18, 2022 <b>...</b> Owned by <b>Bend Brewing Company</b>, the bar serves eight taps of BBC beers, including the Grove Pale Ale that is only served at Waypoint.",
+                "formattedUrl": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                "htmlFormattedUrl": "https://pdx.eater.com/maps/<b>bend-oregon</b>-<b>breweries</b>-<b>brew</b>pubs",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMwUHBVDH65iPZOs_5sN5Dt7sCxFhO88Y3Bm35vMnm4G6zXYPd_ezqj3lh",
+                            "width": "311",
+                            "height": "162"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://cdn.vox-cdn.com/thumbor/zzgb7neaSzoLzKzKwUxcOsNp5s4=/0x216:1500x1001/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13760367/web_15_093923_DSC_3814_ed1.jpg",
+                            "article:published_time": "2019-02-21T10:52:51-08:00",
+                            "og:image:width": "1200",
+                            "twitter:card": "summary_large_image",
+                            "og:site_name": "Eater Portland",
+                            "sailthru.tags": "general,eater-portland,front-page",
+                            "twitter:url": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                            "apple-mobile-web-app-title": "Eater Portland",
+                            "parsely-author": "Jeffrey Stull",
+                            "msapplication-tileimage": "https://cdn.vox-cdn.com/uploads/chorus_asset/file/6253179/apple-touch-icon-144x144.0.png",
+                            "og:description": "From tiny tasting rooms to massive restaurants",
+                            "article:publisher": "https://www.facebook.com/EaterPDX",
+                            "twitter:image": "https://cdn.vox-cdn.com/thumbor/QQ5CwK19NuTBaxMq-ck6AtfIkuU=/0x251:1500x1001/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/13760367/web_15_093923_DSC_3814_ed1.jpg",
+                            "twitter:image:alt": "Seven seats at a bar under an arched wooden roof.",
+                            "parsely-type": "post",
+                            "twitter:site": "eaterpdx",
+                            "article:modified_time": "2022-07-18T12:32:23-07:00",
+                            "parsely-link": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                            "sailthru.title": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                            "parsely-image-url": "https://cdn.vox-cdn.com/thumbor/IOKYsquyXcyF5OaqeFpAwlfDkO8=/0x157:1500x1001/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/63090120/web_15_093923_DSC_3814_ed1.0.jpg",
+                            "parsely-section": "front-page",
+                            "msapplication-tilecolor": "#e20000",
+                            "sailthru.date": "2019-02-21T10:52:51-08:00",
+                            "og:image:alt": "Seven seats at a bar under an arched wooden roof.",
+                            "og:type": "article",
+                            "twitter:title": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                            "msvalidate.01": "D385D0326A3AE144205C298DB34B4E94",
+                            "author": "Jeffrey Stull",
+                            "og:title": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                            "og:image:height": "630",
+                            "fb:pages": "6029273333,242726355745404,115169205199800,139755792796580,131547960225574,213601342019363,301223156562915,309491225851948,243335249017579,348494641841991,109814609047278,442143005803582,110073695686645,385346484849141,451388614896528,240433149442075,670887879603309,150611155024023,176453365796072,110358775652218,465169560201718,105842919452319,213198508690703,192135047484517,243781239374345,111376838888644",
+                            "sailthru.image.thumb": "https://cdn.vox-cdn.com/thumbor/zERuC9orpc3owrgYPPfZwe2d6pg=/239x0:1240x1001/200x200/cdn.vox-cdn.com/uploads/chorus_image/image/63090120/web_15_093923_DSC_3814_ed1.0.jpg",
+                            "parsely-title": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                            "style-tools": "https://www.eater.com/style/community/506/0399aba017f9a0472491f117a8e0688e/tools.css",
+                            "parsely-pub-date": "2019-02-21T10:52:51-08:00",
+                            "fb:app_id": "549923288395304",
+                            "sailthru.description": "From tiny tasting rooms to massive restaurants",
+                            "parsely-tags": "pdx-eater,front-page",
+                            "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+                            "twitter:description": "From tiny tasting rooms to massive restaurants",
+                            "og:url": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                            "sailthru.image.full": "https://cdn.vox-cdn.com/thumbor/IOKYsquyXcyF5OaqeFpAwlfDkO8=/0x157:1500x1001/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/63090120/web_15_093923_DSC_3814_ed1.0.jpg"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://cdn.vox-cdn.com/thumbor/zzgb7neaSzoLzKzKwUxcOsNp5s4=/0x216:1500x1001/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13760367/web_15_093923_DSC_3814_ed1.jpg"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "yellowpages": {
+        "searchResult": {
+            "metaProperties": {
+                "didYouMean": "",
+                "errorCode": "",
+                "listingCount": 2,
+                "message": "",
+                "relatedCategories": {
+                    "@xsi.type": "rServiceFacets",
+                    "relatedCategory": [
+                        {
+                            "count": 1,
+                            "name": "American Restaurants"
+                        },
+                        {
+                            "count": 1,
+                            "name": "Bar & Grills"
+                        },
+                        {
+                            "count": 1,
+                            "name": "Bars"
+                        },
+                        {
+                            "count": 1,
+                            "name": "Beer & Ale"
+                        },
+                        {
+                            "count": 1,
+                            "name": "Breakfast, Brunch & Lunch Restaurants"
+                        }
+                    ]
+                },
+                "inputParams": {
+                    "@xsi.type": "searchRequest",
+                    "appId": "kxhsv49f1d",
+                    "dnt": "",
+                    "format": "json",
+                    "userIpAddress": "151.138.150.233",
+                    "userReferrer": "internalReferrer",
+                    "requestId": "ce29a037-c275-40ce-be14-6f50eff0cb2e",
+                    "shortUrl": false,
+                    "test": "",
+                    "userAgent": "axios/0.27.2",
+                    "visitorId": "kxhsv49f1d",
+                    "listingCount": 5,
+                    "phoneSearch": false,
+                    "searchLocation": 97702,
+                    "sort": "distance",
+                    "term": "Bend Brewing Company",
+                    "termType": ""
+                },
+                "requestId": "ce29a037-c275-40ce-be14-6f50eff0cb2e",
+                "resultCode": "Success",
+                "searchCity": "Bend",
+                "searchLat": 44.022332,
+                "searchLon": -121.298543,
+                "searchState": "OR",
+                "searchType": "BusinessName",
+                "searchZip": 97702,
+                "totalAvailable": 2,
+                "trackingRequestURL": "http://c.ypcdn.com/2/i/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&lsrc=MDM&cp=__",
+                "ypcAttribution": ""
+            },
+            "searchListings": {
+                "searchListing": [
+                    {
+                        "adImage": "",
+                        "adImageClick": "",
+                        "additionalText": " ",
+                        "audioURL": "",
+                        "averageRating": 5,
+                        "baseClickURL": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=1313697&lid=1313697&lsrc=MDM",
+                        "businessName": "Bend Brewing Company",
+                        "businessNameURL": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=1313697&lid=1313697&tl=1600&lsrc=MDM&dest=http%3A%2F%2Fwww.yellowpages.com%2Fbend-or%2Fmip%2Fbend-brewing-company-1313697%3Ffrom%3Dpubapi_kxhsv49f1d",
+                        "categories": " Brew Pubs|Beer & Ale|Bars|Bar & Grills|American Restaurants|Breakfast, Brunch & Lunch Restaurants|Taverns|Restaurants|",
+                        "city": "Bend",
+                        "claimed": false,
+                        "claimedStatus": false,
+                        "couponFlag": false,
+                        "couponImageURL": "",
+                        "couponTitle": "",
+                        "couponURL": "",
+                        "customLink": "",
+                        "customLinkText": "",
+                        "description1": "",
+                        "description2": "",
+                        "distance": 2.72,
+                        "distribAdImage": "",
+                        "distribAdImageClick": "",
+                        "email": "",
+                        "hasDisplayAddress": true,
+                        "hasPriorityShading": false,
+                        "isRedListing": false,
+                        "latitude": 44.060257,
+                        "listingId": 1313697,
+                        "longitude": -121.313866,
+                        "moreInfoURL": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=1313697&lid=1313697&tl=7&lsrc=MDM&dest=http%3A%2F%2Fwww.yellowpages.com%2Fbend-or%2Fmip%2Fbend-brewing-company-1313697%3Ffrom%3Dpubapi_kxhsv49f1d",
+                        "noAddressMessage": "",
+                        "omitAddress": false,
+                        "omitPhone": false,
+                        "openHours": "Mon - Sun 11:30 am - 10:00 pm",
+                        "openStatus": "open",
+                        "paymentMethods": "VISA, MASTER CARD, ALL MAJOR CREDIT CARDS, CASH",
+                        "phone": "(541) 383-1599",
+                        "pricePerCall": "",
+                        "primaryCategory": "American Restaurants",
+                        "printAdImage": "",
+                        "printAdImageClick": "",
+                        "ratingCount": 5,
+                        "ringToNumberDisplay": "",
+                        "searchResultType": "BusinessName",
+                        "services": "",
+                        "slogan": "",
+                        "state": "OR",
+                        "street": "1019 NW Brooks St",
+                        "videoURL": "",
+                        "viewPhone": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=1313697&lid=1313697&tl=1015&lsrc=MDM",
+                        "websiteDisplayURL": "",
+                        "websiteURL": "",
+                        "zip": 97703
+                    },
+                    {
+                        "adImage": "",
+                        "adImageClick": "",
+                        "additionalText": " ",
+                        "audioURL": "",
+                        "averageRating": 0,
+                        "baseClickURL": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=507411772&lid=507411772&lsrc=MDM",
+                        "businessName": "Bend Brewing Co",
+                        "businessNameURL": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=507411772&lid=507411772&tl=1600&lsrc=MDM&dest=http%3A%2F%2Fwww.yellowpages.com%2Fbend-or%2Fmip%2Fbend-brewing-co-507411772%3Ffrom%3Dpubapi_kxhsv49f1d",
+                        "categories": " No Internet Heading Assigned|",
+                        "city": "Bend",
+                        "claimed": false,
+                        "claimedStatus": false,
+                        "couponFlag": false,
+                        "couponImageURL": "",
+                        "couponTitle": "",
+                        "couponURL": "",
+                        "customLink": "",
+                        "customLinkText": "",
+                        "description1": "",
+                        "description2": "",
+                        "distance": 4.48,
+                        "distribAdImage": "",
+                        "distribAdImageClick": "",
+                        "email": "",
+                        "hasDisplayAddress": true,
+                        "hasPriorityShading": false,
+                        "isRedListing": false,
+                        "latitude": 44.086994,
+                        "listingId": 507411772,
+                        "longitude": -121.29115,
+                        "moreInfoURL": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=507411772&lid=507411772&tl=7&lsrc=MDM&dest=http%3A%2F%2Fwww.yellowpages.com%2Fbend-or%2Fmip%2Fbend-brewing-co-507411772%3Ffrom%3Dpubapi_kxhsv49f1d",
+                        "noAddressMessage": "",
+                        "omitAddress": false,
+                        "omitPhone": false,
+                        "openHours": "",
+                        "openStatus": "",
+                        "paymentMethods": "MASTER CARD, VISA, CASH",
+                        "phone": "(541) 797-9908",
+                        "pricePerCall": "",
+                        "primaryCategory": "No Internet Heading Assigned",
+                        "printAdImage": "",
+                        "printAdImageClick": "",
+                        "ratingCount": 0,
+                        "ringToNumberDisplay": "",
+                        "searchResultType": "BusinessName",
+                        "services": "",
+                        "slogan": "",
+                        "state": "OR",
+                        "street": "20650 High Desert Ln",
+                        "videoURL": "",
+                        "viewPhone": "http://c.ypcdn.com/2/c/rtd?vrid=kxhsv49f1d&rid=ce29a037-c275-40ce-be14-6f50eff0cb2e&ptid=kxhsv49f1d&ypid=507411772&lid=507411772&tl=1015&lsrc=MDM",
+                        "websiteDisplayURL": "",
+                        "websiteURL": "",
+                        "zip": 97701
+                    }
+                ]
+            }
+        }
+    },
+    "yelp": {
+        "businesses": [
+            {
+                "id": "MKroYVihBRX7RhzKjF2PpA",
+                "alias": "bend-brewing-company-bend",
+                "name": "Bend Brewing Company",
+                "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/uGiLnF5fzMAcbiOwEeHYKQ/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/bend-brewing-company-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 555,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    },
+                    {
+                        "alias": "sandwiches",
+                        "title": "Sandwiches"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.0604299,
+                    "longitude": -121.31384
+                },
+                "transactions": [
+                    "delivery",
+                    "pickup"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "1019 NW Brooks St",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "1019 NW Brooks St",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15413831599",
+                "display_phone": "(541) 383-1599",
+                "distance": 10162.41195960059
+            },
+            {
+                "id": "rpkQHsfE2GmpHrCiuk-qHw",
+                "alias": "crux-fermentation-project-bend",
+                "name": "Crux Fermentation Project",
+                "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/XUrCigd2V9QoLLk9MVzNcA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/crux-fermentation-project-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 853,
+                "categories": [
+                    {
+                        "alias": "brewpubs",
+                        "title": "Brewpubs"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.0507591,
+                    "longitude": -121.3078589
+                },
+                "transactions": [],
+                "price": "$$",
+                "location": {
+                    "address1": "50 SW Division St",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97702",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "50 SW Division St",
+                        "Bend, OR 97702"
+                    ]
+                },
+                "phone": "+15413853333",
+                "display_phone": "(541) 385-3333",
+                "distance": 9022.007416917444
+            },
+            {
+                "id": "2XJjmnZGDDZCtngE2yL_Hg",
+                "alias": "old-ironwood-taps-bend",
+                "name": "Old Ironwood Taps",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/vzLwccsjQuvUH3JErR9ltA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/old-ironwood-taps-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 3,
+                "categories": [
+                    {
+                        "alias": "beergardens",
+                        "title": "Beer Gardens"
+                    },
+                    {
+                        "alias": "foodtrucks",
+                        "title": "Food Trucks"
+                    },
+                    {
+                        "alias": "beerbar",
+                        "title": "Beer Bar"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.058163,
+                    "longitude": -121.30809
+                },
+                "transactions": [],
+                "location": {
+                    "address1": "42 NW Hawthorne Ave",
+                    "address2": null,
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "42 NW Hawthorne Ave",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+14582021090",
+                "display_phone": "(458) 202-1090",
+                "distance": 9686.47295557347
+            },
+            {
+                "id": "vxS3SNp7W60xV9q8LMllfg",
+                "alias": "deschutes-brewery-bend-public-house-bend",
+                "name": "Deschutes Brewery Bend Public House",
+                "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/dpaFzxmjHPTapMOIpQ_i6w/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/deschutes-brewery-bend-public-house-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 1397,
+                "categories": [
+                    {
+                        "alias": "tradamerican",
+                        "title": "American (Traditional)"
+                    },
+                    {
+                        "alias": "brewpubs",
+                        "title": "Brewpubs"
+                    },
+                    {
+                        "alias": "pizza",
+                        "title": "Pizza"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.059525799216914,
+                    "longitude": -121.31147658573943
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "1044 NW Bond St",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97703",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "1044 NW Bond St",
+                        "Bend, OR 97703"
+                    ]
+                },
+                "phone": "+15413829242",
+                "display_phone": "(541) 382-9242",
+                "distance": 9969.03868372201
+            },
+            {
+                "id": "folKnnAnfXWVPLYd3eVozA",
+                "alias": "sunriver-brewing-co-sunriver-pub-sunriver",
+                "name": "Sunriver Brewing Co - Sunriver Pub",
+                "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Wj3IURffrw5vbpkSzTggBg/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/sunriver-brewing-co-sunriver-pub-sunriver?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 667,
+                "categories": [
+                    {
+                        "alias": "brewpubs",
+                        "title": "Brewpubs"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 43.872815,
+                    "longitude": -121.436604
+                },
+                "transactions": [],
+                "price": "$$",
+                "location": {
+                    "address1": "57100 Beaver Dr",
+                    "address2": "Bldg 4",
+                    "address3": "",
+                    "city": "Sunriver",
+                    "zip_code": "97707",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "57100 Beaver Dr",
+                        "Bldg 4",
+                        "Sunriver, OR 97707"
+                    ]
+                },
+                "phone": "+15413065154",
+                "display_phone": "(541) 306-5154",
+                "distance": 20468.91856336156
+            },
+            {
+                "id": "L7ujON8iECe4qKv6crJuWw",
+                "alias": "immersion-brewing-bend",
+                "name": "Immersion Brewing",
+                "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/dcH5ccP2pundBQmJq4oWtQ/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/immersion-brewing-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 362,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    },
+                    {
+                        "alias": "gastropubs",
+                        "title": "Gastropubs"
+                    },
+                    {
+                        "alias": "pubs",
+                        "title": "Pubs"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.050962,
+                    "longitude": -121.314705
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "550 SW Industrial Way",
+                    "address2": "Ste 185",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97702",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "550 SW Industrial Way",
+                        "Ste 185",
+                        "Bend, OR 97702"
+                    ]
+                },
+                "phone": "+15416337821",
+                "display_phone": "(541) 633-7821",
+                "distance": 9392.930543592898
+            },
+            {
+                "id": "cMSPWNkpVNpMoO_Dpvm0iA",
+                "alias": "10-barrel-brewing-west-side-bend-bend",
+                "name": "10 Barrel Brewing - West Side Bend",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/FR3IDQh_NEzAsQTEQT8PmQ/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/10-barrel-brewing-west-side-bend-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 1062,
+                "categories": [
+                    {
+                        "alias": "brewpubs",
+                        "title": "Brewpubs"
+                    },
+                    {
+                        "alias": "tradamerican",
+                        "title": "American (Traditional)"
+                    },
+                    {
+                        "alias": "cocktailbars",
+                        "title": "Cocktail Bars"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.05637173792783,
+                    "longitude": -121.3285452705628
+                },
+                "transactions": [
+                    "delivery",
+                    "pickup"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "1135 NW Galveston Ave",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "1135 NW Galveston Ave",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15416785228",
+                "display_phone": "(541) 678-5228",
+                "distance": 10585.234116085408
+            },
+            {
+                "id": "Q8xaUSGYvvNS0pvA6OTJiQ",
+                "alias": "goodlife-brewing-company-bend",
+                "name": "GoodLife Brewing Company",
+                "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/XLd3NjVfuilFlJIUmtBryA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/goodlife-brewing-company-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 268,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.05061,
+                    "longitude": -121.33053
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "70 SW Century Dr",
+                    "address2": "Ste 100-464",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97702",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "70 SW Century Dr",
+                        "Ste 100-464",
+                        "Bend, OR 97702"
+                    ]
+                },
+                "phone": "+15417280749",
+                "display_phone": "(541) 728-0749",
+                "distance": 10257.468973241359
+            },
+            {
+                "id": "pk-7gARAQJpnuWVNrpzZVw",
+                "alias": "deschutes-brewery-bend-4",
+                "name": "Deschutes Brewery Tasting Room",
+                "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/HMqYjrtK6b2fIHChqIdiAg/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/deschutes-brewery-bend-4?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 234,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    },
+                    {
+                        "alias": "beerbar",
+                        "title": "Beer Bar"
+                    },
+                    {
+                        "alias": "beertours",
+                        "title": "Beer Tours"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.047229,
+                    "longitude": -121.322417
+                },
+                "transactions": [],
+                "price": "$$",
+                "location": {
+                    "address1": "901 SW Simpson Ave",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97702",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "901 SW Simpson Ave",
+                        "Bend, OR 97702"
+                    ]
+                },
+                "phone": "+15413858606",
+                "display_phone": "(541) 385-8606",
+                "distance": 9519.293779719403
+            },
+            {
+                "id": "QNHe1qwS3794I5leudGrrg",
+                "alias": "sunriver-brewing-co-galveston-pub-bend-2",
+                "name": "Sunriver Brewing Co - Galveston Pub",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/84l7a3O61RxFJtlyC4FJ-g/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/sunriver-brewing-co-galveston-pub-bend-2?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 259,
+                "categories": [
+                    {
+                        "alias": "brewpubs",
+                        "title": "Brewpubs"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.05645,
+                    "longitude": -121.32697
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "1005 NW Galveston Ave",
+                    "address2": "Ste 150",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97703",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "1005 NW Galveston Ave",
+                        "Ste 150",
+                        "Bend, OR 97703"
+                    ]
+                },
+                "phone": "+15414089377",
+                "display_phone": "(541) 408-9377",
+                "distance": 10503.868154462001
+            },
+            {
+                "id": "DRX8ctXa9xLEtErCsk-w4w",
+                "alias": "boneyard-beer-bend",
+                "name": "Boneyard Beer",
+                "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ZEAsBHsjgR7T4vDctszhIQ/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/boneyard-beer-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 211,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.05404,
+                    "longitude": -121.30805
+                },
+                "transactions": [],
+                "price": "$",
+                "location": {
+                    "address1": "37 NW Lake Pl",
+                    "address2": "Ste B",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "37 NW Lake Pl",
+                        "Ste B",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15413232325",
+                "display_phone": "(541) 323-2325",
+                "distance": 9313.379361752073
+            },
+            {
+                "id": "GtP-OykCT2szJgDMEraY5Q",
+                "alias": "looney-bean-bend-bend",
+                "name": "Looney Bean Bend",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/awg4lGJShUhcJj3mRLAp3g/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/looney-bean-bend-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 249,
+                "categories": [
+                    {
+                        "alias": "coffee",
+                        "title": "Coffee & Tea"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.0599462,
+                    "longitude": -121.3142708
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "961 NW Brooks St",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97703",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "961 NW Brooks St",
+                        "Bend, OR 97703"
+                    ]
+                },
+                "phone": "+15414089142",
+                "display_phone": "(541) 408-9142",
+                "distance": 10141.275602010395
+            },
+            {
+                "id": "Gun4FfEj-8wqB-E7PwAf0Q",
+                "alias": "j-dub-bend",
+                "name": "J DUB",
+                "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jZQ8Ah3GX7DJC361fOVuoQ/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/j-dub-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 468,
+                "categories": [
+                    {
+                        "alias": "breakfast_brunch",
+                        "title": "Breakfast & Brunch"
+                    },
+                    {
+                        "alias": "tradamerican",
+                        "title": "American (Traditional)"
+                    },
+                    {
+                        "alias": "bars",
+                        "title": "Bars"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.0584487915039,
+                    "longitude": -121.312339782715
+                },
+                "transactions": [
+                    "delivery",
+                    "pickup"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "932 NW Bond St",
+                    "address2": null,
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "932 NW Bond St",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15417976335",
+                "display_phone": "(541) 797-6335",
+                "distance": 9934.157710183057
+            },
+            {
+                "id": "CGJ_FmIUsWHW2nccZPAqqw",
+                "alias": "bridge-99-brewery-bend",
+                "name": "Bridge 99 Brewery",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/RXnbPdGA_qE9SHYHLcB4VA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/bridge-99-brewery-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 63,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.0903594522883,
+                    "longitude": -121.29151773404
+                },
+                "transactions": [],
+                "price": "$$",
+                "location": {
+                    "address1": "63063 Layton Ave",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "63063 Layton Ave",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15412801690",
+                "display_phone": "(541) 280-1690",
+                "distance": 12223.336036965748
+            },
+            {
+                "id": "bsabGnpewxE3xupsZlNU9Q",
+                "alias": "craft-kitchen-and-brewery-bend",
+                "name": "Craft Kitchen & Brewery",
+                "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/BBe_Lrd-fWetZp4YT84MhA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/craft-kitchen-and-brewery-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 231,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    },
+                    {
+                        "alias": "newamerican",
+                        "title": "American (New)"
+                    }
+                ],
+                "rating": 4,
+                "coordinates": {
+                    "latitude": 44.08714,
+                    "longitude": -121.29021
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "62988 Layton Ave",
+                    "address2": "Ste 103",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "62988 Layton Ave",
+                        "Ste 103",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15416681766",
+                "display_phone": "(541) 668-1766",
+                "distance": 11861.765470652712
+            },
+            {
+                "id": "0Zs-0iid2-uh6qgIoJlMGg",
+                "alias": "mcmenamins-old-st-francis-school-bend-3",
+                "name": "McMenamins Old St. Francis School",
+                "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/STKb-m4t_ltvNMmNJqkWSg/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/mcmenamins-old-st-francis-school-bend-3?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 746,
+                "categories": [
+                    {
+                        "alias": "pubs",
+                        "title": "Pubs"
+                    }
+                ],
+                "rating": 3.5,
+                "coordinates": {
+                    "latitude": 44.056548431718,
+                    "longitude": -121.314357796256
+                },
+                "transactions": [],
+                "price": "$$",
+                "location": {
+                    "address1": "700 NW Bond St",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "700 NW Bond St",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15413825174",
+                "display_phone": "(541) 382-5174",
+                "distance": 9849.131269674483
+            },
+            {
+                "id": "jmTBCm2LZHsVZQ3aEc_sww",
+                "alias": "boneyard-pub-bend-3",
+                "name": "Boneyard Pub",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Qa8HP3mL-KEDhZGHn6xeCg/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/boneyard-pub-bend-3?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 185,
+                "categories": [
+                    {
+                        "alias": "brewpubs",
+                        "title": "Brewpubs"
+                    }
+                ],
+                "rating": 3.5,
+                "coordinates": {
+                    "latitude": 44.06911,
+                    "longitude": -121.30625
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "1955 NE Division St",
+                    "address2": "",
+                    "address3": null,
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "1955 NE Division St",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15412417184",
+                "display_phone": "(541) 241-7184",
+                "distance": 10610.374561038954
+            },
+            {
+                "id": "gvYUsMN58LSfwb0h8tw_XA",
+                "alias": "worthy-brewing-bend",
+                "name": "Worthy Brewing",
+                "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/IgPJVmF2mXxFwOpQTw92EA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/worthy-brewing-bend?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 597,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    },
+                    {
+                        "alias": "newamerican",
+                        "title": "American (New)"
+                    },
+                    {
+                        "alias": "beergardens",
+                        "title": "Beer Gardens"
+                    }
+                ],
+                "rating": 3.5,
+                "coordinates": {
+                    "latitude": 44.05542,
+                    "longitude": -121.26026
+                },
+                "transactions": [
+                    "delivery"
+                ],
+                "price": "$$",
+                "location": {
+                    "address1": "495 NE Bellevue Dr",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Bend",
+                    "zip_code": "97701",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "495 NE Bellevue Dr",
+                        "Bend, OR 97701"
+                    ]
+                },
+                "phone": "+15416394776",
+                "display_phone": "(541) 639-4776",
+                "distance": 7738.192085785375
+            },
+            {
+                "id": "KaH2PWSAOnNbSckwCREsug",
+                "alias": "kobold-brewing-tasting-room-redmond-3",
+                "name": "Kobold Brewing Tasting Room",
+                "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/3wTBlB1CEqVfpcGelMJrRA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/kobold-brewing-tasting-room-redmond-3?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 51,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    },
+                    {
+                        "alias": "tacos",
+                        "title": "Tacos"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.27482,
+                    "longitude": -121.17456
+                },
+                "transactions": [],
+                "price": "$",
+                "location": {
+                    "address1": "245 SW 6th St",
+                    "address2": "",
+                    "address3": null,
+                    "city": "Redmond",
+                    "zip_code": "97756",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "245 SW 6th St",
+                        "Redmond, OR 97756"
+                    ]
+                },
+                "phone": "+15415049373",
+                "display_phone": "(541) 504-9373",
+                "distance": 32303.167898627562
+            },
+            {
+                "id": "Qb-IM25DS3Mb7xzvdTmAMg",
+                "alias": "wild-ride-brewing-co-redmond",
+                "name": "Wild Ride Brewing Co",
+                "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/kxWZ9drCvnaXHVhXbGgmOA/o.jpg",
+                "is_closed": false,
+                "url": "https://www.yelp.com/biz/wild-ride-brewing-co-redmond?adjust_creative=1eb6LGB2yDCTc3klUjzpxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=1eb6LGB2yDCTc3klUjzpxg",
+                "review_count": 208,
+                "categories": [
+                    {
+                        "alias": "breweries",
+                        "title": "Breweries"
+                    }
+                ],
+                "rating": 4.5,
+                "coordinates": {
+                    "latitude": 44.2739299336569,
+                    "longitude": -121.173097856666
+                },
+                "transactions": [],
+                "price": "$$",
+                "location": {
+                    "address1": "332 SW 5th St",
+                    "address2": "",
+                    "address3": "",
+                    "city": "Redmond",
+                    "zip_code": "97756",
+                    "country": "US",
+                    "state": "OR",
+                    "display_address": [
+                        "332 SW 5th St",
+                        "Redmond, OR 97756"
+                    ]
+                },
+                "phone": "+15415168544",
+                "display_phone": "(541) 516-8544",
+                "distance": 32232.930965205174
+            }
+        ],
+        "total": 29,
+        "region": {
+            "center": {
+                "longitude": -121.23687744140625,
+                "latitude": 43.98768934771044
+            }
+        }
+    }
+}

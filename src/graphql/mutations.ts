@@ -2,6 +2,21 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const crawlEnginesLanguage = /* GraphQL */ `
+  mutation CrawlEnginesLanguage(
+    $search: String
+    $postalCode: String
+    $domainID: String
+    $apexDomain: String
+  ) {
+    crawlEnginesLanguage(
+      search: $search
+      postalCode: $postalCode
+      domainID: $domainID
+      apexDomain: $apexDomain
+    )
+  }
+`;
 export const crawlEngines = /* GraphQL */ `
   mutation CrawlEngines(
     $search: String
@@ -151,6 +166,13 @@ export const createEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -167,6 +189,13 @@ export const createEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -195,6 +224,13 @@ export const createEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -211,6 +247,13 @@ export const createEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -239,6 +282,13 @@ export const createEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -255,6 +305,13 @@ export const createEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -283,6 +340,13 @@ export const createEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -299,6 +363,13 @@ export const createEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -346,6 +417,13 @@ export const updateEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -362,6 +440,13 @@ export const updateEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -390,6 +475,13 @@ export const updateEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -406,6 +498,13 @@ export const updateEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -434,6 +533,13 @@ export const updateEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -450,6 +556,13 @@ export const updateEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -478,6 +591,13 @@ export const updateEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -494,6 +614,13 @@ export const updateEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -541,6 +668,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -557,6 +691,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -585,6 +726,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -601,6 +749,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -629,6 +784,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -645,6 +807,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -673,6 +842,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
             y
           }
         }
+        heatmapChart {
+          id
+          data {
+            x
+            y
+          }
+        }
         highScore
         foundWebsite
         mostLikely
@@ -689,6 +865,13 @@ export const deleteEngineCrawl = /* GraphQL */ `
           address
         }
         bumpChart {
+          id
+          data {
+            x
+            y
+          }
+        }
+        heatmapChart {
           id
           data {
             x
@@ -741,6 +924,13 @@ export const createDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -757,6 +947,13 @@ export const createDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -785,6 +982,13 @@ export const createDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -801,6 +1005,13 @@ export const createDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -829,6 +1040,13 @@ export const createDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -845,6 +1063,13 @@ export const createDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -873,6 +1098,13 @@ export const createDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -889,6 +1121,13 @@ export const createDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -980,6 +1219,13 @@ export const updateDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -996,6 +1242,13 @@ export const updateDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1024,6 +1277,13 @@ export const updateDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1040,6 +1300,13 @@ export const updateDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1068,6 +1335,13 @@ export const updateDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1084,6 +1358,13 @@ export const updateDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1112,6 +1393,13 @@ export const updateDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1128,6 +1416,13 @@ export const updateDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1219,6 +1514,13 @@ export const deleteDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1235,6 +1537,13 @@ export const deleteDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1263,6 +1572,13 @@ export const deleteDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1279,6 +1595,13 @@ export const deleteDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1307,6 +1630,13 @@ export const deleteDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1323,6 +1653,13 @@ export const deleteDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x
@@ -1351,6 +1688,13 @@ export const deleteDomain = /* GraphQL */ `
                 y
               }
             }
+            heatmapChart {
+              id
+              data {
+                x
+                y
+              }
+            }
             highScore
             foundWebsite
             mostLikely
@@ -1367,6 +1711,13 @@ export const deleteDomain = /* GraphQL */ `
               address
             }
             bumpChart {
+              id
+              data {
+                x
+                y
+              }
+            }
+            heatmapChart {
               id
               data {
                 x

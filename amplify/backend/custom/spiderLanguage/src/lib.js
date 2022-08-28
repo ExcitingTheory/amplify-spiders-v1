@@ -1,7 +1,7 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
-// import '@tensorflow/tfjs-node';
-// import * as use from '@tensorflow-models/universal-sentence-encoder';
+import '@tensorflow/tfjs-node';
+import * as use from '@tensorflow-models/universal-sentence-encoder';
 
 
 /**
@@ -56,37 +56,37 @@ const dot = function (a, b) {
   return sum
 }
 
-// const similarity = function (a, b) {
-//   var magnitudeA = Math.sqrt(dot(a, a));
-//   var magnitudeB = Math.sqrt(dot(b, b));
-//   if (magnitudeA && magnitudeB)
-//     return dot(a, b) / (magnitudeA * magnitudeB);
-//   else return false
-// }
+const similarity = function (a, b) {
+  var magnitudeA = Math.sqrt(dot(a, a));
+  var magnitudeB = Math.sqrt(dot(b, b));
+  if (magnitudeA && magnitudeB)
+    return dot(a, b) / (magnitudeA * magnitudeB);
+  else return false
+}
 
 
-// const cosineSimilarityMatrix = function (matrix) {
-//   let cosine_similarity_matrix = [];
-//   for (let i = 0; i < matrix.length; i++) {
-//     let row = [];
-//     for (let j = 0; j < i; j++) {
-//       row.push(cosine_similarity_matrix[j][i]);
-//     }
-//     row.push(1);
-//     for (let j = (i + 1); j < matrix.length; j++) {
-//       row.push(similarity(matrix[i], matrix[j]));
-//     }
-//     cosine_similarity_matrix.push(row);
-//   }
-//   return cosine_similarity_matrix;
-// }
+const cosineSimilarityMatrix = function (matrix) {
+  let cosine_similarity_matrix = [];
+  for (let i = 0; i < matrix.length; i++) {
+    let row = [];
+    for (let j = 0; j < i; j++) {
+      row.push(cosine_similarity_matrix[j][i]);
+    }
+    row.push(1);
+    for (let j = (i + 1); j < matrix.length; j++) {
+      row.push(similarity(matrix[i], matrix[j]));
+    }
+    cosine_similarity_matrix.push(row);
+  }
+  return cosine_similarity_matrix;
+}
 
-// export const syntacticSimilarity = async function (sentences) {
-//   const model = await use.load()
-//   const embeddings = await model.embed(sentences)
-//   let arr = cosineSimilarityMatrix(embeddings.arraySync())
-//   return arr
-// }
+export const syntacticSimilarity = async function (sentences) {
+  const model = await use.load()
+  const embeddings = await model.embed(sentences)
+  let arr = cosineSimilarityMatrix(embeddings.arraySync())
+  return arr
+}
 
 export const getRequest = async function (url, params = {}) {
   let data = axios.get(url, params).catch((error) => {
@@ -219,27 +219,27 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
     }
   }
 
-    // const scoreSyntax = await syntacticSimilarity(syntax)
-  // const heatmapExceptSearch = scoreSyntax[0].slice(1)
-  // const syntaxExceptSearch = syntax.slice(1)
-  // const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
-  //   const x = syntaxExceptSearch[i]
-  //   return {
-  //     x,
-  //     y,
-  //   }
-  // })
+  const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
 
-  // const heatmapChart = [{
-  //   id: search,
-  //   data: heatmapChartData
-  // }]
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    // heatmapChart,
+    heatmapChart,
     // scoreSyntax,
     // syntax,
     foundWebsite,
@@ -328,27 +328,27 @@ export const parseGoogle = async function (data, search, postalCode, domainName,
     }
   })
 
-  // const scoreSyntax = await syntacticSimilarity(syntax)
-  // const heatmapExceptSearch = scoreSyntax[0].slice(1)
-  // const syntaxExceptSearch = syntax.slice(1)
-  // const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
-  //   const x = syntaxExceptSearch[i]
-  //   return {
-  //     x,
-  //     y,
-  //   }
-  // })
+  const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
 
-  // const heatmapChart = [{
-  //   id: search,
-  //   data: heatmapChartData
-  // }]
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    // heatmapChart,
+    heatmapChart,
     // scoreSyntax,
     // syntax,
     foundWebsite,
@@ -430,21 +430,21 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
     }
   })
 
-    // const scoreSyntax = await syntacticSimilarity(syntax)
-  // const heatmapExceptSearch = scoreSyntax[0].slice(1)
-  // const syntaxExceptSearch = syntax.slice(1)
-  // const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
-  //   const x = syntaxExceptSearch[i]
-  //   return {
-  //     x,
-  //     y,
-  //   }
-  // })
+  const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
 
-  // const heatmapChart = [{
-  //   id: search,
-  //   data: heatmapChartData
-  // }]
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
   // [
   //   {
   //     "id": "Japan",
@@ -460,7 +460,7 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
     results,
     bumpChart,
     highScore,
-    // heatmapChart,
+    heatmapChart,
     // scoreSyntax,
     // syntax,
     mostLikely,
@@ -568,27 +568,27 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
 
   // console.log(JSON.stringify(results))
 
-    // const scoreSyntax = await syntacticSimilarity(syntax)
-  // const heatmapExceptSearch = scoreSyntax[0].slice(1)
-  // const syntaxExceptSearch = syntax.slice(1)
-  // const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
-  //   const x = syntaxExceptSearch[i]
-  //   return {
-  //     x,
-  //     y,
-  //   }
-  // })
+  const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
 
-  // const heatmapChart = [{
-  //   id: search,
-  //   data: heatmapChartData
-  // }]
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    // heatmapChart,
+    heatmapChart,
     // scoreSyntax,
     // syntax,
     foundWebsite,
@@ -664,27 +664,27 @@ export const parseYellowpages = async function (data, search, postalCode, domain
     }
   })
 
-    // const scoreSyntax = await syntacticSimilarity(syntax)
-  // const heatmapExceptSearch = scoreSyntax[0].slice(1)
-  // const syntaxExceptSearch = syntax.slice(1)
-  // const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
-  //   const x = syntaxExceptSearch[i]
-  //   return {
-  //     x,
-  //     y,
-  //   }
-  // })
+  const scoreSyntax = await syntacticSimilarity(syntax)
+  const heatmapExceptSearch = scoreSyntax[0].slice(1)
+  const syntaxExceptSearch = syntax.slice(1)
+  const heatmapChartData = heatmapExceptSearch.map(function (y, i) {
+    const x = syntaxExceptSearch[i]
+    return {
+      x,
+      y,
+    }
+  })
 
-  // const heatmapChart = [{
-  //   id: search,
-  //   data: heatmapChartData
-  // }]
+  const heatmapChart = [{
+    id: search,
+    data: heatmapChartData
+  }]
 
   return {
     results,
     bumpChart,
     highScore,
-    // heatmapChart,
+    heatmapChart,
     // scoreSyntax,
     // syntax,
     mostLikely,

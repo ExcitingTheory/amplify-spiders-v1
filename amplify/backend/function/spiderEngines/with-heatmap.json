@@ -1,0 +1,1287 @@
+{
+    "input": {
+        "search": "Bend Brewing Company",
+        "domainID": "d4dc1945-f62e-4022-94b6-218bdf78430c",
+        "postalCode": "97702",
+        "citysearch": {
+            "results": [
+                {
+                    "key": 0,
+                    "name": "The Original Bend Transmission Company",
+                    "score": 0.358974358974359,
+                    "address": "61522 American Loop"
+                },
+                {
+                    "key": 1,
+                    "name": "Bend Movers",
+                    "score": 0.23809523809523808,
+                    "address": "1001 SE 15th Str Ste 112"
+                },
+                {
+                    "key": 2,
+                    "name": "Bend Tree Service",
+                    "score": 0.2857142857142857,
+                    "address": "19380 River Woods Dr"
+                },
+                {
+                    "key": 3,
+                    "name": "Bend On-Site Screening",
+                    "score": 0.391304347826087,
+                    "address": "61580 American Ln Ste 4"
+                },
+                {
+                    "key": 4,
+                    "name": "Bend Glass & Mirror",
+                    "score": 0.23809523809523808,
+                    "address": "1080 SE 9th St Ste 100"
+                },
+                {
+                    "key": 5,
+                    "name": "Residence Inn By Marriott Bend",
+                    "score": 0.25806451612903225,
+                    "address": "500 SW Bond St"
+                },
+                {
+                    "key": 6,
+                    "name": "Springhill Suites By Marriott Bend",
+                    "score": 0.22857142857142856,
+                    "address": "551 SW Industrial Way"
+                },
+                {
+                    "key": 7,
+                    "name": "La Quinta Inn By Wyndham Bend",
+                    "score": 0.23333333333333334,
+                    "address": "61200 S Highway 97"
+                },
+                {
+                    "key": 8,
+                    "name": "Bend Veterinary Specialty & Emergency Center",
+                    "score": 0.17777777777777778,
+                    "address": "1245 SE 3rd St C3"
+                },
+                {
+                    "key": 9,
+                    "name": "Therapeutic Associates Physical Thrpy-Athletic Club Of Bend",
+                    "score": 0.1,
+                    "address": "61615 Athletic Club Dr"
+                },
+                {
+                    "key": 10,
+                    "name": "Entrada Lodge",
+                    "score": 0.047619047619047616,
+                    "address": "19221 SW Century Dr"
+                },
+                {
+                    "key": 11,
+                    "name": "Central Oregon Fence Company",
+                    "score": 0.3448275862068966,
+                    "address": "61170 Larkspur Loop"
+                },
+                {
+                    "key": 12,
+                    "name": "Bend Courier Company",
+                    "score": 0.6190476190476191,
+                    "address": "105 Sw Hayes Ave"
+                },
+                {
+                    "key": 13,
+                    "name": "Element Bend",
+                    "score": 0.23809523809523808,
+                    "address": "98 SW Wall St"
+                },
+                {
+                    "key": 14,
+                    "name": "Cynthia's of Bend",
+                    "score": 0.2857142857142857,
+                    "address": "1100 SE 3rd St"
+                },
+                {
+                    "key": 15,
+                    "name": "BMW of Bend",
+                    "score": 0.23809523809523808,
+                    "address": "SE 3rd St"
+                },
+                {
+                    "key": 16,
+                    "name": "Chevrolet of Bend",
+                    "score": 0.2857142857142857,
+                    "address": "345 NE 3rd St"
+                },
+                {
+                    "key": 17,
+                    "name": "Porsche Bend",
+                    "score": 0.23809523809523808,
+                    "address": "1055 SE 3rd St"
+                },
+                {
+                    "key": 18,
+                    "name": "Audi Bend",
+                    "score": 0.23809523809523808,
+                    "address": "1045 SE 3rd St"
+                },
+                {
+                    "key": 19,
+                    "name": "BMW of Bend",
+                    "score": 0.23809523809523808,
+                    "address": "798 SE Division St"
+                }
+            ],
+            "bumpChart": [
+                {
+                    "id": "The Original Bend Transmission Company: 61522 American Loop",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 1
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Movers: 1001 SE 15th Str Ste 112",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 2
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Tree Service: 19380 River Woods Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 3
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend On-Site Screening: 61580 American Ln Ste 4",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 4
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Glass & Mirror: 1080 SE 9th St Ste 100",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "Residence Inn By Marriott Bend: 500 SW Bond St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 6
+                        }
+                    ]
+                },
+                {
+                    "id": "Springhill Suites By Marriott Bend: 551 SW Industrial Way",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 7
+                        }
+                    ]
+                },
+                {
+                    "id": "La Quinta Inn By Wyndham Bend: 61200 S Highway 97",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 8
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Veterinary Specialty & Emergency Center: 1245 SE 3rd St C3",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 9
+                        }
+                    ]
+                },
+                {
+                    "id": "Therapeutic Associates Physical Thrpy-Athletic Club Of Bend: 61615 Athletic Club Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 10
+                        }
+                    ]
+                },
+                {
+                    "id": "Entrada Lodge: 19221 SW Century Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 11
+                        }
+                    ]
+                },
+                {
+                    "id": "Central Oregon Fence Company: 61170 Larkspur Loop",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 12
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Courier Company: 105 Sw Hayes Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 13
+                        }
+                    ]
+                },
+                {
+                    "id": "Element Bend: 98 SW Wall St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 14
+                        }
+                    ]
+                },
+                {
+                    "id": "Cynthia's of Bend: 1100 SE 3rd St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 15
+                        }
+                    ]
+                },
+                {
+                    "id": "BMW of Bend: SE 3rd St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 16
+                        }
+                    ]
+                },
+                {
+                    "id": "Chevrolet of Bend: 345 NE 3rd St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 17
+                        }
+                    ]
+                },
+                {
+                    "id": "Porsche Bend: 1055 SE 3rd St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 18
+                        }
+                    ]
+                },
+                {
+                    "id": "Audi Bend: 1045 SE 3rd St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 19
+                        }
+                    ]
+                },
+                {
+                    "id": "BMW of Bend: 798 SE Division St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 20
+                        }
+                    ]
+                }
+            ],
+            "highScore": 0.6190476190476191,
+            "heatmapChart": [
+                {
+                    "id": "Bend Brewing Company",
+                    "data": [
+                        {
+                            "x": "The Original Bend Transmission Company",
+                            "y": 0.4658243591089322
+                        },
+                        {
+                            "x": "Bend Movers",
+                            "y": 0.5170353099403711
+                        },
+                        {
+                            "x": "Bend Tree Service",
+                            "y": 0.531085595746351
+                        },
+                        {
+                            "x": "Bend On-Site Screening",
+                            "y": 0.3048651316655877
+                        },
+                        {
+                            "x": "Bend Glass & Mirror",
+                            "y": 0.45842327657331167
+                        },
+                        {
+                            "x": "Residence Inn By Marriott Bend",
+                            "y": 0.5191944337798408
+                        },
+                        {
+                            "x": "Springhill Suites By Marriott Bend",
+                            "y": 0.5126167568132013
+                        },
+                        {
+                            "x": "La Quinta Inn By Wyndham Bend",
+                            "y": 0.5111013313511299
+                        },
+                        {
+                            "x": "Bend Veterinary Specialty & Emergency Center",
+                            "y": 0.3707807199111074
+                        },
+                        {
+                            "x": "Therapeutic Associates Physical Thrpy-Athletic Club Of Bend",
+                            "y": 0.3108996557201252
+                        },
+                        {
+                            "x": "Entrada Lodge",
+                            "y": 0.4565735884153445
+                        },
+                        {
+                            "x": "Central Oregon Fence Company",
+                            "y": 0.5385661051137615
+                        },
+                        {
+                            "x": "Bend Courier Company",
+                            "y": 0.6136624229899131
+                        },
+                        {
+                            "x": "Element Bend",
+                            "y": 0.3799858083619335
+                        },
+                        {
+                            "x": "Cynthia's of Bend",
+                            "y": 0.42015393454899863
+                        },
+                        {
+                            "x": "BMW of Bend",
+                            "y": 0.33949100484284583
+                        },
+                        {
+                            "x": "Chevrolet of Bend",
+                            "y": 0.46103969864317357
+                        },
+                        {
+                            "x": "Porsche Bend",
+                            "y": 0.33065185678832965
+                        },
+                        {
+                            "x": "Audi Bend",
+                            "y": 0.41421651014828553
+                        },
+                        {
+                            "x": "BMW of Bend",
+                            "y": 0.33949101048840336
+                        }
+                    ]
+                }
+            ],
+            "foundWebsite": false,
+            "mostLikely": 12,
+            "exactWebsiteMatch": -1,
+            "exactWebsiteMatchHttp": -1,
+            "exactNameMatch": -1
+        },
+        "google": {
+            "results": [
+                {
+                    "key": 0,
+                    "name": "Bend Brewing Company",
+                    "score": 0.9523809523809523,
+                    "websiteUrl": "https://www.bendbrewingco.com/",
+                    "address": "https://www.bendbrewingco.com/"
+                },
+                {
+                    "key": 1,
+                    "name": "Deschutes Brewery | Deschutes Brewery",
+                    "score": 0.13157894736842105,
+                    "websiteUrl": "https://www.deschutesbrewery.com/",
+                    "address": "https://www.deschutesbrewery.com/"
+                },
+                {
+                    "key": 2,
+                    "name": "PUB MENU — Bend Brewing Company",
+                    "score": 0.625,
+                    "websiteUrl": "https://www.bendbrewingco.com/the-pub",
+                    "address": "https://www.bendbrewingco.com/the-pub"
+                },
+                {
+                    "key": 3,
+                    "name": "GoodLife Brewing - Great Bend Beer in Oregon",
+                    "score": 0.26666666666666666,
+                    "websiteUrl": "https://www.goodlifebrewing.com/",
+                    "address": "https://www.goodlifebrewing.com/"
+                },
+                {
+                    "key": 4,
+                    "name": "10 Barrel Brewing Co. – Drink Beer Outside – Bend, Oregon",
+                    "score": 0.22413793103448276,
+                    "websiteUrl": "https://10barrel.com/",
+                    "address": "https://10barrel.com/"
+                },
+                {
+                    "key": 5,
+                    "name": "Cascade Lakes Brewing Company",
+                    "score": 0.5333333333333333,
+                    "websiteUrl": "https://www.cascadelakes.com/",
+                    "address": "https://www.cascadelakes.com/"
+                },
+                {
+                    "key": 6,
+                    "name": "Sunriver Brewing Company: Home",
+                    "score": 0.4838709677419355,
+                    "websiteUrl": "https://www.sunriverbrewingcompany.com/",
+                    "address": "https://www.sunriverbrewingcompany.com/"
+                },
+                {
+                    "key": 7,
+                    "name": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                    "score": 0.20408163265306123,
+                    "websiteUrl": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                    "address": "https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs"
+                },
+                {
+                    "key": 8,
+                    "name": "Immersion Brewing: Home",
+                    "score": 0.3333333333333333,
+                    "websiteUrl": "https://imbrewing.com/",
+                    "address": "https://imbrewing.com/"
+                },
+                {
+                    "key": 9,
+                    "name": "HOME | Silver Moon Brewing | Bend, Oregon",
+                    "score": 0.2857142857142857,
+                    "websiteUrl": "https://www.silvermoonbrewing.com/",
+                    "address": "https://www.silvermoonbrewing.com/"
+                }
+            ],
+            "bumpChart": [
+                {
+                    "id": "Bend Brewing Company: https://www.bendbrewingco.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 1
+                        }
+                    ]
+                },
+                {
+                    "id": "Deschutes Brewery | Deschutes Brewery: https://www.deschutesbrewery.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 2
+                        }
+                    ]
+                },
+                {
+                    "id": "PUB MENU — Bend Brewing Company: https://www.bendbrewingco.com/the-pub",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 3
+                        }
+                    ]
+                },
+                {
+                    "id": "GoodLife Brewing - Great Bend Beer in Oregon: https://www.goodlifebrewing.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 4
+                        }
+                    ]
+                },
+                {
+                    "id": "10 Barrel Brewing Co. – Drink Beer Outside – Bend, Oregon: https://10barrel.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "Cascade Lakes Brewing Company: https://www.cascadelakes.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 6
+                        }
+                    ]
+                },
+                {
+                    "id": "Sunriver Brewing Company: Home: https://www.sunriverbrewingcompany.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 7
+                        }
+                    ]
+                },
+                {
+                    "id": "17 Killer Breweries and Brewpubs in Bend, Oregon: https://pdx.eater.com/maps/bend-oregon-breweries-brewpubs",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 8
+                        }
+                    ]
+                },
+                {
+                    "id": "Immersion Brewing: Home: https://imbrewing.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 9
+                        }
+                    ]
+                },
+                {
+                    "id": "HOME | Silver Moon Brewing | Bend, Oregon: https://www.silvermoonbrewing.com/",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 10
+                        }
+                    ]
+                }
+            ],
+            "highScore": 1,
+            "heatmapChart": [
+                {
+                    "id": "Bend Brewing Company",
+                    "data": [
+                        {
+                            "x": "Bend Brewing Company",
+                            "y": 1
+                        },
+                        {
+                            "x": "Deschutes Brewery | Deschutes Brewery",
+                            "y": 0.7702594855275334
+                        },
+                        {
+                            "x": "PUB MENU — Bend Brewing Company",
+                            "y": 0.6678715817579978
+                        },
+                        {
+                            "x": "GoodLife Brewing - Great Bend Beer in Oregon",
+                            "y": 0.8065149712169977
+                        },
+                        {
+                            "x": "10 Barrel Brewing Co. – Drink Beer Outside – Bend, Oregon",
+                            "y": 0.7415640772349729
+                        },
+                        {
+                            "x": "Cascade Lakes Brewing Company",
+                            "y": 0.9259438877307566
+                        },
+                        {
+                            "x": "Sunriver Brewing Company: Home",
+                            "y": 0.8243835006367994
+                        },
+                        {
+                            "x": "17 Killer Breweries and Brewpubs in Bend, Oregon",
+                            "y": 0.7225666050554335
+                        },
+                        {
+                            "x": "Immersion Brewing: Home",
+                            "y": 0.6515436855410377
+                        },
+                        {
+                            "x": "HOME | Silver Moon Brewing | Bend, Oregon",
+                            "y": 0.700284237572601
+                        }
+                    ]
+                }
+            ],
+            "foundWebsite": true,
+            "mostLikely": 2,
+            "exactWebsiteMatch": 0,
+            "exactWebsiteMatchHttp": -1,
+            "exactNameMatch": 0
+        },
+        "foursquare": {
+            "results": [
+                {
+                    "key": 0,
+                    "name": "GoodLife Brewing Company",
+                    "score": 0.64,
+                    "address": "70 SW Century Dr"
+                },
+                {
+                    "key": 1,
+                    "name": "Worthy Brewing Co.",
+                    "score": 0.5238095238095238,
+                    "address": "495 NE Bellevue Dr"
+                },
+                {
+                    "key": 2,
+                    "name": "10 Barrel Brewing",
+                    "score": 0.38095238095238093,
+                    "address": "1135 NW Galveston Ave"
+                },
+                {
+                    "key": 3,
+                    "name": "Bend Rock Gym",
+                    "score": 0.23809523809523808,
+                    "address": "1182 SE Centennial Ct"
+                },
+                {
+                    "key": 4,
+                    "name": "Bend Pet Express",
+                    "score": 0.2857142857142857,
+                    "address": "420 NE Windy Knolls Dr"
+                },
+                {
+                    "key": 5,
+                    "name": "Farewell Bend Park",
+                    "score": 0.38095238095238093,
+                    "address": "1000 SW Reed Market Rd"
+                },
+                {
+                    "key": 6,
+                    "name": "Hilton Garden Inn Bend",
+                    "score": 0.2608695652173913,
+                    "address": "425 SW Bluff Dr"
+                },
+                {
+                    "key": 7,
+                    "name": "River Pig Saloon Bend",
+                    "score": 0.2727272727272727,
+                    "address": "555 NW Arizona Ave"
+                },
+                {
+                    "key": 8,
+                    "name": "Sunriver Brewing Co - Galveston Pub",
+                    "score": 0.2777777777777778,
+                    "address": "1005 NW Galveston Ave"
+                },
+                {
+                    "key": 9,
+                    "name": "Coach Outlet Bend",
+                    "score": 0.3333333333333333,
+                    "address": "61334 S Highway 97"
+                }
+            ],
+            "bumpChart": [
+                {
+                    "id": "GoodLife Brewing Company: 70 SW Century Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 1
+                        }
+                    ]
+                },
+                {
+                    "id": "Worthy Brewing Co.: 495 NE Bellevue Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 2
+                        }
+                    ]
+                },
+                {
+                    "id": "10 Barrel Brewing: 1135 NW Galveston Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 3
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Rock Gym: 1182 SE Centennial Ct",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 4
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Pet Express: 420 NE Windy Knolls Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "Farewell Bend Park: 1000 SW Reed Market Rd",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 6
+                        }
+                    ]
+                },
+                {
+                    "id": "Hilton Garden Inn Bend: 425 SW Bluff Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 7
+                        }
+                    ]
+                },
+                {
+                    "id": "River Pig Saloon Bend: 555 NW Arizona Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 8
+                        }
+                    ]
+                },
+                {
+                    "id": "Sunriver Brewing Co - Galveston Pub: 1005 NW Galveston Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 9
+                        }
+                    ]
+                },
+                {
+                    "id": "Coach Outlet Bend: 61334 S Highway 97",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 10
+                        }
+                    ]
+                }
+            ],
+            "highScore": 0.64,
+            "heatmapChart": [
+                {
+                    "id": "Bend Brewing Company",
+                    "data": [
+                        {
+                            "x": "GoodLife Brewing Company",
+                            "y": 0.9037648957736588
+                        },
+                        {
+                            "x": "Worthy Brewing Co.",
+                            "y": 0.7791165166854485
+                        },
+                        {
+                            "x": "10 Barrel Brewing",
+                            "y": 0.7630969550323107
+                        },
+                        {
+                            "x": "Bend Rock Gym",
+                            "y": 0.4306250823932368
+                        },
+                        {
+                            "x": "Bend Pet Express",
+                            "y": 0.5388352270082608
+                        },
+                        {
+                            "x": "Farewell Bend Park",
+                            "y": 0.48650464639199054
+                        },
+                        {
+                            "x": "Hilton Garden Inn Bend",
+                            "y": 0.6039652927585933
+                        },
+                        {
+                            "x": "River Pig Saloon Bend",
+                            "y": 0.5733712289102947
+                        },
+                        {
+                            "x": "Sunriver Brewing Co - Galveston Pub",
+                            "y": 0.7784509447444666
+                        },
+                        {
+                            "x": "Coach Outlet Bend",
+                            "y": 0.5347849329722623
+                        }
+                    ]
+                }
+            ],
+            "mostLikely": 0,
+            "exactNameMatch": -1
+        },
+        "yelp": {
+            "results": [
+                {
+                    "key": 0,
+                    "name": "Bend Brewing Company",
+                    "score": 0.9523809523809523,
+                    "address": "1019 NW Brooks St",
+                    "websiteUrl": "http://www.bendbrewingco.com"
+                },
+                {
+                    "key": 1,
+                    "name": "Crux Fermentation Project",
+                    "score": 0.07692307692307693,
+                    "address": "50 SW Division St"
+                },
+                {
+                    "key": 2,
+                    "name": "Old Ironwood Taps",
+                    "score": 0.047619047619047616,
+                    "address": "42 NW Hawthorne Ave"
+                },
+                {
+                    "key": 3,
+                    "name": "Deschutes Brewery Bend Public House",
+                    "score": 0.25,
+                    "address": "1044 NW Bond St"
+                },
+                {
+                    "key": 4,
+                    "name": "10 Barrel Brewing - West Side Bend",
+                    "score": 0.34285714285714286,
+                    "address": "1135 NW Galveston Ave"
+                },
+                {
+                    "key": 5,
+                    "name": "Sunriver Brewing Co - Sunriver Pub",
+                    "score": 0.2857142857142857,
+                    "address": "57100 Beaver Dr"
+                },
+                {
+                    "key": 6,
+                    "name": "Immersion Brewing",
+                    "score": 0.38095238095238093,
+                    "address": "550 SW Industrial Way"
+                },
+                {
+                    "key": 7,
+                    "name": "GoodLife Brewing Company",
+                    "score": 0.64,
+                    "address": "70 SW Century Dr"
+                },
+                {
+                    "key": 8,
+                    "name": "Deschutes Brewery Tasting Room",
+                    "score": 0.2903225806451613,
+                    "address": "901 SW Simpson Ave"
+                },
+                {
+                    "key": 9,
+                    "name": "Sunriver Brewing Co - Galveston Pub",
+                    "score": 0.2777777777777778,
+                    "address": "1005 NW Galveston Ave"
+                },
+                {
+                    "key": 10,
+                    "name": "Boneyard Beer",
+                    "score": 0.14285714285714285,
+                    "address": "37 NW Lake Pl"
+                },
+                {
+                    "key": 11,
+                    "name": "Looney Bean Bend",
+                    "score": 0.3333333333333333,
+                    "address": "961 NW Brooks St"
+                },
+                {
+                    "key": 12,
+                    "name": "J DUB",
+                    "score": 0,
+                    "address": "932 NW Bond St"
+                },
+                {
+                    "key": 13,
+                    "name": "Bridge 99 Brewery",
+                    "score": 0.23809523809523808,
+                    "address": "63063 Layton Ave"
+                },
+                {
+                    "key": 14,
+                    "name": "Craft Kitchen & Brewery",
+                    "score": 0.2916666666666667,
+                    "address": "62988 Layton Ave"
+                },
+                {
+                    "key": 15,
+                    "name": "Boneyard Pub",
+                    "score": 0.09523809523809523,
+                    "address": "1955 NE Division St"
+                },
+                {
+                    "key": 16,
+                    "name": "McMenamins Old St. Francis School",
+                    "score": 0.11764705882352941,
+                    "address": "700 NW Bond St"
+                },
+                {
+                    "key": 17,
+                    "name": "Worthy Brewing",
+                    "score": 0.42857142857142855,
+                    "address": "495 NE Bellevue Dr"
+                },
+                {
+                    "key": 18,
+                    "name": "Kobold Brewing The Vault",
+                    "score": 0.36,
+                    "address": "245 SW 6th St"
+                },
+                {
+                    "key": 19,
+                    "name": "Wild Ride Brewing Co",
+                    "score": 0.5238095238095238,
+                    "address": "332 SW 5th St"
+                }
+            ],
+            "bumpChart": [
+                {
+                    "id": "Bend Brewing Company: 1019 NW Brooks St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 1
+                        }
+                    ]
+                },
+                {
+                    "id": "Crux Fermentation Project: 50 SW Division St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 2
+                        }
+                    ]
+                },
+                {
+                    "id": "Old Ironwood Taps: 42 NW Hawthorne Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 3
+                        }
+                    ]
+                },
+                {
+                    "id": "Deschutes Brewery Bend Public House: 1044 NW Bond St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 4
+                        }
+                    ]
+                },
+                {
+                    "id": "10 Barrel Brewing - West Side Bend: 1135 NW Galveston Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "Sunriver Brewing Co - Sunriver Pub: 57100 Beaver Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 6
+                        }
+                    ]
+                },
+                {
+                    "id": "Immersion Brewing: 550 SW Industrial Way",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 7
+                        }
+                    ]
+                },
+                {
+                    "id": "GoodLife Brewing Company: 70 SW Century Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 8
+                        }
+                    ]
+                },
+                {
+                    "id": "Deschutes Brewery Tasting Room: 901 SW Simpson Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 9
+                        }
+                    ]
+                },
+                {
+                    "id": "Sunriver Brewing Co - Galveston Pub: 1005 NW Galveston Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 10
+                        }
+                    ]
+                },
+                {
+                    "id": "Boneyard Beer: 37 NW Lake Pl",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 11
+                        }
+                    ]
+                },
+                {
+                    "id": "Looney Bean Bend: 961 NW Brooks St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 12
+                        }
+                    ]
+                },
+                {
+                    "id": "J DUB: 932 NW Bond St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 13
+                        }
+                    ]
+                },
+                {
+                    "id": "Bridge 99 Brewery: 63063 Layton Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 14
+                        }
+                    ]
+                },
+                {
+                    "id": "Craft Kitchen & Brewery: 62988 Layton Ave",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 15
+                        }
+                    ]
+                },
+                {
+                    "id": "Boneyard Pub: 1955 NE Division St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 16
+                        }
+                    ]
+                },
+                {
+                    "id": "McMenamins Old St. Francis School: 700 NW Bond St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 17
+                        }
+                    ]
+                },
+                {
+                    "id": "Worthy Brewing: 495 NE Bellevue Dr",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 18
+                        }
+                    ]
+                },
+                {
+                    "id": "Kobold Brewing The Vault: 245 SW 6th St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 19
+                        }
+                    ]
+                },
+                {
+                    "id": "Wild Ride Brewing Co: 332 SW 5th St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 20
+                        }
+                    ]
+                }
+            ],
+            "highScore": 1,
+            "heatmapChart": [
+                {
+                    "id": "Bend Brewing Company",
+                    "data": [
+                        {
+                            "x": "Bend Brewing Company",
+                            "y": 1
+                        },
+                        {
+                            "x": "Crux Fermentation Project",
+                            "y": 0.5014313336307146
+                        },
+                        {
+                            "x": "Old Ironwood Taps",
+                            "y": 0.47979062516599186
+                        },
+                        {
+                            "x": "Deschutes Brewery Bend Public House",
+                            "y": 0.7804133943286675
+                        },
+                        {
+                            "x": "10 Barrel Brewing - West Side Bend",
+                            "y": 0.7729365365847004
+                        },
+                        {
+                            "x": "Sunriver Brewing Co - Sunriver Pub",
+                            "y": 0.7611360583781865
+                        },
+                        {
+                            "x": "Immersion Brewing",
+                            "y": 0.6621984980865975
+                        },
+                        {
+                            "x": "GoodLife Brewing Company",
+                            "y": 0.9037648957736588
+                        },
+                        {
+                            "x": "Deschutes Brewery Tasting Room",
+                            "y": 0.7629905651592893
+                        },
+                        {
+                            "x": "Sunriver Brewing Co - Galveston Pub",
+                            "y": 0.7784509447444666
+                        },
+                        {
+                            "x": "Boneyard Beer",
+                            "y": 0.7722596151956805
+                        },
+                        {
+                            "x": "Looney Bean Bend",
+                            "y": 0.42350563338871666
+                        },
+                        {
+                            "x": "J DUB",
+                            "y": 0.2700399153559901
+                        },
+                        {
+                            "x": "Bridge 99 Brewery",
+                            "y": 0.6804463678555885
+                        },
+                        {
+                            "x": "Craft Kitchen & Brewery",
+                            "y": 0.7520264152668643
+                        },
+                        {
+                            "x": "Boneyard Pub",
+                            "y": 0.6095863369133652
+                        },
+                        {
+                            "x": "McMenamins Old St. Francis School",
+                            "y": 0.44916426963856787
+                        },
+                        {
+                            "x": "Worthy Brewing",
+                            "y": 0.7774761420834471
+                        },
+                        {
+                            "x": "Kobold Brewing The Vault",
+                            "y": 0.6509985560061645
+                        },
+                        {
+                            "x": "Wild Ride Brewing Co",
+                            "y": 0.6892140258148002
+                        }
+                    ]
+                }
+            ],
+            "foundWebsite": true,
+            "mostLikely": 0,
+            "exactWebsiteMatch": -1,
+            "exactWebsiteMatchHttp": 0,
+            "exactNameMatch": 0
+        },
+        "yellowpages": {
+            "results": [
+                {
+                    "key": 0,
+                    "name": "Bend Brewing Company",
+                    "score": 0.9523809523809523,
+                    "address": "1019 NW Brooks St"
+                },
+                {
+                    "key": 1,
+                    "name": "Bend Brewing Co",
+                    "score": 0.6666666666666666,
+                    "address": "20650 High Desert Ln"
+                }
+            ],
+            "bumpChart": [
+                {
+                    "id": "Bend Brewing Company: 1019 NW Brooks St",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 1
+                        }
+                    ]
+                },
+                {
+                    "id": "Bend Brewing Co: 20650 High Desert Ln",
+                    "data": [
+                        {
+                            "x": "8/28/2022",
+                            "y": 2
+                        }
+                    ]
+                }
+            ],
+            "highScore": 1,
+            "heatmapChart": [
+                {
+                    "id": "Bend Brewing Company",
+                    "data": [
+                        {
+                            "x": "Bend Brewing Company",
+                            "y": 0.9999999999999497
+                        },
+                        {
+                            "x": "Bend Brewing Co",
+                            "y": 0.9395779854018597
+                        }
+                    ]
+                }
+            ],
+            "mostLikely": 0,
+            "exactNameMatch": 0
+        },
+        "owner": "7a06a392-f4aa-4deb-a5dc-4100eaa85eee",
+        "_version": 1
+    }
+}
