@@ -24,11 +24,10 @@
  */
 const hookHandler = async (data, error) => {
   // const { envName } = data?.amplify.environment
+  console.log("process.env['_CUSTOM_IMAGE']", process.env['_CUSTOM_IMAGE'])
   if (!process.env['_CUSTOM_IMAGE']) {
     let ecrRepo = 'cdk-hnb659fds-container-assets-759854655984-us-east-1'
     await docker(path.join(__dirname, '../backend/custom/spiderLanguage/src/'), ecrRepo) 
-  } else {
-    console.log('Not building docker container, you had better pushbed your backend changes until this supports docker in docker.')
   }
 
 };
