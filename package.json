@@ -19,6 +19,7 @@
     "@mui/material": "latest",
     "@nivo/bump": "^0.79.1",
     "@nivo/core": "^0.79.0",
+    "@nivo/heatmap": "^0.79.1",
     "add": "^2.0.6",
     "aws-amplify": "^4.3.11",
     "axios": "^0.27.2",
