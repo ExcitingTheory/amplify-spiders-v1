@@ -23,8 +23,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "amplify/backend/function/spiderEngines/src/lib.js"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "amplify"
   ]
 }
