@@ -24,8 +24,7 @@
  */
 const hookHandler = async (data, error) => {
   // const { envName } = data?.amplify.environment
-  const isCiCd = process.env['_CUSTOM_IMAGE'] || ''
-  if (!isCiCd) {
+  if (!process.env['_CUSTOM_IMAGE']) {
     let ecrRepo = 'cdk-hnb659fds-container-assets-759854655984-us-east-1'
     await docker(path.join(__dirname, '../backend/custom/spiderLanguage/src/'), ecrRepo) 
   } else {
