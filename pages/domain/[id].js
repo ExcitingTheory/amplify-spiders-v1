@@ -45,7 +45,7 @@ const MyResponsiveHeatMap = ({ data /* see data tab */ }) => {
         <ResponsiveHeatMap
           data={data}
           margin={{ top: 200, right: 100, bottom: 100, left: 200 }}
-          valueFormat=">-.2%"
+          valueFormat=" >-.0~%"
           axisTop={{
             tickSize: 5,
             tickPadding: 5,
@@ -99,7 +99,7 @@ const MyResponsiveHeatMap = ({ data /* see data tab */ }) => {
               tickSize: 3,
               tickSpacing: 4,
               tickOverlap: false,
-              tickFormat: '>-.2%',
+              tickFormat: ' >-.0~%',
               title: 'More competitive →',
               titleAlign: 'start',
               titleOffset: 4
