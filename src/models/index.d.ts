@@ -40,6 +40,7 @@ export declare class EngineResult {
   readonly exactWebsiteMatch?: number | null;
   readonly exactWebsiteMatchHttp?: number | null;
   readonly exactNameMatch?: number | null;
+  readonly rank?: number | null;
   constructor(init: ModelInit<EngineResult>);
 }
 

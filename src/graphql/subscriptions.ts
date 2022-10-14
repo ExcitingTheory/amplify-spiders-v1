@@ -127,6 +127,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       citysearch {
         results {
@@ -156,6 +157,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       google {
         results {
@@ -185,6 +187,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       foursquare {
         results {
@@ -214,6 +217,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       facebook {
         results {
@@ -243,6 +247,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       yelp {
         results {
@@ -272,6 +277,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       infogroup {
         results {
@@ -301,6 +307,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       yellowpages {
         results {
@@ -330,6 +337,7 @@ export const onCreateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       owner
       createdAt
@@ -375,6 +383,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       citysearch {
         results {
@@ -404,6 +413,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       google {
         results {
@@ -433,6 +443,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       foursquare {
         results {
@@ -462,6 +473,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       facebook {
         results {
@@ -491,6 +503,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       yelp {
         results {
@@ -520,6 +533,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       infogroup {
         results {
@@ -549,6 +563,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       yellowpages {
         results {
@@ -578,6 +593,7 @@ export const onUpdateEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       owner
       createdAt
@@ -623,6 +639,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       citysearch {
         results {
@@ -652,6 +669,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       google {
         results {
@@ -681,6 +699,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       foursquare {
         results {
@@ -710,6 +729,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       facebook {
         results {
@@ -739,6 +759,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       yelp {
         results {
@@ -768,6 +789,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       infogroup {
         results {
@@ -797,6 +819,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       yellowpages {
         results {
@@ -826,6 +849,7 @@ export const onDeleteEngineCrawl = /* GraphQL */ `
         exactWebsiteMatch
         exactWebsiteMatchHttp
         exactNameMatch
+        rank
       }
       owner
       createdAt
@@ -876,6 +900,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           citysearch {
             results {
@@ -905,6 +930,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           google {
             results {
@@ -934,6 +960,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           foursquare {
             results {
@@ -963,6 +990,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           facebook {
             results {
@@ -992,6 +1020,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           yelp {
             results {
@@ -1021,6 +1050,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           infogroup {
             results {
@@ -1050,6 +1080,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           yellowpages {
             results {
@@ -1079,6 +1110,7 @@ export const onCreateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           owner
           createdAt
@@ -1168,6 +1200,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           citysearch {
             results {
@@ -1197,6 +1230,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           google {
             results {
@@ -1226,6 +1260,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           foursquare {
             results {
@@ -1255,6 +1290,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           facebook {
             results {
@@ -1284,6 +1320,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           yelp {
             results {
@@ -1313,6 +1350,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           infogroup {
             results {
@@ -1342,6 +1380,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           yellowpages {
             results {
@@ -1371,6 +1410,7 @@ export const onUpdateDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           owner
           createdAt
@@ -1460,6 +1500,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           citysearch {
             results {
@@ -1489,6 +1530,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           google {
             results {
@@ -1518,6 +1560,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           foursquare {
             results {
@@ -1547,6 +1590,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           facebook {
             results {
@@ -1576,6 +1620,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           yelp {
             results {
@@ -1605,6 +1650,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           infogroup {
             results {
@@ -1634,6 +1680,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           yellowpages {
             results {
@@ -1663,6 +1710,7 @@ export const onDeleteDomain = /* GraphQL */ `
             exactWebsiteMatch
             exactWebsiteMatchHttp
             exactNameMatch
+            rank
           }
           owner
           createdAt

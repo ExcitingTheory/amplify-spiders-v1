@@ -13,7 +13,7 @@
  async function docker(path, ecrRepo) {
    // TODO make multi region
   const { stdout, stderr } = await exec(`cd ${path} && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 759854655984.dkr.ecr.us-east-1.amazonaws.com &&
-   docker build -t cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest . && docker tag cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest 759854655984.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest && docker push 759854655984.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest`);
+   docker build -t cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest . && docker tag cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest 759854655984.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest && aws ecr batch-delete-image  --repository-name cdk-hnb659fds-container-assets-759854655984-us-east-1  --image-ids imageTag=spiderEnginesLanguage-latest && docker push 759854655984.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest`);
   console.log('stdout:', stdout);
   console.error('stderr:', stderr);
 }
@@ -29,7 +29,7 @@ const hookHandler = async (data, error) => {
     let ecrRepo = 'cdk-hnb659fds-container-assets-759854655984-us-east-1'
     await docker(path.join(__dirname, '../backend/custom/spiderLanguage/src/'), ecrRepo) 
   } else {
-    console.log('removed containter build becuase its unsupported')
+    console.log('removed container build because its unsupported')
   }
 
 };

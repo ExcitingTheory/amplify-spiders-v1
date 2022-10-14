@@ -46,6 +46,7 @@ type EngineResult {
   exactWebsiteMatch: Int # key in results
   exactWebsiteMatchHttp: Int # key in results
   exactNameMatch: Int # key in results
+  rank: Int
 }
 
 type WebCrawl @model @auth(
@@ -91,4 +92,4 @@ type Domain @model @auth(
   EngineCrawls: [EngineCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
   WebCrawls: [WebCrawl] @hasMany(indexName: "byDomain", fields: ["id"])
 }
- 
+  

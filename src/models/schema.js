@@ -557,9 +557,16 @@ export const schema = {
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
+                },
+                "rank": {
+                    "name": "rank",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
                 }
             }
         }
     },
-    "version": "f759b42756a7fe198d9d383577cdd826"
+    "version": "88a0618a430825aeadaa642226b62f5d"
 };

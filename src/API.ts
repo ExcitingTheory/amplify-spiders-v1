@@ -150,6 +150,7 @@ export type EngineResultInput = {
   exactWebsiteMatch?: number | null,
   exactWebsiteMatchHttp?: number | null,
   exactNameMatch?: number | null,
+  rank?: number | null,
 };
 
 export type ParsedEngineResultInput = {
@@ -213,6 +214,7 @@ export type EngineResult = {
   exactWebsiteMatch?: number | null,
   exactWebsiteMatchHttp?: number | null,
   exactNameMatch?: number | null,
+  rank?: number | null,
 };
 
 export type ParsedEngineResult = {
@@ -549,6 +551,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -584,6 +587,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -619,6 +623,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -654,6 +659,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -689,6 +695,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -724,6 +731,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -759,6 +767,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -794,6 +803,7 @@ export type CreateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -850,6 +860,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -885,6 +896,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -920,6 +932,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -955,6 +968,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -990,6 +1004,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -1025,6 +1040,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -1060,6 +1076,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -1095,6 +1112,7 @@ export type UpdateEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -1151,6 +1169,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -1186,6 +1205,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -1221,6 +1241,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -1256,6 +1277,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -1291,6 +1313,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -1326,6 +1349,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -1361,6 +1385,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -1396,6 +1421,7 @@ export type DeleteEngineCrawlMutation = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -1459,6 +1485,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -1494,6 +1521,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -1529,6 +1557,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -1564,6 +1593,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -1599,6 +1629,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -1634,6 +1665,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -1669,6 +1701,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -1704,6 +1737,7 @@ export type CreateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
@@ -1811,6 +1845,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -1846,6 +1881,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -1881,6 +1917,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -1916,6 +1953,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -1951,6 +1989,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -1986,6 +2025,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -2021,6 +2061,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -2056,6 +2097,7 @@ export type UpdateDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
@@ -2163,6 +2205,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -2198,6 +2241,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -2233,6 +2277,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -2268,6 +2313,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -2303,6 +2349,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -2338,6 +2385,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -2373,6 +2421,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -2408,6 +2457,7 @@ export type DeleteDomainMutation = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
@@ -2633,6 +2683,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -2668,6 +2719,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -2703,6 +2755,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -2738,6 +2791,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -2773,6 +2827,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -2808,6 +2863,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -2843,6 +2899,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -2878,6 +2935,7 @@ export type GetEngineCrawlQuery = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -2937,6 +2995,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       citysearch?:  {
         __typename: "EngineResult",
@@ -2972,6 +3031,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       google?:  {
         __typename: "EngineResult",
@@ -3007,6 +3067,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       foursquare?:  {
         __typename: "EngineResult",
@@ -3042,6 +3103,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       facebook?:  {
         __typename: "EngineResult",
@@ -3077,6 +3139,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       yelp?:  {
         __typename: "EngineResult",
@@ -3112,6 +3175,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       infogroup?:  {
         __typename: "EngineResult",
@@ -3147,6 +3211,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       yellowpages?:  {
         __typename: "EngineResult",
@@ -3182,6 +3247,7 @@ export type ListEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       owner?: string | null,
       createdAt: string,
@@ -3245,6 +3311,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       citysearch?:  {
         __typename: "EngineResult",
@@ -3280,6 +3347,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       google?:  {
         __typename: "EngineResult",
@@ -3315,6 +3383,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       foursquare?:  {
         __typename: "EngineResult",
@@ -3350,6 +3419,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       facebook?:  {
         __typename: "EngineResult",
@@ -3385,6 +3455,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       yelp?:  {
         __typename: "EngineResult",
@@ -3420,6 +3491,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       infogroup?:  {
         __typename: "EngineResult",
@@ -3455,6 +3527,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       yellowpages?:  {
         __typename: "EngineResult",
@@ -3490,6 +3563,7 @@ export type SyncEngineCrawlsQuery = {
         exactWebsiteMatch?: number | null,
         exactWebsiteMatchHttp?: number | null,
         exactNameMatch?: number | null,
+        rank?: number | null,
       } | null,
       owner?: string | null,
       createdAt: string,
@@ -3555,6 +3629,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -3590,6 +3665,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -3625,6 +3701,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -3660,6 +3737,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -3695,6 +3773,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -3730,6 +3809,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -3765,6 +3845,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -3800,6 +3881,7 @@ export type GetDomainQuery = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
@@ -3910,6 +3992,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           citysearch?:  {
             __typename: "EngineResult",
@@ -3945,6 +4028,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           google?:  {
             __typename: "EngineResult",
@@ -3980,6 +4064,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           foursquare?:  {
             __typename: "EngineResult",
@@ -4015,6 +4100,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           facebook?:  {
             __typename: "EngineResult",
@@ -4050,6 +4136,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           yelp?:  {
             __typename: "EngineResult",
@@ -4085,6 +4172,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           infogroup?:  {
             __typename: "EngineResult",
@@ -4120,6 +4208,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           yellowpages?:  {
             __typename: "EngineResult",
@@ -4155,6 +4244,7 @@ export type ListDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           owner?: string | null,
           createdAt: string,
@@ -4269,6 +4359,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           citysearch?:  {
             __typename: "EngineResult",
@@ -4304,6 +4395,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           google?:  {
             __typename: "EngineResult",
@@ -4339,6 +4431,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           foursquare?:  {
             __typename: "EngineResult",
@@ -4374,6 +4467,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           facebook?:  {
             __typename: "EngineResult",
@@ -4409,6 +4503,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           yelp?:  {
             __typename: "EngineResult",
@@ -4444,6 +4539,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           infogroup?:  {
             __typename: "EngineResult",
@@ -4479,6 +4575,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           yellowpages?:  {
             __typename: "EngineResult",
@@ -4514,6 +4611,7 @@ export type SyncDomainsQuery = {
             exactWebsiteMatch?: number | null,
             exactWebsiteMatchHttp?: number | null,
             exactNameMatch?: number | null,
+            rank?: number | null,
           } | null,
           owner?: string | null,
           createdAt: string,
@@ -4727,6 +4825,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -4762,6 +4861,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -4797,6 +4897,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -4832,6 +4933,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -4867,6 +4969,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -4902,6 +5005,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -4937,6 +5041,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -4972,6 +5077,7 @@ export type OnCreateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -5027,6 +5133,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -5062,6 +5169,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -5097,6 +5205,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -5132,6 +5241,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -5167,6 +5277,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -5202,6 +5313,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -5237,6 +5349,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -5272,6 +5385,7 @@ export type OnUpdateEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -5327,6 +5441,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     citysearch?:  {
       __typename: "EngineResult",
@@ -5362,6 +5477,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     google?:  {
       __typename: "EngineResult",
@@ -5397,6 +5513,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     foursquare?:  {
       __typename: "EngineResult",
@@ -5432,6 +5549,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     facebook?:  {
       __typename: "EngineResult",
@@ -5467,6 +5585,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yelp?:  {
       __typename: "EngineResult",
@@ -5502,6 +5621,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     infogroup?:  {
       __typename: "EngineResult",
@@ -5537,6 +5657,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     yellowpages?:  {
       __typename: "EngineResult",
@@ -5572,6 +5693,7 @@ export type OnDeleteEngineCrawlSubscription = {
       exactWebsiteMatch?: number | null,
       exactWebsiteMatchHttp?: number | null,
       exactNameMatch?: number | null,
+      rank?: number | null,
     } | null,
     owner?: string | null,
     createdAt: string,
@@ -5634,6 +5756,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -5669,6 +5792,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -5704,6 +5828,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -5739,6 +5864,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -5774,6 +5900,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -5809,6 +5936,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -5844,6 +5972,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -5879,6 +6008,7 @@ export type OnCreateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
@@ -5985,6 +6115,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -6020,6 +6151,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -6055,6 +6187,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -6090,6 +6223,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -6125,6 +6259,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -6160,6 +6295,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -6195,6 +6331,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -6230,6 +6367,7 @@ export type OnUpdateDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
@@ -6336,6 +6474,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         citysearch?:  {
           __typename: "EngineResult",
@@ -6371,6 +6510,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         google?:  {
           __typename: "EngineResult",
@@ -6406,6 +6546,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         foursquare?:  {
           __typename: "EngineResult",
@@ -6441,6 +6582,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         facebook?:  {
           __typename: "EngineResult",
@@ -6476,6 +6618,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yelp?:  {
           __typename: "EngineResult",
@@ -6511,6 +6654,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         infogroup?:  {
           __typename: "EngineResult",
@@ -6546,6 +6690,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         yellowpages?:  {
           __typename: "EngineResult",
@@ -6581,6 +6726,7 @@ export type OnDeleteDomainSubscription = {
           exactWebsiteMatch?: number | null,
           exactWebsiteMatchHttp?: number | null,
           exactNameMatch?: number | null,
+          rank?: number | null,
         } | null,
         owner?: string | null,
         createdAt: string,
