@@ -36,14 +36,14 @@
     "sharedId": "7563e824",
     "resourceName": "spiders17563e8247563e824",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "manual",
+    "useDefault": "default",
     "usernameAttributes": [
       "email"
     ],
     "userPoolGroups": false,
     "adminQueries": true,
     "triggers": {},
-    "hostedUI": true,
+    "hostedUI": false,
     "userPoolGroupList": [
       "free"
     ],
@@ -65,15 +65,10 @@
     },
     "breakCircularDependency": true,
     "dependsOn": [],
-    "authProviders": [],
     "parentStack": {
       "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "thirdPartyAuth": false,
-    "hostedUIDomainName": "spiders197b8e242-97b8e242",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/domains/\",\"https://spiders.excitingtheory.com/domains/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://spiders.excitingtheory.com/\"]}"
+    "authProviders": []
   }
 }
