@@ -190,7 +190,7 @@ const MyResponsiveBump = ({ chartData, name }) => {
   return null
 }
 
-const Summary = function ({ data, chartData, term }) {
+const Summary = function ({ data, chartData, name }) {
 
   if (data) {
 
@@ -206,7 +206,15 @@ const Summary = function ({ data, chartData, term }) {
     //   console.log('MyResponsiveBum:  chartData, engineCrawl' )
 
 
-    console.log('Summary.data', data)
+    console.log('Summary.data', {
+      exactNameMatch,
+      exactWebsiteMatch,
+      exactWebsiteMatchHttp,
+      foundWebsite,
+      highScore,
+      mostLikely,
+      // results
+    })
 
     // console.log('engineCrawl', engineCrawl)
     const lineTitles = Array.from(chartData.keys())
@@ -226,7 +234,7 @@ const Summary = function ({ data, chartData, term }) {
   
   return (
     <Box sx={{ margin: '1rem', padding: '1rem' }}>
-      <h2>Search Term: "{term}"</h2>
+      <h3>Search Engine: {name}</h3>
       {(exactNameMatch > -1 || exactWebsiteMatch > -1 || exactWebsiteMatchHttp> -1  || mostLikely > -1 ) &&
       <TableContainer component={Paper} sx={{width: '50vw'}}>
       <Table size="small">
@@ -234,26 +242,26 @@ const Summary = function ({ data, chartData, term }) {
           <TableCell variant="head">Summary</TableCell>
           <TableCell variant="head">Control</TableCell>
           </TableHead>
-        {exactNameMatch > -1 && 
+        {(exactNameMatch  != null && exactNameMatch > -1) && 
           <TableRow>
           <TableCell variant="head">Exact Match #{exactNameMatch + 1} </TableCell>
           <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactNameMatch])}}>Highlight</Button></TableCell>
           </TableRow>
         }
-        {exactWebsiteMatch > -1 && 
+        {(exactWebsiteMatch  != null && exactWebsiteMatch > -1) && 
           <TableRow>
           <TableCell variant="head">Https Website #{exactWebsiteMatch + 1} </TableCell>
           <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactWebsiteMatch])}}>Highlight</Button></TableCell>
           </TableRow>
         }
-        {exactWebsiteMatchHttp > -1 && 
+        {(exactWebsiteMatchHttp != null  && exactWebsiteMatchHttp > -1) && 
           <TableRow>
           <TableCell variant="head">Http Website #{exactWebsiteMatchHttp + 1} </TableCell>
-          <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactNameMatch])}}>Highlight</Button></TableCell>
+          <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactWebsiteMatchHttp])}}>Highlight</Button></TableCell>
           </TableRow>
         }
 
-        {mostLikely > -1 &&
+        {(mostLikely != null && mostLikely > -1) &&
           <TableRow>
           <TableCell variant="head">{roundedHighScore}% Match #{mostLikely + 1} </TableCell>
           <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[mostLikely])}}>Highlight</Button></TableCell>
@@ -357,22 +365,26 @@ const Charts = function ({data, term}) {
 
   return (
     <Card>
-      <Summary data={lastCrawlCitysearch} chartData={citysearchBumpChart} term={term} />
+      <h1>Search Term "{term}"</h1>
+      <Summary data={lastCrawlCitysearch} chartData={citysearchBumpChart} name="Citysearch" />
       <MyResponsiveBump chartData={citysearchBumpChart} name="Citysearch" />
       <MyResponsiveHeatMap data={citysearchHeatmapChart} />
 
-      <Summary data={lastCrawlGoogle} chartData={googleBumpChart} term={term} />
+      <Summary data={lastCrawlGoogle} chartData={googleBumpChart} name="Google" />
       <MyResponsiveBump chartData={googleBumpChart} name="Google" />
       <MyResponsiveHeatMap data={googleHeatmapChart} />
 
+      <Summary data={lastCrawlFoursquare} chartData={foursquareBumpChart} name="Foursquare" />
       <MyResponsiveBump chartData={foursquareBumpChart} name="Foursquare" />
-      <MyResponsiveHeatMap data={foursquareHeatmapChart} />
+      <MyResponsiveHeatMap data={foursquareHeatmapChart} name="Foursquare" />
 
+      <Summary data={lastCrawlYellowpages} chartData={yelpBumpChart} name="Yelp" />
       <MyResponsiveBump chartData={yelpBumpChart} name="Yelp" />
-      <MyResponsiveHeatMap data={yelpHeatmapChart} />
+      <MyResponsiveHeatMap data={yelpHeatmapChart} name="Yelp" />
 
+      <Summary data={lastCrawlYellowpages} chartData={googleBumpChart} name="Yellowpages" />
       <MyResponsiveBump chartData={yellowpagesBumpChart} name="Yellowpages" />
-      <MyResponsiveHeatMap data={yellowpagesHeatmapChart} />
+      <MyResponsiveHeatMap data={yellowpagesHeatmapChart} name="Yellowpages" />
 
     </Card>
   )
