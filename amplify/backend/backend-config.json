@@ -22,11 +22,7 @@
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
-        "socialProviders": [
-          "FACEBOOK",
-          "GOOGLE",
-          "AMAZON"
-        ],
+        "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
         ],
