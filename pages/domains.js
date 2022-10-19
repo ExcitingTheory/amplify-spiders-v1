@@ -57,8 +57,8 @@ function Domains({signOut,user}) {
                 marginTop: '3rem'
             }}>
 
-            <h1>hello {user.username}</h1>
-            <button onClick={signOut}>Sign Out</button>
+            {/* <h1>hello {user.username}</h1>
+            <button onClick={signOut}>Sign Out</button> */}
     
             <h1>Domains &nbsp;<Button variant="outlined" color="primary" ><AddIcon />&nbsp;Create New</Button></h1>
     

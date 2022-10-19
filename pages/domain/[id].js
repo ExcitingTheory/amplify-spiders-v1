@@ -9,6 +9,12 @@ import '@aws-amplify/ui-react/styles.css';
 import {
   Button,
   Item,
+  TableContainer,
+  Paper,
+  Table,
+  TableRow,
+  TableHead,
+  TableCell,
   Box,
   Typography,
   AppBar,
@@ -32,7 +38,7 @@ const MyResponsiveHeatMap = ({ data /* see data tab */ }) => {
   if (data) {
 
     return (
-      <Card
+      <Box
         style={{
           margin: '2rem auto',
           minWidth: 'min-content',
@@ -106,7 +112,7 @@ const MyResponsiveHeatMap = ({ data /* see data tab */ }) => {
             }
           ]}
         />
-      </Card>
+      </Box>
     )
   }
   return null
@@ -117,54 +123,10 @@ const MyResponsiveBump = ({ chartData, name }) => {
 
   console.log('MyResponsiveBump', chartData)
   if (chartData) {
-
-    //   const {
-    //     exactNameMatch,
-    //     exactWebsiteMatch,
-    //     exactWebsiteMatchHttp,
-    //     foundWebsite,
-    //     highScore,
-    //     mostLikely,
-    //     results
-    //   } = engineCrawl
-    //   console.log('MyResponsiveBum:  chartData, engineCrawl' )
-
-    // if (exactNameMatch && results[exactNameMatch]) {
-    //   console.log("results[exactNameMatch]", results[exactNameMatch])
-    // }
-    // if (exactWebsiteMatch && results[exactWebsiteMatch]) {
-    //   console.log("results[exactWebsiteMatch]", results[exactWebsiteMatch])
-    // }
-    // if (exactWebsiteMatchHttp && results[exactWebsiteMatchHttp]) {
-    //   console.log("results[exactWebsiteMatchHttp]", results[exactWebsiteMatchHttp])
-    // }
-    // if (highScore && results[highScore]) {
-    //   console.log("results[highScore]", results[highScore])
-    // }
-    // if (highScore && results[mostLikely]) {
-    //   console.log("results[mostLikely]", results[mostLikely])
-    // }
-
-    // console.log(JSON.stringify({
-    //   exactNameMatch,
-    //   exactWebsiteMatch,
-    //   exactWebsiteMatchHttp,
-    //   foundWebsite,
-    //   highScore,
-    //   mostLikely,
-    //   results
-    // }))
-
-    // console.log('engineCrawl', engineCrawl)
     chartData = Array.from(chartData.values())
 
-    function onStuffClick() {
-      console.log('click', chartData)
-      document.querySelector("path[data-testid='line.Cascade Lakes Brewing Company: https://www.cascadelakes.com/.interactive']").dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
-    }
-
     return (
-      <Card
+      <Box
         style={{
           margin: '2rem auto',
           minWidth: 'min-content',
@@ -173,9 +135,8 @@ const MyResponsiveBump = ({ chartData, name }) => {
           padding: '2rem 1rem 6rem 2rem'
         }}>
 
-        <h3>{name}</h3>
+        {/* <h3>{name}</h3> */}
 
-        <button onClick={onStuffClick}>Click</button>
         <ResponsiveBump
           data={chartData}
           colors={{ scheme: 'dark2' }}
@@ -224,12 +185,100 @@ const MyResponsiveBump = ({ chartData, name }) => {
           margin={{ top: 40, right: 400, bottom: 40, left: 60 }}
           axisRight={null}
         />
-      </Card>)
+      </Box>)
   }
   return null
 }
 
-const Charts = function ({ bumpCharts, engineCrawls }) {
+const Summary = function ({ data, chartData, term }) {
+
+  if (data) {
+
+    const {
+      exactNameMatch,
+      exactWebsiteMatch,
+      exactWebsiteMatchHttp,
+      foundWebsite,
+      highScore,
+      mostLikely,
+      // results
+    } = data
+    //   console.log('MyResponsiveBum:  chartData, engineCrawl' )
+
+
+    console.log('Summary.data', data)
+
+    // console.log('engineCrawl', engineCrawl)
+    const lineTitles = Array.from(chartData.keys())
+
+    console.log(lineTitles)
+
+    function highlightLine(name) {
+      // console.log('highlightLine.click: ', name)
+      const selector = `path[data-testid="line.${name}.interactive"]`
+      document.querySelector(selector).dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
+      // document.querySelector(`path[data-testid="line.The Original Bend Transmission Company: 61522 American Loop.interactive"]`).dispatchEvent(new MouseEvent('mouseover', { 'bubbles': true }));
+    }
+
+    console.log('data, chartData', data)
+
+    const roundedHighScore = Math.round((highScore + Number.EPSILON) * 100)
+  
+  return (
+    <Box sx={{ margin: '1rem', padding: '1rem' }}>
+      <h2>Search Term: "{term}"</h2>
+      {(exactNameMatch > -1 || exactWebsiteMatch > -1 || exactWebsiteMatchHttp> -1  || mostLikely > -1 ) &&
+      <TableContainer component={Paper} sx={{width: '50vw'}}>
+      <Table size="small">
+          <TableHead>
+          <TableCell variant="head">Summary</TableCell>
+          <TableCell variant="head">Control</TableCell>
+          </TableHead>
+        {exactNameMatch > -1 && 
+          <TableRow>
+          <TableCell variant="head">Exact Match #{exactNameMatch + 1} </TableCell>
+          <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactNameMatch])}}>Highlight</Button></TableCell>
+          </TableRow>
+        }
+        {exactWebsiteMatch > -1 && 
+          <TableRow>
+          <TableCell variant="head">Https Website #{exactWebsiteMatch + 1} </TableCell>
+          <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactWebsiteMatch])}}>Highlight</Button></TableCell>
+          </TableRow>
+        }
+        {exactWebsiteMatchHttp > -1 && 
+          <TableRow>
+          <TableCell variant="head">Http Website #{exactWebsiteMatchHttp + 1} </TableCell>
+          <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[exactNameMatch])}}>Highlight</Button></TableCell>
+          </TableRow>
+        }
+
+        {mostLikely > -1 &&
+          <TableRow>
+          <TableCell variant="head">{roundedHighScore}% Match #{mostLikely + 1} </TableCell>
+          <TableCell><Button onMouseUp={() => {highlightLine(lineTitles[mostLikely])}}>Highlight</Button></TableCell>
+          </TableRow>
+        }
+          
+
+      </Table>
+      </TableContainer>
+      }
+    </Box>)
+  } else {
+    return null
+  }
+  
+
+
+
+
+}
+
+
+const Charts = function ({data, term}) {
+
+  console.log('Charts.data, term', data, term)
 
   // const {
   // citysearch,
@@ -242,17 +291,14 @@ const Charts = function ({ bumpCharts, engineCrawls }) {
   // yellowpages
   // } = bumpCharts
 
-  const citysearchBumpChart = bumpCharts?.citysearch
-  const googleBumpChart = bumpCharts?.google
-  const foursquareBumpChart = bumpCharts?.foursquare
+  const citysearchBumpChart = data?.citysearch
+  const googleBumpChart = data?.google
+  const foursquareBumpChart = data?.foursquare
   // facebook,
   // keywordplanner,
-  const yelpBumpChart = bumpCharts?.yelp
+  const yelpBumpChart = data?.yelp
   // infogroup,
-  const yellowpagesBumpChart = bumpCharts?.yellowpages
-
-
-
+  const yellowpagesBumpChart = data?.yellowpages
 
 
   console.log(JSON.stringify({
@@ -270,7 +316,7 @@ const Charts = function ({ bumpCharts, engineCrawls }) {
   let lastCrawl = {}
 
   try {
-    lastCrawl = engineCrawls.slice(-1)[0]
+    lastCrawl = data['engineCrawls'].slice(-1)[0]
   } catch {
   }
 
@@ -298,22 +344,24 @@ const Charts = function ({ bumpCharts, engineCrawls }) {
   }))
 
 
-  console.log(JSON.stringify({
-    citysearchHeatmapChart,
-    googleHeatmapChart,
-    foursquareHeatmapChart,
-    // facebook,
-    // keywordplanner,
-    yelpHeatmapChart,
-    // infogroup,
-    yellowpagesHeatmapChart
-  }))
+  // console.log(JSON.stringify({
+  //   citysearchHeatmapChart,
+  //   googleHeatmapChart,
+  //   foursquareHeatmapChart,
+  //   // facebook,
+  //   // keywordplanner,
+  //   yelpHeatmapChart,
+  //   // infogroup,
+  //   yellowpagesHeatmapChart
+  // }))
 
   return (
-    <div>
+    <Card>
+      <Summary data={lastCrawlCitysearch} chartData={citysearchBumpChart} term={term} />
       <MyResponsiveBump chartData={citysearchBumpChart} name="Citysearch" />
       <MyResponsiveHeatMap data={citysearchHeatmapChart} />
 
+      <Summary data={lastCrawlGoogle} chartData={googleBumpChart} term={term} />
       <MyResponsiveBump chartData={googleBumpChart} name="Google" />
       <MyResponsiveHeatMap data={googleHeatmapChart} />
 
@@ -326,7 +374,7 @@ const Charts = function ({ bumpCharts, engineCrawls }) {
       <MyResponsiveBump chartData={yellowpagesBumpChart} name="Yellowpages" />
       <MyResponsiveHeatMap data={yellowpagesHeatmapChart} />
 
-    </div>
+    </Card>
   )
 
 }
@@ -366,52 +414,50 @@ function proccessMaps(data, inputMap) {
 }
 
 
-function Domains({ signOut, user }) {
-  const [domain, setDomain] = useState([])
-  const [engineCrawls, setEngineCrawls] = useState([])
-  const [bumpCharts, setBumpCharts] = useState({})
+function DomainDetail({ signOut, user }) {
+  const [domain, setDomain] = useState({})
+  // const [engineCrawls, setEngineCrawls] = useState([])
+  // const [bumpCharts, setBumpCharts] = useState({})
+  const [chartsBySearchTerm, setChartsBySearchTerm] = useState({})
   const [work, setIsWorking] = useState(false)
   // const router = useRouter()
   const router = useRouter()
   const { id } = router.query
 
+  console.log('DomainDetail.router.query', router.query)
   console.log('const { id } = router.query', id)
+  console.log('DomainDetail.domain: ', domain)
+  // console.log('DomainDetail.engineCrawls:', engineCrawls)
 
-
-
-  useEffect(async () => {
-    console.log('Domains.useEffect')
-    await fetchDomains()
-    console.log('Domains.useEffect')
-    async function fetchDomains() {
-      let domainData = await DataStore.query(Domain, id)
-      domainData = domainData[0] ? domainData[0] : domainData // Why the fuck does this happen? 
-      console.log('domainData', domainData)
-      // domainData = domainData[0]
-      // const engineCrawls = await DataStore.query(EngineCrawl)
-      const engineCrawls = (await DataStore.query(EngineCrawl, Predicates.ALL, {
+  useEffect(() => {
+    if (!id) {
+      return
+    }
+    fetchEngineCrawls()
+    async function fetchEngineCrawls() {
+      console.log('fetchEngineCrawls')
+      const response = await DataStore.query(EngineCrawl, Predicates.ALL, {
         sort: s => s.createdAt(SortDirection.ASCENDING)
-      })).filter(c => c.domainID === domainData?.id);
-      // const engineCrawls = (await DataStore.query(EngineCrawl)).filter(c => c.domainID === domainData?.id);
-      console.log('domainData[0]', domainData)
-      console.log('engineCrawls[0]', engineCrawls)
-      setDomain(domainData)
+      })
+      const filteredData = response.filter(c => c.domainID === id)
+      
+
+      let sort = {}
 
 
+      filteredData.forEach(function (element) {
 
-      let maps = {
-        citysearch: null,
-        google: null,
-        foursquare: null,
-        // facebook: null,
-        // keywordplanner: null,
-        yelp: null,
-        // infogroup: null,
-        yellowpages: null
-      }
-
-
-      engineCrawls.forEach(function (element) {
+        // let maps = {
+        //   citysearch: null,
+        //   google: null,
+        //   foursquare: null,
+        //   // facebook: null,
+        //   // keywordplanner: null,
+        //   yelp: null,
+        //   // infogroup: null,
+        //   yellowpages: null
+        // }
+        
         console.log('engineCrawls.forEach.element ', element.id)
         const {
           citysearch,
@@ -421,34 +467,87 @@ function Domains({ signOut, user }) {
           // keywordplanner,
           yelp,
           // infogroup,
-          yellowpages
+          yellowpages,
+          createdAt,
+          postalCode,
+          search
         } = element
+
+        const searchKey = [search, postalCode].join(' ')
+
 
         console.log('engineCrawls.forEach.element ', element)
 
-        maps['citysearch'] = proccessMaps(citysearch, maps['citysearch'])
-        maps['google'] = proccessMaps(google, maps['google'])
-        maps['foursquare'] = proccessMaps(foursquare, maps['foursquare'])
-        maps['yelp'] = proccessMaps(yelp, maps['yelp'])
-        maps['yellowpages'] = proccessMaps(yellowpages, maps['yellowpages'])
 
+
+        if(sort[searchKey]) {
+          
+          sort[searchKey]['citysearch'] = proccessMaps(citysearch, sort[searchKey]['citysearch'])
+          sort[searchKey]['google'] = proccessMaps(google, sort[searchKey]['google'])
+          sort[searchKey]['foursquare'] = proccessMaps(foursquare, sort[searchKey]['foursquare'])
+          sort[searchKey]['yelp'] = proccessMaps(yelp, sort[searchKey]['yelp'])
+          sort[searchKey]['yellowpages'] = proccessMaps(yellowpages, sort[searchKey]['yellowpages'])
+
+
+          sort[searchKey]['engineCrawls'].push(element)
+
+
+        } else {
+
+          sort[searchKey] = {
+            citysearch: null,
+            google: null,
+            foursquare: null,
+            // facebook: null,
+            // keywordplanner: null,
+            yelp: null,
+            // infogroup: null,
+            yellowpages: null,
+            engineCrawls: []
+          }
+        }
       })
 
-      console.log("maps HERE ARE MAPS", maps)
-      setEngineCrawls(engineCrawls)
-      setBumpCharts(maps)
+      // console.log("maps HERE ARE MAPS", maps)
+      console.log("sort HERE ARE sorted MAPS", sort)
+      setChartsBySearchTerm(sort) //maps used to be
+      // setEngineCrawls(filteredData)
     }
-    const subscription = DataStore.observe(Domain).subscribe(() => fetchDomains())
+    const subscription = DataStore.observeQuery(EngineCrawl, Predicates.ALL, {
+      sort: s => s.createdAt(SortDirection.ASCENDING)
+    }).subscribe(() => fetchEngineCrawls())
 
     return function cleanup() {
       subscription.unsubscribe();
     }
-  }, [])
+  }, [id])
+
+  useEffect(() => {
+    if (!id) {
+      return;
+    }
+    fetchDomain()
+    async function fetchDomain() {
+      const response = await DataStore.query(Domain, id)
+      console.log('fetchDomain.response', response)
+      setDomain(response)
+    }
+    const subscription = DataStore.observe(Domain, id).subscribe(() => fetchDomain())
+
+    return function cleanup() {
+      subscription.unsubscribe();
+    }
+
+  }, [id])
+
+
+  console.log('chartsBySearchTerm', chartsBySearchTerm)
+
 
   return (
     <>
       <AppBar
-        position="fixed"
+        position="static"
         color="default"
       >
         <MainToolbar>
@@ -459,24 +558,14 @@ function Domains({ signOut, user }) {
           </Box>
         </MainToolbar>
       </AppBar>
-      <Container
-        style={{
-          padding: '2rem 1rem',
-          marginTop: '3rem'
-        }}>
-
-        <h1>hello {user.username}</h1>
-        <button onClick={signOut}>Sign Out</button>
-
-        <h1>Domain</h1>
-
+      <Container>
         <Box>
           {!domain &&
             <div>Loading...</div>
           }
           {domain &&
             <>
-              <Card
+              <Box
                 key={domain.id}
                 sx={{
                   margin: '1rem auto',
@@ -485,15 +574,16 @@ function Domains({ signOut, user }) {
                   minWidth: 'min-content'
                 }}
               >
-                <h2>{domain.name}</h2>
-                <div>{domain.description}</div>
+                <h1>{domain.name}</h1>
+              </Box>
+              {Object.keys(chartsBySearchTerm).length > 0 &&
+                Object.entries(chartsBySearchTerm).map((item, key)=>{
+                  console.log('chartsBySearchTerm, item, key', item[0], item[1])
+                return <Charts data={item[1]} term={item[0]} key={key} />
+              })
+              }
 
-
-
-
-              </Card>
-
-              <Charts bumpCharts={bumpCharts} engineCrawls={engineCrawls} />
+              {/* <Charts bumpCharts={bumpCharts} engineCrawls={engineCrawls} /> */}
             </>
           }
 
@@ -502,5 +592,5 @@ function Domains({ signOut, user }) {
     </>
   )
 }
-
-export default withAuthenticator(Domains, { socialProviders: ['amazon', 'facebook', 'google'] });
+export default withAuthenticator(DomainDetail)
+// export default withAuthenticator(DomainDetail, { socialProviders: ['amazon', 'facebook', 'google'] });
