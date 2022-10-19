@@ -13,14 +13,9 @@
     },
     "categories": {
       "auth": {
-        "spiders17563e8247563e824": {},
-        "userPoolGroups": {}
+        "spiders17563e8247563e824": {}
       },
       "function": {
-        "AdminQueriesd6d26a6b": {
-          "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",
-          "s3Key": "amplify-builds/AdminQueriesd6d26a6b-34515a34776f53705451-build.zip"
-        },
         "spiderEngines": {
           "secretsPathAmplifyAppId": "d39d9izi3mmqnw",
           "deploymentBucketName": "amplify-spiders1-dev-193723-deployment",

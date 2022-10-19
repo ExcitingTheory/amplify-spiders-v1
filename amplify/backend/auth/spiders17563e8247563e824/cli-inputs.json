@@ -44,9 +44,7 @@
     "adminQueries": true,
     "triggers": {},
     "hostedUI": true,
-    "userPoolGroupList": [
-      "free"
-    ],
+    "userPoolGroupList": [],
     "adminQueryGroup": "admin",
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

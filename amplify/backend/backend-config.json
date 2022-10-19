@@ -1,21 +1,5 @@
 {
   "auth": {
-    "userPoolGroups": {
-      "service": "Cognito-UserPool-Groups",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "spiders17563e8247563e824",
-          "attributes": [
-            "UserPoolId",
-            "AppClientIDWeb",
-            "AppClientID",
-            "IdentityPoolId"
-          ]
-        }
-      ]
-    },
     "spiders17563e8247563e824": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
@@ -44,20 +28,6 @@
     }
   },
   "function": {
-    "AdminQueriesd6d26a6b": {
-      "service": "Lambda",
-      "providerPlugin": "awscloudformation",
-      "build": true,
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "spiders17563e8247563e824",
-          "attributes": [
-            "UserPoolId"
-          ]
-        }
-      ]
-    },
     "spiderEngines": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -105,28 +75,6 @@
     }
   },
   "api": {
-    "AdminQueries": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
-      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "spiders17563e8247563e824",
-          "attributes": [
-            "UserPoolId"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "AdminQueriesd6d26a6b",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        }
-      ]
-    },
     "spiders1": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
