@@ -36,14 +36,14 @@
     "sharedId": "7563e824",
     "resourceName": "spiders17563e8247563e824",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
+    "useDefault": "defaultSocial",
     "usernameAttributes": [
       "email"
     ],
     "userPoolGroups": false,
     "adminQueries": true,
     "triggers": {},
-    "hostedUI": false,
+    "hostedUI": true,
     "userPoolGroupList": [
       "free"
     ],
@@ -69,6 +69,14 @@
       "Ref": "AWS::StackId"
     },
     "permissions": [],
+    "hostedUIDomainName": "spiders1a2f1c3df-a2f1c3df",
+    "authProvidersUserPool": [
+      "Facebook",
+      "Google",
+      "LoginWithAmazon"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}},{\"ProviderName\":\"LoginWithAmazon\",\"authorize_scopes\":\"profile profile:user_id\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"user_id\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/domains/\",\"https://spiders.excitingtheory.com/domians/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://spiders.excitingtheory.com/\"]}",
     "authProviders": []
   }
 }

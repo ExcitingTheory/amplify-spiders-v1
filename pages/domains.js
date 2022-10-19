@@ -92,4 +92,5 @@ function Domains({signOut,user}) {
     )
 }
 
-export default withAuthenticator(Domains, {socialProviders:['amazon', 'facebook', 'google']});
+export default withAuthenticator(Domains);
+// export default withAuthenticator(Domains, {socialProviders:['amazon', 'facebook', 'google']});
