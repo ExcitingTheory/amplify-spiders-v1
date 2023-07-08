@@ -568,5 +568,6 @@ export const schema = {
             }
         }
     },
+    "codegenVersion": "3.4.4",
     "version": "88a0618a430825aeadaa642226b62f5d"
 };
