@@ -12,8 +12,8 @@
  
  async function docker(path, ecrRepo) {
    // TODO make multi region
-  const { stdout, stderr } = await exec(`cd ${path} && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 759854655984.dkr.ecr.us-east-1.amazonaws.com &&
-   docker build -t cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest . && docker tag cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest 759854655984.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest && aws ecr batch-delete-image  --repository-name cdk-hnb659fds-container-assets-759854655984-us-east-1  --image-ids imageTag=spiderEnginesLanguage-latest && docker push 759854655984.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-759854655984-us-east-1:spiderEnginesLanguage-latest`);
+  const { stdout, stderr } = await exec(`cd ${path} && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com &&
+   docker build -t $ECR_REPO_NAME:spiderEnginesLanguage-latest . && docker tag $ECR_REPO_NAME:spiderEnginesLanguage-latest $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ECR_REPO_NAME:spiderEnginesLanguage-latest && aws ecr batch-delete-image  --repository-name $ECR_REPO_NAME --image-ids imageTag=spiderEnginesLanguage-latest && docker push $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ECR_REPO_NAME:spiderEnginesLanguage-latest`);
   console.log('stdout:', stdout);
   console.error('stderr:', stderr);
 }
@@ -26,7 +26,7 @@ const hookHandler = async (data, error) => {
   // const { envName } = data?.amplify.environment
   console.log("process.env['USER_BRANCH']", process.env['USER_BRANCH'])
   if (!process.env['USER_BRANCH']) {
-    let ecrRepo = 'cdk-hnb659fds-container-assets-759854655984-us-east-1'
+    let ecrRepo = process.env.ECR_REPO_NAME
     await docker(path.join(__dirname, '../backend/custom/spiderLanguage/src/'), ecrRepo) 
   } else {
     console.log('removed container build because its unsupported')
