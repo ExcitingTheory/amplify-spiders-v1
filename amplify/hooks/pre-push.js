@@ -1,9 +1,6 @@
 /**
- * This is a sample hook script created by Amplify CLI.
- * To start using this pre-push hook please change the filename:
- * pre-push.js.sample  ->  pre-push.js
- *
- * learn more: https://docs.amplify.aws/cli/usage/command-hooks
+ * ECR_REPO_NAME=""  ACCOUNT_ID="" amplify push 
+ * This may bneed to b e disabled on the first deploy?
  */
 
  const util = require('node:util');
