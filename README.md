@@ -13,7 +13,10 @@ To get started with Amplify Spiders v1, follow these steps:
 2. Install the necessary dependencies by running `npm install`.
 3. Set up your AWS Amplify environment by following the instructions in the [amplify/README.md](amplify/README.md) file.
 4. Run the project locally by running `npm run dev`.
-5. Deploy the project to the cloud by running `amplify push`.
+5. Build and push the container CI/CD Needs some work still: see here for more information [Pre-push Hook](https://github.com/ExcitingTheory/amplify-spiders-v1/blob/main/amplify/hooks/pre-push.js) This may need to be disabled on the first deploy?
+6. Deploy the first time rename the hook, `amplify push`, put the hooks name back.
+7. Deploy the project to the cloud with the hook enabled by running `ECR_REPO_NAME=""  ACCOUNT_ID="" amplify push`. Where `ECR_REPO_NAME` is the repo that CDK generates.
+
 
 ## Features and Functionality
 
