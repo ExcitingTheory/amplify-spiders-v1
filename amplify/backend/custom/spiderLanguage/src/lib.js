@@ -44,7 +44,14 @@ export const stringSimilarity = function (str1, str2, gramSize = 2) {
   return hits / total;
 }
 
-
+/**
+ * 
+ * @param {*} a 
+ * @param {*} b 
+ * @returns  The dot product of two vectors.
+ * 
+ * https://stackoverflow.com/questions/43013238/how-to-calculate-dot-product-of-two-vectors-in-javascript
+ */
 const dot = function (a, b) {
   var hasOwnProperty = Object.prototype.hasOwnProperty;
   var sum = 0;
@@ -56,6 +63,13 @@ const dot = function (a, b) {
   return sum
 }
 
+/**
+ * 
+ * @param {*} a 
+ * @param {*} b 
+ * @returns The cosine similarity of two vectors.
+ * 
+ */
 const similarity = function (a, b) {
   var magnitudeA = Math.sqrt(dot(a, a));
   var magnitudeB = Math.sqrt(dot(b, b));
@@ -64,7 +78,11 @@ const similarity = function (a, b) {
   else return false
 }
 
-
+/**
+ * 
+ * @param {*} matrix 
+ * @returns A matrix of cosine similarities between the rows of the input matrix.
+ */
 const cosineSimilarityMatrix = function (matrix) {
   let cosine_similarity_matrix = [];
   for (let i = 0; i < matrix.length; i++) {
@@ -81,6 +99,11 @@ const cosineSimilarityMatrix = function (matrix) {
   return cosine_similarity_matrix;
 }
 
+/**
+ * 
+ * @param {*} sentences 
+ * @returns A matrix of syntactic similarities between the sentences.
+ */
 export const syntacticSimilarity = async function (sentences) {
   const model = await use.load()
   const embeddings = await model.embed(sentences)
@@ -88,6 +111,12 @@ export const syntacticSimilarity = async function (sentences) {
   return arr
 }
 
+/**
+ * 
+ * @param {*} url
+ * @param {*} params 
+ * @returns The response from the get request.
+ */
 export const getRequest = async function (url, params = {}) {
   let data = axios.get(url, params).catch((error) => {
     if (error.response) {
@@ -111,6 +140,18 @@ export const getRequest = async function (url, params = {}) {
   return data
 }
 
+
+/**
+ * 
+ * @param {*} data
+ * @param {*} search 
+ * @param {*} postalCode 
+ * @param {*} domainName 
+ * @param {*} dateStamp 
+ * @returns The most likely location from the data.
+ * 
+ * This function takes the data from the citysearch api and returns the most likely location.
+ */
 export const parseCitysearch = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.results?.locations || [];
   let mostLikely = -1
@@ -138,13 +179,6 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
 
     syntax.push(name)
 
-    // const address = {
-    //   street: element?.address?.street,
-    //   city: element?.address?.city,
-    //   state: element?.address?.state,
-    //   postalCode: element?.address?.postal_code
-    // }
-
     const address = element?.address?.street
 
     let scoreInfo = {
@@ -168,6 +202,7 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
       return result.value
     }
   })
+
   const bumpChart = results.map(function (result) {
     if (result?.name) {
       const y = result?.key >= 0 ? result.key + 1 : null
@@ -182,15 +217,7 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
     }
   })
 
-  // console.log(JSON.stringify({
-  //   results,
-  //   highScore,
-  //   foundWebsite,
-  //   mostLikely
-  // }))
-
   const websiteCheckIndex = exactNameMatch >= 0 ? exactNameMatch : mostLikely
-  // console.log('toSearch[websiteCheckIndex]["website"]', toSearch[websiteCheckIndex]["website"])
   if (toSearch[websiteCheckIndex] && toSearch[websiteCheckIndex]["website"]) {
     let website
     try {
@@ -250,6 +277,17 @@ export const parseCitysearch = async function (data, search, postalCode, domainN
   }
 }
 
+/**
+ * 
+ * @param {*} data
+ * @param {*} search 
+ * @param {*} postalCode 
+ * @param {*} domainName 
+ * @param {*} dateStamp 
+ * @returns The most likely location from the data.
+ * 
+ * This function takes the data from the google api and returns the most likely location.
+ */
 export const parseGoogle = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.items || [];
   // console.log(toSearch)
@@ -361,15 +399,14 @@ export const parseGoogle = async function (data, search, postalCode, domainName,
 
 /**
  * 
- * @param {Object} data 
- * @param {String} search 
- * @param {Number} postalCode 
- * @param {String} domainName 
- * @returns {
-    results, // array of first page results
-    highScore, // Highest score
-    mostLikely // Key from highest score
-  }
+ * @param {*} data 
+ * @param {*} search 
+ * @param {*} postalCode 
+ * @param {*} domainName 
+ * @param {*} dateStamp 
+ * @returns The most likely location from the data.
+ * 
+ * This function takes the data from the foursquare api and returns the most likely location.
  */
 export const parseFoursquare = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.results || [];
@@ -468,6 +505,17 @@ export const parseFoursquare = async function (data, search, postalCode, domainN
   }
 }
 
+/**
+ * 
+ * @param {*} data 
+ * @param {*} search 
+ * @param {*} postalCode 
+ * @param {*} domainName 
+ * @param {*} dateStamp 
+ * @returns The most likely location from the data.
+ * 
+ * This function takes the data from the yelp api and returns the most likely location.
+ */
 export const parseYelp = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.businesses || [];
   let mostLikely = -1
@@ -599,6 +647,18 @@ export const parseYelp = async function (data, search, postalCode, domainName, d
   }
 }
 
+
+/**
+ * 
+ * @param {*} data 
+ * @param {*} search 
+ * @param {*} postalCode 
+ * @param {*} domainName 
+ * @param {*} dateStamp 
+ * @returns The most likely location from the data.
+ * 
+ * This function takes the data from the yellowpages api and returns the most likely location.
+ */
 export const parseYellowpages = async function (data, search, postalCode, domainName, dateStamp) {
   const toSearch = data?.searchResult?.searchListings?.searchListing || [];
   let mostLikely = -1

@@ -50,6 +50,13 @@ const query = /* GraphQL */ `
 
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
+ * @param {import('@types/aws-lambda').APIGatewayProxyEvent} event
+ * @param {import('@types/aws-lambda').Context} context
+ * @returns {Promise<import('@types/aws-lambda').APIGatewayProxyResult>}
+ * @see https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html
+ * 
+ * @description
+ * This is the entry point for the Lambda function invoked by the API Gateway.
  */
 export const handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
@@ -268,6 +275,7 @@ export const handler = async (event) => {
   let response;
 
   try {
+    // Save the data to the database
     response = await fetch(request);
     body = await response.json();
     if (body.errors) statusCode = 400;
