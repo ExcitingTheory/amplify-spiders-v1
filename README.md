@@ -66,14 +66,12 @@ Amplify Spiders v1 is currently in development. The following features and funct
 
 ## Contributing
 
-If you'd like to contribute to Amplify Spiders v1, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes and commit them.
-4. Push your changes to your fork.
-5. Create a pull request.
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file for information on how to contribute to Amplify Spiders v1.
 
 ## License
 
-Amplify Spiders v1 is licensed under the MIT License. See `LICENSE` for more information.
+Amplify Spiders v1 is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
+
+## Code of Conduct
+
+Amplify Spiders v1 has adopted the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/). See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for more information.
