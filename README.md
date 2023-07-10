@@ -31,7 +31,7 @@ To get started with Amplify Spiders v1, follow these steps:
 
 ## Features and Functionality
 
-<image src="./images/demo-spiders.gif" alt="Amplify Spiders v1 domain rank demo">
+<image src="./images/demo-spiders.gif" alt="Amplify Spiders v1 domain rank demo" width="100%">
 
 Amplify Spiders v1 includes the following features and functionality:
 
