@@ -10,12 +10,6 @@ Version 1.x.x is currently being supported with security updates, bug fixes, and
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
-
 Email [info@excitingtheory.com](mailto:info@excitingtheory.com) with any security concerns.
 
 We will prioritize security issues and do our best to address them quickly. If you have found an issue that you believe to be a security issue, please do NOT open an issue on GitHub. Instead, please email us at [info@excitingtheory.com](mailto:info@excitingtheory.com).
